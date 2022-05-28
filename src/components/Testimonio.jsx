@@ -5,19 +5,19 @@ export function Testimonio(props){
     return (
         <div className= 'contenedor-testimonio'>
             <div className= 'anyTravel'>
-            <img
-             className= 'imagen-testimonio'
-            src={require(`../imagenes/img-${props.imagen}.jpg`)}
-            alt= {props.imagen} />
+                <img
+                className= 'imagen-testimonio'
+                src={require(`../imagenes/img-${props.imagen}.jpg`)}
+                alt= {props.imagen} />
             </div>
             <div className= 'contenedor-texto-testimonio'>
                 <p className='nombre-testimonio'><strong>{props.nombre} en {props.pais}</strong></p>
-                <p className='cargo-testimonio'>{props.cargo} en <strong>{props.empresa}</strong></p>
+                <p className='incluye-testimonio'>{props.incluye}</p>
 
-                <p className='texto-testimonio'>"{props.testimonio}"</p>
+                <p className='precio-testimonio'>US$ {props.precio}.-</p>
                 <section className='numerales'>
                 <label for="tentacles">Pasajes:</label>
-                <input type="number" className="contador" id="tentacles" name="tentacles" min="1" max="20" placeholder="1"></input>
+                <input type="number" className="contador" id="tentacles" name="tentacles" min="1" max="20" placeholder="0"></input>
                 </section>
                 <section className='fechasTodas'>
                     <article className='checkIn'>

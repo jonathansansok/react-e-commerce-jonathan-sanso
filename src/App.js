@@ -9,8 +9,8 @@ function App() {
             <nav className="nav">
                 <ul className="ulNav">
                     <li className="liNav"><a href="App.js">Home</a></li>
-                    <li className="liNav"><a href="App.js">Tienda</a></li>
-                    <li className="liNav"><a href="App.js">Galeria</a></li>
+                    <li className="liNav"><a href="App.js">América</a></li>
+                    <li className="liNav"><a href="App.js">Asia/Oceania</a></li>
                     <li className="liNav"><a href="App.js">Contacto</a></li>
                 </ul>
             </nav>
@@ -31,67 +31,67 @@ function App() {
             <article className="okey">
             <Testimonio 
             nombre='Sky Ocean'
-            pais='tailandia'
+            pais='Tailandia'
             imagen='tailandia'
-            cargo='disfruta el mar'
-            empresa='Amazon'
-            testimonio='Da miedo cambiar de carrera. Solo gané la ' />
+            incluye='Pasaje + estadia'
+            precio='3050' 
+             />
             <Testimonio 
-            nombre='Sarah Chima'
-            pais='Nigeria'
+            nombre='Quintana Roo'
+            pais='México'
             imagen='costarica'
-            cargo='Ingeniero de software'
-            empresa='ChatDesk'
-            testimonio='freeCodeCamp fue la puerta de entra' />
+            incluye='Pasaje + estadia'
+            precio='2800' 
+            />
             <Testimonio 
-            nombre='Emma Bostian'
-            pais='Suecia'
+            nombre='Bariloche'
+            pais='Argentina'
             imagen='aspen'
-            cargo='Ingeniera de software'
-            empresa='Spotify'
-            testimonio='Siempre he tenido problemas para aprender JavaScr' />
+            incluye='Pasaje + estadia'
+            precio='3200' 
+             />
             <Testimonio 
-            nombre='Emma Bostian'
-            pais='Suecia'
+            nombre='Cancun'
+            pais='México'
             imagen='aspen'
-            cargo='Ingeniera de software'
-            empresa='Spotify'
-            testimonio='Siempre he tenido problemas para aprender JavaScr' />
+            incluye='Pasaje + estadia'
+            precio='3500' 
+             />
             <Testimonio 
-            nombre='Emma Bostian'
-            pais='Suecia'
+            nombre='Mendoza'
+            pais='Argentina'
             imagen='aspen'
-            cargo='Ingeniera de software'
-            empresa='Spotify'
-            testimonio='Siempre he tenido problemas para aprender JavaScr' />
+            incluye='Pasaje + estadia'
+            precio='2900' 
+            />
             <Testimonio 
-            nombre='Emma Bostian'
-            pais='Suecia'
+            nombre='Tierra del Fuego'
+            pais='Argentina'
             imagen='aspen'
-            cargo='Ingeniera de software'
-            empresa='Spotify'
-            testimonio='Siempre he tenido problemas para aprender JavaScr' />
+            incluye='Pasaje + estadia'
+            precio='2100' 
+            />
             <Testimonio 
-            nombre='Emma Bostian'
-            pais='Suecia'
+            nombre='Islas Fiyi'
+            pais='Rep. of Fiyi'
             imagen='aspen'
-            cargo='Ingeniera de software'
-            empresa='Spotify'
-            testimonio='Siempre he tenido problemas para aprender JavaScr' />
+            incluye='Pasaje + estadia'
+            precio='1900' 
+            />
             <Testimonio 
-            nombre='Emma Bostian'
-            pais='Suecia'
+            nombre='Isla Miyako,'
+            pais='Japón'
             imagen='aspen'
-            cargo='Ingeniera de software'
-            empresa='Spotify'
-            testimonio='Siempre he tenido problemas para aprender JavaScr' />
+            incluye='Pasaje + estadia'
+            precio='2800' 
+            />
             <Testimonio 
-            nombre='Emma Bostian'
-            pais='Suecia'
+            nombre='Aspen'
+            pais='Estados Unidos'
             imagen='aspen'
-            cargo='Ingeniera de software'
-            empresa='Spotify'
-            testimonio='Siempre he tenido problemas para aprender JavaScr' />
+            incluye='Pasaje + estadia'
+            precio='2900' 
+            />
       </article>
       </div>
       </main>
