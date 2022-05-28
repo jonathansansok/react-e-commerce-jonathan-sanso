@@ -21,7 +21,13 @@ function App() {
             <h1>The adventure is waiting for you</h1>
             <button className="hero-button"><a href="App.js">Join us</a></button>
           </article>
+          <article className="tituloYcarrito">
             <h2>Elige tus próximos viajes...</h2>
+            <div class="shoppingTodo">
+                <a id="shoppingLogo" class="shoppingCart" href="checkout.html" target="_blank"/><img src="https://icongr.am/fontawesome/shopping-cart.svg?size=60&color=4ca725" alt="shopping cart" />
+                <p class="contadorUnidades" id="contadorId">00</p>
+              </div>
+          </article>
             <article className="okey">
             <Testimonio 
             nombre='Sky Ocean'

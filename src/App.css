@@ -127,7 +127,34 @@ color: white;
     align-items: center;
     justify-content: center;
 }
+.tituloYcarrito{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
 
+.shoppingTodo{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+.contadorUnidades{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 30px;
+    height: 20px;
+    margin-left: 5px;
+/*     border:  8px; */
+    background-color: salmon;
+    color: rgb(120, 9, 224);
+    border-radius: 5px;
+
+}
 .okey{
     width: 80%;
     display: flex;

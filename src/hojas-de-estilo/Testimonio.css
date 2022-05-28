@@ -79,7 +79,52 @@
     margin-bottom: 20px;
 }
 
-.checkOut{
+.checkIn input{
+    margin-left: 10px;
+    border: 1px solid #000;
+    background-color:rgb(120, 9, 224);
     margin-top: 10px;
     margin-bottom: 10px;
+    color: salmon;
+    font-size: 16px;
 }
+
+.checkOut {
+    margin-right: 10px;
+
+}
+
+
+.checkOut input{
+    margin-left: 10px;
+    border: 1px solid #000;
+    background-color:rgb(120, 9, 224);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: salmon;
+    font-size: 16px;
+}
+
+.agregarACarrito{
+
+    border: 0;
+    padding: 3px 4px;
+    border-radius: 0.4rem;
+    transition: all 0.6s;
+    font-size: 1em;
+    text-align: center;
+    border: 2px solid rgb(120, 9, 224);
+    transition: all 0.6s;
+}
+.agregarACarrito a{
+    text-decoration: none;
+    color : rgb(120, 9, 224);
+    font-size: bold;
+
+}
+
+.agregarACarrito:hover{
+    background-color: salmon;
+
+}
+

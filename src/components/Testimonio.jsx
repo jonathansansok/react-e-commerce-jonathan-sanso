@@ -22,7 +22,7 @@ export function Testimonio(props){
                 <section className='fechasTodas'>
                     <article className='checkIn'>
                         <label for="start">Check-in:</label>
-                        <input type="date" id="start" name="trip-start"value="2022-05-22" min="2018-01-01" max="2018-12-31" />
+                        <input type="date" id="start" name="trip-start"value="2022-05-22" min="2022-05-22" max="2024-12-31" />
                     </article>
                     <article className='checkOut'>
                         <label for="start">Check-Out:</label>
@@ -30,7 +30,7 @@ export function Testimonio(props){
                     </article>
                 </section>
 
-                <button className='agregarACarrito'>Agregar a Carrito</button>
+                <button className='agregarACarrito'><a href="App.js">Agregar a carrito</a></button>
             </div>
         </div>
     );
