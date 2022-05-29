@@ -64,7 +64,7 @@ function App() {
             precio='3500' 
              />
             <Testimonio 
-            nombre='Mendoza'
+            nombre='Villa la Angostura'
             pais='Argentina'
             imagen='aspen'
             incluye='Pasaje + estadia'
