@@ -47,7 +47,32 @@ h2 {
     flex-wrap: wrap;
     align-items: center;
 }
+.shoppingLogok{
+    width: 45%;
+}
+.shoppingTodo{
+    margin-left: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 
+}
+.contadorUnidades{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 30px;
+    height: 25px;
+    margin-left: 5px;
+/*     border:  8px; */
+    background-color: rgb(120, 9, 224);
+    color: salmon ;
+    border-radius: 5px;
+
+}
 .liNav a {
     text-decoration: none;
     color: black;
@@ -132,30 +157,6 @@ color: white;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-}
-
-.shoppingTodo{
-    margin-left: 15px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-
-}
-.contadorUnidades{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    width: 30px;
-    height: 20px;
-    margin-left: 5px;
-/*     border:  8px; */
-    background-color: salmon;
-    color: rgb(120, 9, 224);
-    border-radius: 5px;
-
 }
 .okey{
     width: 80%;

@@ -10,7 +10,7 @@ function App() {
             <ul className="ulNav">
               <li className="liNav">
               <div class="shoppingTodo">
-                  <a id="shoppingLogo" class="shoppingCart" href="index.html" target="_blank"/><img src="https://icongr.am/fontawesome/shopping-cart.svg?size=60&color=4ca725" alt="shopping cart" />
+                  <a id="shoppingLogo" class="shoppingCart" href="index.html" target="_blank"/><img class="shoppingLogok" src="https://icongr.am/fontawesome/shopping-cart.svg?size=128&color=7809e0" alt="shopping cart" />
                   <p class="contadorUnidades" id="contadorId">00</p>
               </div>
               </li>
