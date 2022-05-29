@@ -6,7 +6,7 @@ function App() {
     <body className="App">
       <header className="header">
         
-        <h1 className="NaturAdventure" ><img src="https://icongr.am/jam/chevrons-square-right-f.svg?size=60&color=901886" alt="logo" /> AdNat</h1>
+        <h1 className="NaturAdventure" ><img src="https://icongr.am/jam/chevrons-square-right-f.svg?size=60&color=7809e0" alt="logo" /> AdNat</h1>
 
         <nav className="nav">
 

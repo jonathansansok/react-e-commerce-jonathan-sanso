@@ -29,7 +29,6 @@ export function Testimonio(props){
                         <input type="date" id="start" name="trip-start"value="2022-05-22" min="2022-05-22" max="2024-12-31" />
                     </article>
                 </section>
-
                 <button className='agregarACarrito'><a href="App.js">Agregar a carrito</a></button>
             </div>
         </div>
