@@ -5,14 +5,17 @@ function App() {
   return (
     <body className="App">
       <header className="header">
-        <img src="https://icongr.am/jam/chevrons-square-right-f.svg?size=60&color=901886" alt="logo" />
+        
+        <h1 className="NaturAdventure" ><img src="https://icongr.am/jam/chevrons-square-right-f.svg?size=60&color=901886" alt="logo" /> AdNat</h1>
+
         <nav className="nav">
+
             <ul className="ulNav">
-              <li className="liNav">
-              <div class="shoppingTodo">
-                  <a id="shoppingLogo" class="shoppingCart" href="index.html" target="_blank"/><img class="shoppingLogok" src="https://icongr.am/fontawesome/shopping-cart.svg?size=128&color=7809e0" alt="shopping cart" />
-                  <p class="contadorUnidades" id="contadorId">00</p>
-              </div>
+              <li className="liNav shoppingTodo">
+
+                    <a id="shoppingLogo" class="shoppingCart" href="index.html" target="_blank"/><img class="shoppingLogok" src="https://icongr.am/fontawesome/shopping-cart.svg?size=40&color=7809e0" alt="shopping cart" />
+                    <a class="contadorUnidades" href="index.html" id="contadorId">00</a>
+
               </li>
             <li className="liNav"><a href="App.js">Home</a></li>
             <li className="liNav"><a href="App.js">América</a></li>
@@ -25,7 +28,7 @@ function App() {
       <main>
       <div className="contenedor-principal">
           <article className="hero">
-            <h1>The adventure is waiting for you</h1>
+            <h2>The adventure is waiting for you</h2>
             <button className="hero-button"><a href="App.js">Join us</a></button>
           </article>
           <article className="tituloElige">

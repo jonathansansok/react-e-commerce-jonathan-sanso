@@ -11,6 +11,18 @@ html, body {
     background-color: #f5f6f7;
 }
 
+.NaturAdventure{
+    color: rgb(120, 9, 224);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 3px;
+    font-size: 2rem;
+    
+
+
+}
 h2 {
     max-width: 940px;
     font-size: 2.5em;
@@ -28,7 +40,8 @@ h2 {
     text-align: center;
 }
 
-.header {
+header {
+    padding-right: 0px;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -36,26 +49,28 @@ h2 {
     justify-content: space-between;
     align-items: center;
     padding: 0 4rem;
+/*     padding-right: 0px; */
     height: 95px;
     background-color: #f5f6f7;
 
 }
 .header nav ul  {
+    padding-top: 10px ;
+    height: 90px;
     width: 100%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
 }
-.shoppingLogok{
-    width: 45%;
-}
+
 .shoppingTodo{
-    margin-left: 15px;
+
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: right;
     align-items: center;
+    width: 60px;
 
 }
 .contadorUnidades{
@@ -119,7 +134,7 @@ height: 400px;
 color: white;
 }
 
-.hero h1{
+.hero h2{
     font-size: 3rem;
     color: white;
     text-shadow:  4px 4px 4px black;
