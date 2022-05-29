@@ -6,14 +6,21 @@ function App() {
     <body className="App">
       <header className="header">
         <img src="https://icongr.am/jam/chevrons-square-right-f.svg?size=60&color=901886" alt="logo" />
-            <nav className="nav">
-                <ul className="ulNav">
-                    <li className="liNav"><a href="App.js">Home</a></li>
-                    <li className="liNav"><a href="App.js">América</a></li>
-                    <li className="liNav"><a href="App.js">Asia/Oceania</a></li>
-                    <li className="liNav"><a href="App.js">Contacto</a></li>
-                </ul>
-            </nav>
+        <nav className="nav">
+            <ul className="ulNav">
+              <li className="liNav">
+              <div class="shoppingTodo">
+                  <a id="shoppingLogo" class="shoppingCart" href="index.html" target="_blank"/><img src="https://icongr.am/fontawesome/shopping-cart.svg?size=60&color=4ca725" alt="shopping cart" />
+                  <p class="contadorUnidades" id="contadorId">00</p>
+              </div>
+              </li>
+            <li className="liNav"><a href="App.js">Home</a></li>
+            <li className="liNav"><a href="App.js">América</a></li>
+            <li className="liNav"><a href="App.js">Asia/Oceania</a></li>
+            <li className="liNav"><a href="App.js">Contacto</a></li>
+            </ul>
+        </nav>
+          
       </header>
       <main>
       <div className="contenedor-principal">
@@ -21,12 +28,8 @@ function App() {
             <h1>The adventure is waiting for you</h1>
             <button className="hero-button"><a href="App.js">Join us</a></button>
           </article>
-          <article className="tituloYcarrito">
+          <article className="tituloElige">
             <h2>Elige tus próximos viajes...</h2>
-            <div class="shoppingTodo">
-                <a id="shoppingLogo" class="shoppingCart" href="checkout.html" target="_blank"/><img src="https://icongr.am/fontawesome/shopping-cart.svg?size=60&color=4ca725" alt="shopping cart" />
-                <p class="contadorUnidades" id="contadorId">00</p>
-              </div>
           </article>
             <article className="okey">
             <Testimonio 
