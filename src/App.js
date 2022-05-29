@@ -45,49 +45,49 @@ function App() {
             <Testimonio 
             nombre='Quintana Roo'
             pais='México'
-            imagen='costarica'
+            imagen='qroo'
             incluye='Pasaje + estadia'
             precio='2800' 
             />
             <Testimonio 
             nombre='Bariloche'
             pais='Argentina'
-            imagen='aspen'
+            imagen='bariloche'
             incluye='Pasaje + estadia'
             precio='3200' 
              />
             <Testimonio 
             nombre='Cancun'
             pais='México'
-            imagen='aspen'
+            imagen='cancun'
             incluye='Pasaje + estadia'
             precio='3500' 
              />
             <Testimonio 
             nombre='Villa la Angostura'
             pais='Argentina'
-            imagen='aspen'
+            imagen='angostura'
             incluye='Pasaje + estadia'
             precio='2900' 
             />
             <Testimonio 
             nombre='Tierra del Fuego'
             pais='Argentina'
-            imagen='aspen'
+            imagen='tierradelfuego'
             incluye='Pasaje + estadia'
             precio='2100' 
             />
             <Testimonio 
             nombre='Islas Fiyi'
             pais='Rep. of Fiyi'
-            imagen='aspen'
+            imagen='fiyi'
             incluye='Pasaje + estadia'
             precio='1900' 
             />
             <Testimonio 
             nombre='Isla Miyako,'
             pais='Japón'
-            imagen='aspen'
+            imagen='miyako'
             incluye='Pasaje + estadia'
             precio='2800' 
             />
