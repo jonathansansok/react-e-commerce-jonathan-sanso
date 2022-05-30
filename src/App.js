@@ -57,7 +57,7 @@ function App() {
             precio='3200' 
              />
             <Testimonio 
-            nombre='Cancun tour'
+            nombre='Cancun'
             pais='México'
             imagen='cancun'
             incluye='Pasaje + estadia'
