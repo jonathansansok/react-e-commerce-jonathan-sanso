@@ -16,16 +16,16 @@ export function Testimonio(props){
 
                 <p className='precio-testimonio'>US$ {props.precio}.-</p>
                 <section className='numerales'>
-                <label for="tentacles">Pasajes:</label>
+                <label htmlFor="tentacles">Pasajes:</label>
                 <input type="number" className="contador" id="tentacles" name="tentacles" min="1" max="20" placeholder="0"></input>
                 </section>
                 <section className='fechasTodas'>
                     <article className='checkIn'>
-                        <label for="start">Check-in:</label>
+                        <label htmlFor="start">Check-in:</label>
                         <input type="date" id="start" name="trip-start"value="2022-05-22" min="2022-05-22" max="2024-12-31" />
                     </article>
                     <article className='checkOut'>
-                        <label for="start">Check-Out:</label>
+                        <label htmlFor="start">Check-Out:</label>
                         <input type="date" id="start" name="trip-start"value="2022-05-22" min="2022-05-22" max="2024-12-31" />
                     </article>
                 </section>

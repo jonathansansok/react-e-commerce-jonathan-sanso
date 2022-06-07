@@ -9,8 +9,8 @@ export function NavBar(){
         
         <nav className="nav">
             <div className="liNav shoppingTodo">
-                <a id="shoppingLogo" class="shoppingCart" href="index.html" target="_blank"/><img class="shoppingLogok" src="https://icongr.am/fontawesome/shopping-cart.svg?size=40&color=7809e0" alt="shopping cart" />
-                <a class="contadorUnidades" href="index.html" id="contadorId">00</a>
+                 <img id="shoppingLogo" href="index.html" target="_blank" className="shoppingCart shoppingLogok" src="https://icongr.am/fontawesome/shopping-cart.svg?size=40&color=7809e0" alt="shopping cart" />
+                <div className="contadorUnidades" href="index.html" id="contadorId">00</div>
             </div>
             <ul className="ulNav">
                 <li className="liNav"><a href="App.js">Home</a></li>

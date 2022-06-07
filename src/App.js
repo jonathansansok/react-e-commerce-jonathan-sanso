@@ -4,7 +4,7 @@ import NavBar from './components/NavBar.jsx';
 
 function App() {
   return (
-    <body className="App">
+    <div className="App">
       <NavBar 
 
       />      
@@ -94,7 +94,7 @@ function App() {
             <li className="icon"><a href="https://www.facebook.com/jonathan.sanso" target="_blank"><img src="https://icongr.am/fontawesome/facebook.svg?size=30&color=901886"  alt="facebook" /></a></li>
         </ul>
     </footer>
-    </body>
+    </div>
   );
 }
 
