@@ -1,6 +1,7 @@
 import './App.css';
 import Testimonio from './components/Testimonio.jsx';
 import NavBar from './components/NavBar.jsx';
+import ItemListContainer from './components/ItemListContainer';
 
 function App() {
   return (
@@ -16,7 +17,11 @@ function App() {
               <button className="hero-button"><a href="App.js">Join us</a></button>
             </article>
             <article className="tituloElige">
-              <h2>Elige tus próximos viajes...</h2>
+            <ItemListContainer 
+              titulo2='Elige tus proximos destinos'
+
+              />
+
             </article>
               <article className="okey">
               <Testimonio 
