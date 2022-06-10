@@ -7,9 +7,7 @@ function App() {
   return (
     <div className="App">
       <NavBar 
-
       />      
-
       <main>
         <div className="contenedor-principal">
             <article className="hero">
