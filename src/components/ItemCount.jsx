@@ -28,7 +28,7 @@ const ItemCount = () => {
 	return (
 		<div className='botonera'>
 			<div className='CounterSection'>
-				<p>cantidad: {Numero}</p>
+				<p>Pasajes: {Numero}</p>
 				<div className='botonera-acciones'>
 					<button onClick={sumar}> + </button>
 					<button onClick={restar}> - </button>
