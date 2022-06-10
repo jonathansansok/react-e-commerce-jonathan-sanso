@@ -30,8 +30,8 @@ const ItemCount = () => {
 			<div className='CounterSection'>
 				<p>cantidad: {Numero}</p>
 				<div className='botonera-acciones'>
-					<button onClick={sumar}>Incrementar</button>
-					<button onClick={restar}>Decrementar</button>
+					<button onClick={sumar}> + </button>
+					<button onClick={restar}> - </button>
 				</div>
 			</div>
 		</div>

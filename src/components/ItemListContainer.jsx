@@ -1,6 +1,6 @@
 import React  from 'react';
 import '../hojas-de-estilo/ItemListContainer.css';
-import ItemCount from './components/ItemCount.jsx';
+import ItemCount from './ItemCount.jsx';
 
 export function ItemListContainer(propsfrase){
     return (
