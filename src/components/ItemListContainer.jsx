@@ -2,10 +2,10 @@ import React  from 'react';
 import '../hojas-de-estilo/ItemListContainer.css';
 import ItemCount from './ItemCount.jsx';
 
-function ItemListContainer(propsfrase){
+function ItemListContainer({titulo2}){
     return (
         <>
-            <h2>{propsfrase.titulo2} </h2>
+            <h2>{titulo2} </h2>
             <ItemCount
             />
         </>

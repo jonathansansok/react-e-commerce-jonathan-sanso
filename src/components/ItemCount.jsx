@@ -2,22 +2,22 @@ import {useState} from 'react';
 import '../hojas-de-estilo/ItemCount.css';
 
 
+<ItemCount stock={10} initial={1} />
 
-
-const ItemCount = () => {
-	const [Numero, setcounter] = useState(1);
+const ItemCount = ({stock,initial}) => {
+	const [Numero, setNumero] = useState(initial);
 
 	const sumar = () => {
-		if (Numero < 10) {
-		setcounter(Numero + 1);
+		if (Numero < stock) {
+			setNumero(Numero + 1);
 		}else{
 			alert('No puedes agregar mas de 10 pasajes');
 			console.log('No puedes agregar mas de 10 pasajes');
 		}
 	};
 	const restar = () => {
-		if (Numero > 1) {
-		setcounter(Numero - 1);
+		if (Numero > initial) {
+		setNumero(Numero - 1);
 		}else{
 			alert('No puedes solicitar 0 pasajes');
 			console.log('No puedes solicitar 0 pasajes');
