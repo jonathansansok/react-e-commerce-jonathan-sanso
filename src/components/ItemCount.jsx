@@ -8,7 +8,7 @@ const ItemCount = () => {
 	const [Numero, setcounter] = useState(1);
 
 	const sumar = () => {
-		if (Numero < 12) {
+		if (Numero < 10) {
 		setcounter(Numero + 1);
 		}else{
 			alert('No puedes agregar mas de 10 pasajes');
@@ -16,7 +16,7 @@ const ItemCount = () => {
 		}
 	};
 	const restar = () => {
-		if (Numero >= 1) {
+		if (Numero > 1) {
 		setcounter(Numero - 1);
 		}else{
 			alert('No puedes solicitar 0 pasajes');
