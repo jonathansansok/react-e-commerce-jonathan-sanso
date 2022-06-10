@@ -50,6 +50,7 @@
 .precio-testimonio{
     font-size: 1.1rem;
     text-align: center;
+    margin-bottom: 10px;
 }
 
 .contador{
@@ -79,6 +80,7 @@
 
 .fechasTodas{
     margin-bottom: 20px;
+    margin-top: 15px;
 }
 
 .checkIn input{

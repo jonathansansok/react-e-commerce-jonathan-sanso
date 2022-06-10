@@ -1,3 +1,32 @@
-h2{
-    letter-spacing: 4px;
+.botonera{
+    margin-top: 10px;
+}
+
+.CounterSection{
+    display: flex;
+    flex-direction: row;
+
+}
+
+.botonera-pasaje{
+    font-size: 0.9rem;
+}
+
+.botonera-sumaresta{
+    font-size: 1rem;
+    cursor: pointer;
+    border: 1px solid black;
+    border-radius: 3px;
+    padding: 1px 6px 1px 6px;
+    margin-left: 10px;
+    margin-right: 10px;
+    color: rgb(120, 9, 224);
+    font-weight: bold;
+
+}
+
+
+.botonera-acciones{
+    display: flex;
+    flex-direction: row;
 }

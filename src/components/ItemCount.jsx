@@ -21,17 +21,18 @@ const ItemCount = () => {
 		}else{
 			alert('No puedes solicitar 0 pasajes');
 			console.log('No puedes solicitar 0 pasajes');
-
 		}
 	};
 
 	return (
 		<div className='botonera'>
 			<div className='CounterSection'>
-				<p>Pasajes: {Numero}</p>
+				<p className='botonera-pasaje'> Pasajes: </p>
 				<div className='botonera-acciones'>
-					<button onClick={sumar}> + </button>
-					<button onClick={restar}> - </button>
+					<div className='botonera-sumaresta' onClick={restar}> - </div>
+					<p className='botonera-pasaje'>  {Numero}</p>
+					<div className='botonera-sumaresta' onClick={sumar}> + </div>
+
 				</div>
 			</div>
 		</div>

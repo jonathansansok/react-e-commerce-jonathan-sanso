@@ -1,5 +1,6 @@
 import React from 'react';
 import '../hojas-de-estilo/Testimonio.css';
+import ItemCount from './ItemCount.jsx';
 
 export function Testimonio(props){
     return (
@@ -16,8 +17,8 @@ export function Testimonio(props){
 
                 <p className='precio-testimonio'>US$ {props.precio}.-</p>
                 <section className='numerales'>
-                <label htmlFor="tentacles">Pasajes:</label>
-                <input type="number" className="contador" id="tentacles" name="tentacles" min="1" max="20" placeholder="0"></input>
+                <ItemCount
+            />
                 </section>
                 <section className='fechasTodas'>
                     <article className='checkIn'>

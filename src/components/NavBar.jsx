@@ -3,7 +3,7 @@ import '../hojas-de-estilo/NavBar.css';
 import CartWidget from './CartWidget';
 
 
-export function NavBar(){
+function NavBar(){
     return (
         <header className="header">
         
