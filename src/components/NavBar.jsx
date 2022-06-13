@@ -1,4 +1,4 @@
-import React from 'react';
+/* import React from 'react'; */
 import '../hojas-de-estilo/NavBar.css';
 import CartWidget from './CartWidget';
 
