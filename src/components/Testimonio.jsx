@@ -17,8 +17,9 @@ export function Testimonio(props){
 
                 <p className='precio-testimonio'>US$ {props.precio}.-</p>
                 <section className='numerales'>
-                <ItemCount
-            />
+                <ItemCount stock={10} initial={1} 
+                />
+
                 </section>
                 <section className='fechasTodas'>
                     <article className='checkIn'>
