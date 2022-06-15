@@ -13,8 +13,8 @@ const ItemListContainer = ({titulo2}) => {
 	useEffect(() => {
 		// Llamada a la api
 		fetch('./data.js')
-			.then((response) => response.productos())
-			.then((productos) => setProductos(productos));
+			.then((response) => response.json())
+			.then((json) => setProductos(json));
 	}, []);
 
 	return (
