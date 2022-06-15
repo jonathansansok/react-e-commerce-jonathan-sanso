@@ -22,7 +22,6 @@ const ItemListContainer = ({titulo2}) => {
 	return (
 		<div>
             <h2>{titulo2} </h2>
-
 			{users.map((user) => (
 				<Item key={user.id} data={user} />
 			))}

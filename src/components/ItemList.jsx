@@ -10,9 +10,13 @@ const CardList = () => {
 	useEffect(() => {
 		// Llamada a la api
 		fetch('data.js')
+		console.log('data.js');
 			.then((response) => response.json())
+
 			.then((json) => setUsers(json));
+
 	}, []);
+
 
 	return (
 		<div>
