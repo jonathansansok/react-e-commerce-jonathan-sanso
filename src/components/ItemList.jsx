@@ -7,7 +7,7 @@ import Item from './Item.jsx';
 
 		return(		
 		{data.map((productos)=> <Item key={productos.id} data={productos} />}
-		)
+			)
 	}
 
 export default ItemList;
