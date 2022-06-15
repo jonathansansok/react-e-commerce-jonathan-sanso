@@ -7,7 +7,6 @@ const CardList = () => {
 
 	console.log('DATA:', users);
 
-	// Efecto de montaje (guiño, guiño)
 	useEffect(() => {
 		// Llamada a la api
 		fetch('data.js')
