@@ -1,7 +1,7 @@
 import './App.css';
-import Item from './components/Item.jsx';
+
 import NavBar from './components/NavBar.jsx';
-import ItemList from './components/ItemList.jsx';
+
 import ItemListContainer from './components/ItemListContainer.jsx';
 
 function App() {
