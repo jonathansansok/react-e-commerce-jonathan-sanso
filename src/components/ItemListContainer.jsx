@@ -6,7 +6,7 @@ import Item from './Item.jsx';
 
 
 
-const ItemListContainer = () => {
+const ItemListContainer = ({titulo2}) => {
 
 	const [users, setUsers] = useState([]);
 
@@ -22,7 +22,7 @@ const ItemListContainer = () => {
 	return (
 		<div>
             <h2>{titulo2} </h2>
-			<h1>Github Users</h1>
+
 			{users.map((user) => (
 				<Item key={user.id} data={user} />
 			))}
