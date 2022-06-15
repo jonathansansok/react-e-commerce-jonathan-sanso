@@ -1,7 +1,7 @@
 import './App.css';
 import Item from './components/Item.jsx';
 import NavBar from './components/NavBar.jsx';
-
+import ItemList from './components/ItemList.jsx';
 import ItemListContainer from './components/ItemListContainer.jsx';
 
 function App() {
@@ -16,19 +16,79 @@ function App() {
               <button className="hero-button"><a href="App.js">Join us</a></button>
             </article>
             <article className="tituloElige">
-              
             <ItemListContainer 
               titulo2='Elige tus proximos destinos'
-              
 
               />
-              <article className="okey">
 
             </article>
 
+              <article className="okey">
 
-
-                
+              <ItemListContainer />
+                {/* <Testimonio 
+                nombre='Sky Ocean'
+                pais='Tailandia'
+                imagen='tailandia'
+                incluye='Pasaje + estadia'
+                precio='3050' 
+                />
+                <Testimonio 
+                nombre='Quintana Roo'
+                pais='México'
+                imagen='qroo'
+                incluye='Pasaje + estadia'
+                precio='2800' 
+                />
+                <Testimonio 
+                nombre='Bariloche'
+                pais='Argentina'
+                imagen='bariloche'
+                incluye='Pasaje + estadia'
+                precio='3200' 
+                />
+                <Testimonio 
+                nombre='Cancun y Riviera Maya'
+                pais='México'
+                imagen='cancun'
+                incluye='Pasaje + estadia'
+                precio='5000' 
+                />
+                <Testimonio 
+                nombre='Villa la Angostura'
+                pais='Argentina'
+                imagen='angostura'
+                incluye='Pasaje + estadia'
+                precio='2900' 
+                />
+                <Testimonio 
+                nombre='Tierra del Fuego'
+                pais='Argentina'
+                imagen='tierradelfuego'
+                incluye='Pasaje + estadia'
+                precio='2100' 
+                />
+                <Testimonio 
+                nombre='Islas Fiyi'
+                pais='Rep. of Fiyi'
+                imagen='fiyi'
+                incluye='Pasaje + estadia'
+                precio='1900' 
+                />
+                <Testimonio 
+                nombre='Isla Miyako,'
+                pais='Japón'
+                imagen='miyako'
+                incluye='Pasaje + estadia'
+                precio='2800' 
+                />
+                <Testimonio 
+                nombre='Aspen'
+                pais='Estados Unidos'
+                imagen='aspen'
+                incluye='Pasaje + estadia'
+                precio='2900' 
+                /> */}
         </article>
         </div>
       </main>
