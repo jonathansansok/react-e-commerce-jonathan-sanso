@@ -2,7 +2,7 @@ import React from 'react';
 import '../hojas-de-estilo/Testimonio.css';
 import ItemCount from './ItemCount.jsx';
 
-export function Testimonio(props){
+export function Item(props){
     return (
         <div className= 'contenedor-testimonio'>
             <div className= 'anyTravel'>
@@ -37,4 +37,4 @@ export function Testimonio(props){
     );
 }
 
- export default Testimonio; 
+ export default Item; 

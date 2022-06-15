@@ -1,8 +1,6 @@
 import {useState} from 'react';
 import '../hojas-de-estilo/ItemCount.css';
 
-
-
 const ItemCount = ({stock,initial}) => {
 	const [Numero, setNumero] = useState(initial);
 

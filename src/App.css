@@ -70,7 +70,7 @@ color: white;
 }
 .tituloElige{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
     font-size: 2rem;

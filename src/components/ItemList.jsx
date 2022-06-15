@@ -1,13 +1,13 @@
-import React  from 'react';
-import '../hojas-de-estilo/ItemListContainer.css';
+import React, { useState, useEffect } from 'react';
+
 import Item from './Item.jsx';
 
-const ItemListContainer = () => {
-    <h2>{titulo2} </h2>
+const CardList = () => {
 	const [users, setUsers] = useState([]);
 
 	console.log('DATA:', users);
 
+	// Efecto de montaje (guiño, guiño)
 	useEffect(() => {
 		// Llamada a la api
 		fetch('data.js')
@@ -25,5 +25,4 @@ const ItemListContainer = () => {
 	);
 };
 
- export default ItemListContainer; 
-
+export default CardList;
