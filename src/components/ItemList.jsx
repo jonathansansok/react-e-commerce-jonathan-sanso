@@ -2,30 +2,12 @@ import React, { useState, useEffect } from 'react';
 
 import Item from './Item.jsx';
 
-const CardList = () => {
-	const [users, setUsers] = useState([]);
 
-	console.log('DATA:', users);
+	const ItemList = ({data}) =>{
 
-	useEffect(() => {
-		// Llamada a la api
-		fetch('data.js')
-		console.log('data.js');
-			.then((response) => response.json())
+		return(		
+		{data.map((productos)=> <Item key={productos.id} data={productos} />}
+		)
+	}
 
-			.then((json) => setUsers(json));
-
-	}, []);
-
-
-	return (
-		<div>
-			<h1>Github Users</h1>
-			{users.map((user) => (
-				<Item key={user.id} data={user} />
-			))}
-		</div>
-	);
-};
-
-export default CardList;
+export default ItemList;

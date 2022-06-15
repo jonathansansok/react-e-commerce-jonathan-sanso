@@ -2,28 +2,26 @@
 import React, { useState, useEffect } from 'react';
 import '../hojas-de-estilo/ItemListContainer.css';
 import Item from './Item.jsx';
-
+/* import data from './data.js'; */
 
 
 
 const ItemListContainer = ({titulo2}) => {
 
-	const [users, setUsers] = useState([]);
-
-	console.log('DATA:', users);
+	const [productos, setProductos] = useState([]);
 
 	useEffect(() => {
 		// Llamada a la api
-		fetch('data.js')
+		fetch('./data.js')
 			.then((response) => response.json())
-			.then((json) => setUsers(json));
+			.then((json) => setProductos(json));
 	}, []);
 
 	return (
 		<div>
             <h2>{titulo2} </h2>
-			{users.map((user) => (
-				<Item key={user.id} data={user} />
+			{productos.map((productos) => (
+				<Item key={productos.id} data={productos} />
 			))}
 		</div>
 	);

@@ -1,4 +1,4 @@
-const data = [
+export const data = [
 	{ id: 1, nombre: 'Sky Ocean' , pais: 'Tailandia', imagen: 'tailandia', incluye: 'Pasaje + estadia', precio: '3050' },
 	{ id: 2, nombre: 'Quintana Roo' , pais: 'México', imagen: 'qroo', incluye: 'Pasaje + estadia', precio: '3050' },
 	{ id: 3, nombre: 'Bariloche' , pais: 'Argentina', imagen: 'bariloche', incluye: 'Pasaje + estadia', precio: '2800' },
