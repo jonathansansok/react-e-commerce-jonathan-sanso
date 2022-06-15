@@ -3,10 +3,10 @@ import '../hojas-de-estilo/ItemListContainer.css';
 import Item from './Item.jsx';
 import React, { useState, useEffect } from 'react';
 
-import Item from './Item.jsx';
+
 
 const ItemListContainer = () => {
-    <h2>{titulo2} </h2>
+
 	const [users, setUsers] = useState([]);
 
 	console.log('DATA:', users);
@@ -17,12 +17,14 @@ const ItemListContainer = () => {
 			.then((response) => response.json())
 			.then((json) => setUsers(json));
 	}, []);
-    
+
 	return (
 		<div>
+            <h2>{titulo2} </h2>
 			<h1>Github Users</h1>
 			{users.map((user) => (
 				<Item key={user.id} data={user} />
+
 			))}
 		</div>
 	);
