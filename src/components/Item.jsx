@@ -2,20 +2,20 @@ import React from 'react';
 import '../hojas-de-estilo/Item.css';
 import ItemCount from './ItemCount.jsx';
 
-export function Item({reco}){
+export function Item({data}){
     return (
         <div className= 'contenedor-Item'>
             <div className= 'anyTravel'>
                 <img
                 className= 'imagen-Item'
-                src={reco.imagen}
-                alt= {reco.imagen} />
+                image={data.imagen}
+                alt= {data.imagen} />
             </div>
             <div className= 'contenedor-texto-Item'>
-                <p className='nombre-Item'><strong>{reco.nombre} en {reco.pais}</strong></p>
-                <p className='incluye-Item'>{reco.incluye}</p>
+                <p className='nombre-Item'><strong>{data.nombre} en {data.pais}</strong></p>
+                <p className='incluye-Item'>{data.incluye}</p>
 
-                <p className='precio-Item'>US$ {reco.precio}.-</p>
+                <p className='precio-Item'>US$ {data.precio}.-</p>
                 <section className='numerales'>
                 <ItemCount stock={10} initial={1} 
                 />
