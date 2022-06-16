@@ -8,7 +8,7 @@ export function Item({reco}){
             <div className= 'anyTravel'>
                 <img
                 className= 'imagen-Item'
-                src={require(`../imagenes/img-${reco.imagen}.jpg`)}
+                src={reco.imagen}
                 alt= {reco.imagen} />
             </div>
             <div className= 'contenedor-texto-Item'>
