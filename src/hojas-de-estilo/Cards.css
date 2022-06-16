@@ -1,4 +1,11 @@
-.contenedor-Cards{
+.todasLasItem{
+    width: 90%; 
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.contenedor-Item{
     width: 340px;
     height: 700px;
     margin: 10px 10px 50px;
@@ -17,12 +24,12 @@
     margin-bottom: 10px;
 }
 
-.imagen-Cards {
+.imagen-Item {
     width: 340px;
     max-height: 226px;
 }
 
-.contenedor-texto-Cards{
+.contenedor-texto-Item{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -35,19 +42,19 @@
     line-height: 1.1;
 }
 
-.nombre-Cards{
+.nombre-Item{
     font-size: 1.3rem;
     font-weight: 700;
     margin-bottom: 10px;
 }
 
-.incluye-Cards {
+.incluye-Item {
     font-size: 1.3rem;
     margin-top: 15px;
     padding-bottom: 30px;
 }
 
-.precio-Cards{
+.precio-Item{
     font-size: 1.1rem;
     text-align: center;
     margin-bottom: 10px;
