@@ -8,7 +8,8 @@ export function Item({data}){
             <div className= 'anyTravel'>
                 <img
                 className= 'imagen-Item'
-                src={require(`../imagenes/img-${data.imagen}.jpg`)}
+                image={data.imagen}
+                /* src={require(`../imagenes/img-${data.imagen}.jpg`)} */
                 alt= {data.imagen} />
                 
             </div>
