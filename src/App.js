@@ -1,7 +1,7 @@
 import './App.css';
 
 import NavBar from './components/NavBar.jsx';
-
+import MainHero from './components/MainHero';
 import ItemListContainer from './components/ItemListContainer.jsx';
 
 function App() {
@@ -11,10 +11,7 @@ function App() {
       />      
       <main>
         <div className="contenedor-principal">
-            <article className="hero">
-              <h2>The adventure is waiting for you</h2>
-              <button className="hero-button"><a href="App.js">Join us</a></button>
-            </article>
+        <MainHero/>
             <article className="tituloElige">
               <ItemListContainer 
               titulo2='Elige tus proximos destinos'/>
