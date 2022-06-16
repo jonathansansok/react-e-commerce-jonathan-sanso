@@ -8,7 +8,7 @@ export function Item({data}){
             <div className= 'anyTravel'>
                 <img
                 className= 'imagen-Item'
-                image={data.imagen}
+                src={data.imagen}
                 alt= {data.imagen} />
             </div>
             <div className= 'contenedor-texto-Item'>
