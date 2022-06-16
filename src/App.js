@@ -11,10 +11,12 @@ function App() {
       />      
       <main>
         <div className="contenedor-principal">
-        <MainHero/>
+        <MainHero
+        />
             <article className="tituloElige">
               <ItemListContainer 
-              titulo2='Elige tus proximos destinos'/>
+                titulo2='Elige tus proximos destinos'
+              />
             </article>
 
     {/*     <article className="okey">
