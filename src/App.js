@@ -1,9 +1,9 @@
 import './App.css';
 
 import NavBar from './components/NavBar.jsx';
-import MainHero from './components/MainHero';
+import MainHero from './components/MainHero.jsx';
 import ItemListContainer from './components/ItemListContainer.jsx';
-import Footer from './components/Footer';
+import Footer from './components/Footer.jsx';
 
 function App() {
   return (
@@ -16,7 +16,7 @@ function App() {
         />
             <article className="tituloElige">
               <ItemListContainer 
-                titulo2='Elige tus proximos destinos'
+                titulo2='Elige tu proximo destino'
               />
             </article>
         </div>
