@@ -19,12 +19,13 @@ const ItemListContainer = ({titulo2}) => {
 
 	return (
 		<div>
-
             <h2>{titulo2} </h2>
-			{/* <ItemList.jsx/> */}
-			{productos.map((productos) => (
-				<Item key={productos.id} data={productos} />
-			))}
+			<article className="okey">
+				{/* <ItemList.jsx/> */}
+				{productos.map((productos) => (
+					<Item key={productos.id} data={productos} />
+				))}
+			</article> 
 		</div>
 	);
 };

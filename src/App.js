@@ -16,15 +16,14 @@ function App() {
               <button className="hero-button"><a href="App.js">Join us</a></button>
             </article>
             <article className="tituloElige">
-            <ItemListContainer 
-              titulo2='Elige tus proximos destinos'
-              />
+              <ItemListContainer 
+              titulo2='Elige tus proximos destinos'/>
             </article>
 
     {/*     <article className="okey">
              <ItemListContainer />
-            </article> */}
-            
+            */}
+
         </div>
       </main>
       <footer className="footer">
