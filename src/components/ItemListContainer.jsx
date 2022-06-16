@@ -8,7 +8,7 @@ import {data} from './data.js';
 const ItemListContainer = ({titulo2}) => {
 
 	const [productos, setProductos] = useState([]);
-	console.log(data, productos); // Trae bien los objetos/cards de data.js
+	console.log(data); // Trae bien los objetos/cards de data.js
 	useEffect(() => {
 		// Llamada a la api
 		fetch(data)
