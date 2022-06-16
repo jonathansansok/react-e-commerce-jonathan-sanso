@@ -1,10 +1,8 @@
 
 import React, { useState, useEffect } from 'react';
 import '../hojas-de-estilo/ItemListContainer.css';
-import Item from './Item.jsx';
-/* import data from './data.js'; */
-
-
+/* import Item from './Item.jsx'; */
+import {data} from './data.js';
 
 const ItemListContainer = ({titulo2}) => {
 
@@ -12,9 +10,10 @@ const ItemListContainer = ({titulo2}) => {
 
 	useEffect(() => {
 		// Llamada a la api
-		fetch('./data.js')
+		fetch(data)
 			.then((response) => response.json())
 			.then((json) => setProductos(json));
+
 	}, []);
 
 	return (

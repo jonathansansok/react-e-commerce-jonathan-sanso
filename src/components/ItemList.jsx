@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import Item from './Item.jsx';
 
 
-	const ItemList = ({data}) =>{
+	const ItemList = ({Item}) =>{
 
 		return(		
 		{data.map((productos)=> <Item key={productos.id} data={productos} />}
