@@ -21,11 +21,7 @@ const ItemListContainer = ({titulo2}) => {
 		<div>
             <h2>{titulo2} </h2>
 			<article className="todasLasCards">
-{/* 				<ItemList.jsx
-				{productos.map((productos) => (
-					<Item key={productos.id} data={productos} />
-				))}
-				/> */}
+			<ItemList data={productos} />
 			</article> 
 		</div>
 	);
