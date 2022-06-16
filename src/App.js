@@ -19,10 +19,6 @@ function App() {
                 titulo2='Elige tus proximos destinos'
               />
             </article>
-
-    {/*     <article className="okey">
-             <ItemListContainer />
-            */}
         </div>
       </main>
       <Footer
