@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import '../hojas-de-estilo/ItemListContainer.css';
  import Item from './Item.jsx';  
 import {data} from './data.js';
-import ItemList from './ItemList';
+ import ItemList from './ItemList'; 
 
 const ItemListContainer = ({titulo2}) => {
 
@@ -21,8 +21,8 @@ const ItemListContainer = ({titulo2}) => {
 		<article className="tituloElige">
             <h2>{titulo2} </h2>
 			<article className="todasLasItem">
-			{/* <ItemList data={productos}
-			 /> */}
+			 <ItemList data={productos}
+			 /> 
 			</article> 
         </article>
 	);

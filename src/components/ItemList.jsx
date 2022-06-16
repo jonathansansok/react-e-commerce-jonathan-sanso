@@ -3,15 +3,15 @@ import  React from 'react';
 import Item from './Item.jsx';
 
 
-/* const ItemList = ({data}) =>{
+ const ItemList = ({productos}) =>{
 
 	return(
 	
-	{data.map((x)=> <Item key={productos.id} data={x} />}
+	{productos.map((reco)=> <Item key={reco.id} data={reco} />}
 	
 	)
 	
 	}
 
 export default ItemList;
- */
+ 
