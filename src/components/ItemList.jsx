@@ -2,12 +2,16 @@ import  React from 'react';
 
 import Item from './Item.jsx';
 
+/* 
+const ItemList = ({data}) =>{
 
-	const ItemList = ({Item}) =>{
-
-/* 		return(		
-		{data.map((productos)=> <Item key={productos.id} data={productos} />}
-			) */
+	return(
+	
+	{data.map((x)=> <Item key={productos.id} data={productos} />}
+	
+	)
+	
 	}
 
 export default ItemList;
+ */
