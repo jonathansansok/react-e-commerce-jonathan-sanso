@@ -1,5 +1,4 @@
 import './App.css';
-
 import NavBar from './components/NavBar.jsx';
 import MainHero from './components/MainHero.jsx';
 import ItemListContainer from './components/ItemListContainer.jsx';
@@ -12,13 +11,11 @@ function App() {
       />      
       <main>
         <div className="contenedor-principal">
-        <MainHero
-        />
-            <article className="tituloElige">
-              <ItemListContainer 
-                titulo2='Elige tu proximo destino'
-              />
-            </article>
+          <MainHero
+          />
+          <ItemListContainer 
+            titulo2='Elige tu proximo destino'
+          />
         </div>
       </main>
       <Footer

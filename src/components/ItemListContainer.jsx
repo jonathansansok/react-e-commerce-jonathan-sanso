@@ -18,13 +18,13 @@ const ItemListContainer = ({titulo2}) => {
 	}, []);
 
 	return (
-		<div>
+		<article className="tituloElige">
             <h2>{titulo2} </h2>
 			<article className="todasLasItem">
 			{/* <ItemList data={productos}
 			 /> */}
 			</article> 
-		</div>
+        </article>
 	);
 };
 
