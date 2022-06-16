@@ -18,11 +18,15 @@ function App() {
             <article className="tituloElige">
             <ItemListContainer 
               titulo2='Elige tus proximos destinos'
+
               />
+
             </article>
-              <article className="okey">
-              <ItemListContainer />
-        </article>
+
+    {/*     <article className="okey">
+             <ItemListContainer />
+                
+            </article> */}
         </div>
       </main>
       <footer className="footer">

@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import '../hojas-de-estilo/ItemListContainer.css';
  import Item from './Item.jsx'; 
 import {data} from './data.js';
+import ItemList from './ItemList';
 
 const ItemListContainer = ({titulo2}) => {
 
@@ -18,8 +19,9 @@ const ItemListContainer = ({titulo2}) => {
 
 	return (
 		<div>
+
             <h2>{titulo2} </h2>
-			
+			{/* <ItemList.jsx/> */}
 			{productos.map((productos) => (
 				<Item key={productos.id} data={productos} />
 			))}
