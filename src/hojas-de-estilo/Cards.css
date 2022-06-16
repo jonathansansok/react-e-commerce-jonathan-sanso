@@ -1,4 +1,4 @@
-.contenedor-testimonio{
+.contenedor-Cards{
     width: 340px;
     height: 700px;
     margin: 10px 10px 50px;
@@ -17,12 +17,12 @@
     margin-bottom: 10px;
 }
 
-.imagen-testimonio {
+.imagen-Cards {
     width: 340px;
     max-height: 226px;
 }
 
-.contenedor-texto-testimonio{
+.contenedor-texto-Cards{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -35,19 +35,19 @@
     line-height: 1.1;
 }
 
-.nombre-testimonio{
+.nombre-Cards{
     font-size: 1.3rem;
     font-weight: 700;
     margin-bottom: 10px;
 }
 
-.incluye-testimonio {
+.incluye-Cards {
     font-size: 1.3rem;
     margin-top: 15px;
     padding-bottom: 30px;
 }
 
-.precio-testimonio{
+.precio-Cards{
     font-size: 1.1rem;
     text-align: center;
     margin-bottom: 10px;
