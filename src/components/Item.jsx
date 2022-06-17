@@ -6,10 +6,8 @@ export function Item({data}){
     return (
         <div className= 'contenedor-Item'>
             <div className= 'anyTravel'>
-                <img
-                className= 'imagen-Item'
-                image={data.imagen}
-                /* src={require(`../imagenes/img-${data.imagen}.jpg`)} */
+                <img className= 'imagen-Item'
+                src={`/imagenes/img-${data.imagen}.jpg`}
                 alt= {data.imagen} />
                 
             </div>

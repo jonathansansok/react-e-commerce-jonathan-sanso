@@ -1,9 +1,5 @@
-h2{
-    letter-spacing: 1px;
-}
-
-.ItemListContainer-estilo {
-    width: 90%;
+.todasLasItem{
+    width: 90%; 
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
