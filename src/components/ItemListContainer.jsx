@@ -8,10 +8,12 @@ import {data} from './data.js';
 const ItemListContainer = ({titulo2}) => {
 
 	const [productos, setProductos] = useState([]);
-	console.log(data); // Trae bien los objetos/cards de data.js
+
+	
 	useEffect(() => {
-		setProductos(data)
-	}, []);
+		setTimeout(() => {
+		setProductos(data)}, 2000);
+	},  []);
 
 	return (
 		<>
