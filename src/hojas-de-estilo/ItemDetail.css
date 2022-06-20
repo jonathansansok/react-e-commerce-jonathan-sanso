@@ -1,0 +1,141 @@
+
+.contenedor-Item{
+    width: 340px;
+    height: 700px;
+    margin: 10px 10px 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    background-color: #fff;
+    box-shadow: 0 3px 13px 1px rgba(0 0 0 / 9%); ;
+}
+
+.anyTravel{
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 10px;
+}
+
+.imagen-Item {
+    width: 340px;
+    max-height: 226px;
+}
+
+.contenedor-texto-Item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    text-align: center;
+    padding: 40px;
+    font-family: Lato, sans-serif;
+    font-weight: 400;
+    line-height: 1.1;
+}
+
+.nombre-Item{
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.incluye-Item {
+    font-size: 1.3rem;
+    margin-top: 15px;
+    padding-bottom: 30px;
+}
+
+.precio-Item{
+    font-size: 1.1rem;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.contador{
+    margin-left: 10px;
+    width: 40px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color:rgb(120, 9, 224);
+    border: 0;
+    padding: 3px 4px;
+    border-radius: 0.4rem;
+    transition: all 0.6s;
+    color: salmon;
+    font-size: 1em;
+    text-align: center;
+}
+.contador input a {
+    
+    color: green;
+    text-decoration: none;
+    font-size: bold;
+    margin-left: 10px;
+}
+.contador a:hover {
+    color: salmon;
+}
+
+.fechasTodas{
+    margin-bottom: 20px;
+    margin-top: 15px;
+}
+
+.checkIn input{
+    margin-left: 10px;
+    border: 1px solid #000;
+    background-color:rgb(120, 9, 224);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: salmon;
+    font-size: 16px;
+}
+
+.checkOut {
+    margin-right: 10px;
+
+}
+
+
+.checkOut input{
+    margin-left: 10px;
+    border: 1px solid #000;
+    background-color:rgb(120, 9, 224);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: salmon;
+    font-size: 16px;
+}
+
+.agregarACarrito{
+
+    border: 0;
+    padding: 3px 4px;
+    border-radius: 0.4rem;
+    transition: all 0.6s;
+    font-size: 1em;
+    text-align: center;
+    border: 2px solid rgb(120, 9, 224);
+    transition: all 0.6s;
+}
+.agregarACarrito:hover{
+    background-color: rgb(120, 9, 224);
+
+}
+.agregarACarrito a{
+    text-decoration: none;
+    color : rgb(120, 9, 224);
+    font-size: bold;
+
+}
+
+.agregarACarrito a:hover{
+    text-decoration: none;
+    color : salmon;
+}
+
+
+
