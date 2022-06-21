@@ -1,32 +1,35 @@
-
 import React, { useState, useEffect } from 'react';
 import '../hojas-de-estilo/ItemListContainer.css';
-import {data} from './data.js';
-  import ItemList from './ItemList';  
 
-const ItemListContainer = ({titulo2}) => {
+ import {getProductById, data} from './data.js';
+ 
+/*  import {data} from './data.js';  */
+ import ItemDetail from './ItemDetail.jsx';   
 
-	const [productos, setProductos] = useState([]);
+const ItemDetailContainer = () => {
 
+	const [item, setItem] = useState([]);	
+	const [loading, setLoading] = useState([]);
+	const id = 4
 	
 	useEffect(() => {
-		setTimeout(() => {
-		setProductos(data)}, 2000);
+		getProductById((id) => {
+		setItem(data)}, 2000);
 	},  []);
+	console.log("item:", item)
 
 	return (
 		<>
-		<article className="tituloElige">
-            <h2>{titulo2} </h2>
-		</article>
-			<article className="ItemListContainer-estilo">
-			 <ItemList productos={productos}
-			 /> 
-			</article> 
+
+		<h1>ITEM DETAIL</h1>
+		{loading ? <div>Cargando...</div>
+		:<ItemDetail productos={item}	/>
+		}
+
 
 		</>
 	);
 };
 
- export default ItemListContainer; 
+ export default ItemDetailContainer; 
 

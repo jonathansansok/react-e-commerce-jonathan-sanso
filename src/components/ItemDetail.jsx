@@ -1,8 +1,8 @@
 import React from 'react';
-import '../hojas-de-estilo/Item.css';
+import '../hojas-de-estilo/ItemDetail.css';
 import ItemCount from './ItemCount.jsx';
 
-export function Item({data}){
+export function ItemDetail({data}){
     return (
         <div className= 'contenedor-Item'>
             <div className= 'anyTravel'>
@@ -16,9 +16,11 @@ export function Item({data}){
                 <p className='incluye-Item'>{data.incluye}</p>
 
                 <p className='precio-Item'>US$ {data.precio}.-</p>
+                <h3>{data.descripcion}</h3>
                 <section className='numerales'>
                 <ItemCount stock={10} initial={1} 
                 />
+
 
                 </section>
                 <section className='fechasTodas'>
@@ -37,4 +39,4 @@ export function Item({data}){
     );
 }
 
- export default Item; 
+ export default ItemDetail; 

@@ -8,7 +8,7 @@ import {data} from './data.js';
 const ItemListContainer = ({titulo2}) => {
 
 	const [productos, setProductos] = useState([]);
-
+	/* const categoria = 'continente'; */
 	
 	useEffect(() => {
 		setTimeout(() => {
