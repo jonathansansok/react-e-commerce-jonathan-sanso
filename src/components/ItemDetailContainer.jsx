@@ -1,10 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import '../hojas-de-estilo/ItemListContainer.css';
-
- import {getProductById, data} from './data.js';
- 
-/*  import {data} from './data.js';  */
- import ItemDetail from './ItemDetail.jsx';   
+import {getProductById} from './data.js';
+import ItemDetail from './ItemDetail.jsx';   
 
 const ItemDetailContainer = () => {
 
@@ -13,10 +10,16 @@ const ItemDetailContainer = () => {
 	const id = 4;
 	
 	useEffect(() => {
-		getProductById((id) => {
-		setItem(data)}, 2000);
-	},  []);
-	console.log("item:", data)
+		getProductById(id)
+		.then(res => {
+			setItem(res)
+			setLoading(false)
+		}
+		)
+		.catch(err => console.log(err))
+	}, [])
+
+	console.log("item:", item)
 
 	return (
 		<>
