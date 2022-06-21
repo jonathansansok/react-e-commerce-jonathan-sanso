@@ -10,13 +10,13 @@ const ItemDetailContainer = () => {
 
 	const [item, setItem] = useState([]);	
 	const [loading, setLoading] = useState([]);
-	const id = 4
+	const id = 4;
 	
 	useEffect(() => {
 		getProductById((id) => {
 		setItem(data)}, 2000);
 	},  []);
-	console.log("item:", item)
+	console.log("item:", data)
 
 	return (
 		<>
