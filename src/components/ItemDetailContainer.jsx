@@ -9,13 +9,9 @@ const ItemDetailContainer = () => {
 	const id = 4;	
 	useEffect(() => {
 		getProductById(id)
-		.then(res => {
-			setItem(res)
-			setLoading(false)
-		})
-		.catch(err => console.log(err))
-	}, [])
-	console.log("item:", item)
+		setItem(() => {
+		setLoading(id)}, 2000);
+	},  []);
 	return (
 		<>
 		<h1>ITEM DETAIL</h1>
