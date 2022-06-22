@@ -20,7 +20,7 @@ export function ItemDetail({item}){
                 <section className='numerales'>
                 <ItemCount stock={10} initial={1} 
                 />
-
+z
 
                 </section>
                 <section className='fechasTodas'>
