@@ -5,18 +5,28 @@ import ItemDetail from './ItemDetail.jsx';
 
 const ItemDetailContainer = () => {
 	const [item, setItem] = useState([]);	
-	const [loading, setLoading] = useState([]);
+	const [loading, setLoading] = useState(true);
 	const id = 4;	
 	useEffect(() => {
+
 		getProductById(id)
-		setItem(() => {
-		setLoading(id)}, 2000);
-	},  []);
+
+			.then(res=> { 
+
+						setItem(res)
+
+						setLoading(false)
+
+			})
+
+			.catch(err=>console.log(err))
+
+	}, []);
 	return (
 		<>
 		<h1>ITEM DETAIL</h1>
 		{loading ? <div>Cargando...</div>
-		:<ItemDetail productos={item}	/>
+		:<ItemDetail item={item}	/>
 		}
 		</>
 	);
