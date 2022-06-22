@@ -1,7 +1,6 @@
 import React from 'react';
 import '../hojas-de-estilo/ItemDetail.css';
 import ItemCount from './ItemCount.jsx';
-
 export function ItemDetail({item}){
     return (
         <div className= 'contenedor-Item'>
@@ -20,8 +19,6 @@ export function ItemDetail({item}){
                 <section className='numerales'>
                 <ItemCount stock={10} initial={1} 
                 />
-
-
                 </section>
                 <section className='fechasTodas'>
                     <article className='checkIn'>
