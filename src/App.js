@@ -1,35 +1,27 @@
 import './App.css';
 import NavBar from './components/NavBar.jsx';
-import MainHero from './components/MainHero.jsx';
 import ItemListContainer from './components/ItemListContainer.jsx';
-import Footer from './components/Footer.jsx';
+
 import ItemDetailContainer from './components/ItemDetailContainer.jsx'; 
- import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
-
-
-//importar views
+import Footer from './components/Footer.jsx';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-/*     <router> */
+  <Router> 
     <div className="App">
       <NavBar 
-      />      
-      <main>
-        <div className="contenedor-principal">
-          <MainHero
-          />
-          <ItemListContainer 
-            titulo2='Elige tu proximo destino'
-          />
-        </div>
-        <ItemDetailContainer
-           /> 
-      </main>
+      />
+
+      <Routes>
+        <Route path="/" element={ <ItemListContainer titulo2='Elige tu proximo destino'/> } />
+        <Route path="about" element={  <ItemDetailContainer/>  } />
+      </Routes>
+   
       <Footer
       />
     </div>
-/*     </router> */
+  </Router>  
   );
 }
 
