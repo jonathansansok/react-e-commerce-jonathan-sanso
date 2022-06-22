@@ -12,15 +12,10 @@ const ItemDetailContainer = () => {
 		getProductById(id)
 
 			.then(res=> { 
-
 						setItem(res)
-
 						setLoading(false)
-
 			})
-
 			.catch(err=>console.log(err))
-
 	}, []);
 	return (
 		<>
