@@ -4,8 +4,14 @@ import MainHero from './components/MainHero.jsx';
 import ItemListContainer from './components/ItemListContainer.jsx';
 import Footer from './components/Footer.jsx';
 import ItemDetailContainer from './components/ItemDetailContainer.jsx'; 
+ import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+
+
+//importar views
+
 function App() {
   return (
+/*     <router> */
     <div className="App">
       <NavBar 
       />      
@@ -23,6 +29,7 @@ function App() {
       <Footer
       />
     </div>
+/*     </router> */
   );
 }
 

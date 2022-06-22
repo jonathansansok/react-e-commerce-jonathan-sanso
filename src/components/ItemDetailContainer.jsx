@@ -9,6 +9,7 @@ const ItemDetailContainer = () => {
 	const id = 4;	
 	useEffect(() => {
 		getProductById(id)
+<<<<<<< HEAD
 		.then(res => {
 			setItem(res)
 			setLoading(false)
@@ -16,6 +17,11 @@ const ItemDetailContainer = () => {
 		.catch(err => console.log(err))
 	}, [])
 	console.log("item:", item)
+=======
+		setItem(() => {
+		setLoading(id)}, 2000);
+	},  []);
+>>>>>>> master
 	return (
 		<>
 		<h1>ITEM DETAIL</h1>
