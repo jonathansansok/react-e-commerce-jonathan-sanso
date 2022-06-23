@@ -15,7 +15,7 @@ function App() {
       />
 
       <Routes>
-        <Route path="/" element={ <ItemListContainer titulo2='Elige tu proximo destino'/> } />
+        <Route path="/" element={ <ItemListContainer titulo2='Elige tu proximo destino!'/> } />
         <Route path="item/:id" element={  <ItemDetailContainer/>  } />
         <Route path="//detail/:id" element={<ItemListContainer/>  } /> 
         <Route path="/detail/:id" element={<ItemListContainer/>  } /> 
