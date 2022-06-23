@@ -4,7 +4,7 @@ import {getProductById} from './data.js';
 import ItemDetail from './ItemDetail.jsx';   
 
 const ItemDetailContainer = () => {
-	const [item, setItem] = useState([]);	
+	const [item, setItem] = useState({});	
 	const [loading, setLoading] = useState(true);
 	const id = 2;	
 	useEffect(() => {
