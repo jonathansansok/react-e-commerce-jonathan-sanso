@@ -14,16 +14,16 @@ function NavBar(){
              /> 
             <ul className="ulNav">
                 <li className="liNormal">
-                    <NavLink className="liNav" to={"/"}>Home </NavLink>
+                    <NavLink to="/" className="liNav">Home </NavLink>
                 </li>
                 <li className="liNormal">
-                <NavLink className="liNav"to={"America"}>América</NavLink>
+                <NavLink to="/america" className="liNav">América</NavLink>
                 </li>
                 <li className="liNormal">
-                <NavLink className="liNav"to={"AsiaOceania"}>Asia/Oceania</NavLink>
+                <NavLink to="/asiaoceania" className="liNav">Asia/Oceania</NavLink>
                 </li>
                 <li className="liNormal">
-                <NavLink className="liNav"to={"Contacto"}>Contacto</NavLink>
+                <NavLink to="/contacto" className="liNav">Contacto</NavLink>
                 </li>
             </ul>
         </nav>

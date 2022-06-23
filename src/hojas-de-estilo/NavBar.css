@@ -40,67 +40,31 @@ header {
 
 }
 
-.shoppingTodo{
-
-    display: flex;
-    flex-direction: row;
-    justify-content: right;
-    align-items: center;
-    width: 60px;
-
-}
-.contadorUnidades{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-
-    height: 25px;
-    margin-left: 5px;
-/*     border:  8px; */
-    background-color: rgb(120, 9, 224);
-    color: salmon ;
-    border-radius: 5px;
-
-}
-/* li::marker{
-    list-style: none;
-} */
-.liNav a {
-    text-decoration: none;
-    color: black;
-    transition: all 0.8s;
-    margin-right: 10px;
-    width: 40px;
-}
-.contadorUnidades{
-     padding: 0px 3px; 
-}
-
-
-.liNav a:hover {
-    color: white;
-    background-color: rgb(120, 9, 224);
-    border-radius: 5px;
-    padding: 6px 8px 6px 8px;
-    
-}
-.ulNav {
-    display: flex;
-        text-decoration: none;
-
-}
 
 .liNav {
+    text-decoration: none;
+    color: black;
+    transition: all 0.7s;
+    width: 40px;
     list-style: none;
     margin: 1rem 8px 1rem 8px;
     padding: 0.3rem;
 }
-/* va media querie de padding a 0.0 en .liNav */
-.liNav li:hover {
+
+
+.liNav:hover {
+    color: white;
+    background-color: rgb(120, 9, 224);
+    border-radius: 5px;
+    padding: 6px 8px 6px 8px;
     background-color: rgb(120, 9, 224);
     border-radius: 0.4rem;
+    
+}
+.ulNav {
+    display: flex;
+    list-style: none;
+        text-decoration: none;
 
 }
 
