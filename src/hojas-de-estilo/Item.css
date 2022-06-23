@@ -113,6 +113,7 @@
 .agregarACarrito{
 
     border: 0;
+    margin-top: 10px;
     padding: 3px 4px;
     border-radius: 0.4rem;
     transition: all 0.6s;
