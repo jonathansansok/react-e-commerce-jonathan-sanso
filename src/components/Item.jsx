@@ -16,11 +16,11 @@ export function Item({data}){
                 <p className='incluye-Item'>{data.incluye}</p>
 
                 <p className='precio-Item'>US$ {data.precio}.-</p>
-                <section className='numerales'>
+{/*                 <section className='numerales'>
                 <ItemCount stock={10} initial={1} 
                 />
 
-                </section>
+                </section> */}
                 {/* <section className='fechasTodas'>
                     <article className='checkIn'>
                         <label htmlFor="start">Check-in:</label>
