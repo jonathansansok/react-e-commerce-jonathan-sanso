@@ -1,28 +1,32 @@
 import React, { useState, useEffect } from 'react';
-import '../hojas-de-estilo/ItemListContainer.css';
+import '../hojas-de-estilo/ItemDetailContainer.css';
 import {getProductById} from './data.js';
 import ItemDetail from './ItemDetail.jsx';   
+import {useParams} from 'react-router'
 
 const ItemDetailContainer = () => {
-	const [item, setItem] = useState({});	
-	const [loading, setLoading] = useState(true);
-	const id = 2;	
-	useEffect(() => {
+
+	
+ 	const [item, setItem] = useState([]);
+
+
+	let {id} = useParams();
+	console.log(id);	
+	 useEffect(() => {
 
 		getProductById(id)
 			.then(res=> { 
-				setItem(res)
-				setLoading(false)
+				setItem(id)
 			})
 			.catch(err=>console.log(err))
-	}, []);
+	}, [id]); 
 	return (
-		<>
-		<h1>ITEM DETAIL</h1>
-		{loading ? <div>Cargando...</div>
-		:<ItemDetail item={item}	/>
-		}
-		</>
+		<div className='item-detail-container-estilo'>
+			<h1 className='item-detail-container-estilo-h1' >Tu próximo viaje!</h1>
+			<div key={item.id}>
+			<ItemDetail item={item}/> 
+			</div>
+		</div>
 	);
 };
 

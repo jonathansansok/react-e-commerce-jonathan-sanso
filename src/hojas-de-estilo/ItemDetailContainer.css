@@ -2,10 +2,18 @@ h2{
     letter-spacing: 1px;
 }
 
-.ItemListContainer-estilo {
+.item-detail-container-estilo {
+    margin-top: 50px;
     width: 90%;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    min-height: 600px;
+}
+
+.item-detail-container-estilo-h1{
+    letter-spacing: 5px;
+    font-size: 3rem;
+    margin-bottom: 30px;
 }

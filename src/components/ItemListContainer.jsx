@@ -24,8 +24,10 @@ const ItemListContainer = ({titulo2}) => {
 			<article className="tituloElige">
 				<h2>{titulo2} </h2>
 			</article>
-			<article className="ItemListContainer-estilo" key={data.data_id}>
-				<NavLink to={`/item/${data.data_id}`} /* className={"ItemListContainer-estilo"} */>
+			<article className="ItemListContainer-estilo" key={data.id}>
+
+				<NavLink to={`/item/${data.id}`} 
+				 	className={"ItemListContainer-estilo"} >
 				<ItemList productos={productos}
 				/> 
 				</NavLink>
