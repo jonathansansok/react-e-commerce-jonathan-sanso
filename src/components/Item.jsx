@@ -21,7 +21,7 @@ export function Item({data}){
                 />
 
                 </section>
-                <section className='fechasTodas'>
+                {/* <section className='fechasTodas'>
                     <article className='checkIn'>
                         <label htmlFor="start">Check-in:</label>
                         <input type="date" id="start" name="trip-start"value="2022-05-22" min="2022-05-22" max="2024-12-31" />
@@ -30,8 +30,8 @@ export function Item({data}){
                         <label htmlFor="start">Check-Out:</label>
                         <input type="date" id="start" name="trip-start"value="2022-05-22" min="2022-05-22" max="2024-12-31" />
                     </article>
-                </section>
-                <button className='agregarACarrito'><a href="App.js">Agregar a carrito</a></button>
+                </section> */}
+                <button className='agregarACarrito'><a href="App.js">Mas detalles</a></button>
             </div>
         </div>
     );

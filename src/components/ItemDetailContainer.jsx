@@ -6,13 +6,13 @@ import ItemDetail from './ItemDetail.jsx';
 const ItemDetailContainer = () => {
 	const [item, setItem] = useState([]);	
 	const [loading, setLoading] = useState(true);
-	const id = 4;	
+	const id = 2;	
 	useEffect(() => {
 
 		getProductById(id)
 			.then(res=> { 
-						setItem(res)
-						setLoading(false)
+				setItem(res)
+				setLoading(false)
 			})
 			.catch(err=>console.log(err))
 	}, []);
