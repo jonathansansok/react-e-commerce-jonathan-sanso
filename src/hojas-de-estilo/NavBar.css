@@ -64,6 +64,9 @@ header {
     border-radius: 5px;
 
 }
+/* li::marker{
+    list-style: none;
+} */
 .liNav a {
     text-decoration: none;
     color: black;
@@ -99,5 +102,11 @@ header {
     background-color: rgb(120, 9, 224);
     border-radius: 0.4rem;
 
+}
+
+a:-webkit-any-link {
+
+    cursor: pointer;
+    text-decoration: none;
 }
 

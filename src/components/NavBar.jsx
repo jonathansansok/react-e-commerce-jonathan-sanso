@@ -1,7 +1,7 @@
 /* import React from 'react'; */
 import '../hojas-de-estilo/NavBar.css';
 import CartWidget from './CartWidget';
-
+import { NavLink } from 'react-router-dom';
 
 function NavBar(){
     return (
@@ -13,10 +13,18 @@ function NavBar(){
             <CartWidget
              /> 
             <ul className="ulNav">
-                <li className="liNav"><a href="App.js">Home</a></li>
-                <li className="liNav"><a href="App.js">América</a></li>
-                <li className="liNav"><a href="App.js">Asia/Oceania</a></li>
-                <li className="liNav"><a href="App.js">Contacto</a></li>
+                <li className="liNormal">
+                    <NavLink className="liNav" to={"/"}>Home </NavLink>
+                </li>
+                <li className="liNormal">
+                <NavLink className="liNav"to={"America"}>América</NavLink>
+                </li>
+                <li className="liNormal">
+                <NavLink className="liNav"to={"AsiaOceania"}>Asia/Oceania</NavLink>
+                </li>
+                <li className="liNormal">
+                <NavLink className="liNav"to={"Contacto"}>Contacto</NavLink>
+                </li>
             </ul>
         </nav>
           
