@@ -1,29 +1,39 @@
+.top-contenedor-Item-detail{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
-.contenedor-Item{
-    width: 340px;
-    height: 700px;
-    margin: 10px 10px 50px;
+}
+.contenedor-Item-detail{
+    margin-top: 20px;
+    width: 800px;
+    height: auto;
+/*     margin: 10px 10px 50px; */
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: start;
+    justify-content: center;
+    
+    
+    flex-flow: wrap;
     background-color: #fff;
     box-shadow: 0 3px 13px 1px rgba(0 0 0 / 9%); ;
 }
 
-.anyTravel{
+.anyTravel-detail{
     font-size: 1.1rem;
     font-weight: bold;
     color: #000;
     margin-bottom: 10px;
 }
 
-.imagen-Item {
+.imagen-Item-detail {
     width: 340px;
     max-height: 226px;
 }
 
-.contenedor-texto-Item{
+.contenedor-texto-Item-detail{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -36,25 +46,42 @@
     line-height: 1.1;
 }
 
-.nombre-Item{
+.contenedor-texto-Item-detail-bajo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    flex-flow: wrap;
+    font-size: 1rem;
+    text-align: center;
+    padding: 40px;
+    font-family: Lato, sans-serif;
+    font-weight: 400;
+    line-height: 1.1;
+}
+
+.contenedor-texto-Item-detail-bajo h3{
+    width: 600px;
+}
+.nombre-Item-detail{
     font-size: 1.3rem;
     font-weight: 700;
     margin-bottom: 10px;
 }
 
-.incluye-Item {
+.incluye-Item-detail {
     font-size: 1.3rem;
     margin-top: 15px;
     padding-bottom: 30px;
 }
 
-.precio-Item{
+.precio-Item-detail{
     font-size: 1.1rem;
     text-align: center;
     margin-bottom: 10px;
 }
 
-.contador{
+.contador-detail{
     margin-left: 10px;
     width: 40px;
     margin-top: 10px;
@@ -68,23 +95,23 @@
     font-size: 1em;
     text-align: center;
 }
-.contador input a {
+.contador-detail input a {
     
     color: green;
     text-decoration: none;
     font-size: bold;
     margin-left: 10px;
 }
-.contador a:hover {
+.contador-detail a:hover {
     color: salmon;
 }
 
-.fechasTodas{
+.fechasTodas-detail{
     margin-bottom: 20px;
     margin-top: 15px;
 }
 
-.checkIn input{
+.checkIn-detail input{
     margin-left: 10px;
     border: 1px solid #000;
     background-color:rgb(120, 9, 224);
@@ -94,13 +121,13 @@
     font-size: 16px;
 }
 
-.checkOut {
+.checkOut-detail {
     margin-right: 10px;
 
 }
 
 
-.checkOut input{
+.checkOut-detail input{
     margin-left: 10px;
     border: 1px solid #000;
     background-color:rgb(120, 9, 224);
@@ -110,7 +137,7 @@
     font-size: 16px;
 }
 
-.agregarACarrito{
+.agregarACarrito-detail{
 
     border: 0;
     padding: 3px 4px;
@@ -121,18 +148,18 @@
     border: 2px solid rgb(120, 9, 224);
     transition: all 0.6s;
 }
-.agregarACarrito:hover{
+.agregarACarrito-detail:hover{
     background-color: rgb(120, 9, 224);
 
 }
-.agregarACarrito a{
+.agregarACarrito-detail a{
     text-decoration: none;
     color : rgb(120, 9, 224);
     font-size: bold;
 
 }
 
-.agregarACarrito a:hover{
+.agregarACarrito-detail a:hover{
     text-decoration: none;
     color : salmon;
 }
