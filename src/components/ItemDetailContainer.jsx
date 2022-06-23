@@ -4,23 +4,23 @@ import {getProductById} from './data.js';
 import ItemDetail from './ItemDetail.jsx';   
 
 const ItemDetailContainer = () => {
-	const [item, setItem] = useState([]);	
-	const [loading, setLoading] = useState([]);
-	const id = 4;	
+	const [item, setItem] = useState({});	
+	const [loading, setLoading] = useState(true);
+	const id = 2;	
 	useEffect(() => {
+
 		getProductById(id)
-		.then(res => {
-			setItem(res)
-			setLoading(false)
-		})
-		.catch(err => console.log(err))
-	}, [])
-	console.log("item:", item)
+			.then(res=> { 
+				setItem(res)
+				setLoading(false)
+			})
+			.catch(err=>console.log(err))
+	}, []);
 	return (
 		<>
 		<h1>ITEM DETAIL</h1>
 		{loading ? <div>Cargando...</div>
-		:<ItemDetail productos={item}	/>
+		:<ItemDetail item={item}	/>
 		}
 		</>
 	);
