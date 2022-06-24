@@ -5,7 +5,7 @@ import ItemListContainer from './components/ItemListContainer.jsx';
 import ItemDetailContainer from './components/ItemDetailContainer.jsx'; 
 import Footer from './components/Footer.jsx';
 import Contacto from './components/Contacto.jsx';
-
+import Cart from './components/Cart.jsx';
 
 function App() {
   return (
@@ -20,6 +20,7 @@ function App() {
         <Route path="//detail/:id" element={<ItemListContainer/>  } /> 
         <Route path="/detail/:id" element={<ItemListContainer/>  } /> 
         <Route path="/contacto" element={<Contacto />} />
+        <Route path="/cart" element={<Cart />} />
       </Routes>
 
       <Footer

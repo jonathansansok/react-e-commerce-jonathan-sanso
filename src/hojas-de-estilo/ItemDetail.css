@@ -147,19 +147,13 @@
     text-align: center;
     border: 2px solid rgb(120, 9, 224);
     transition: all 0.6s;
-}
-.agregarACarrito-detail:hover{
-    background-color: rgb(120, 9, 224);
-
-}
-.agregarACarrito-detail a{
     text-decoration: none;
     color : rgb(120, 9, 224);
     font-size: bold;
-
+    cursor: pointer;
 }
-
-.agregarACarrito-detail a:hover{
+.agregarACarrito-detail:hover{
+    background-color: rgb(120, 9, 224);
     text-decoration: none;
     color : salmon;
 }

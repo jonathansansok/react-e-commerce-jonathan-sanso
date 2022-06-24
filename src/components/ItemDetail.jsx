@@ -27,14 +27,14 @@ export function ItemDetail({item}){
                     <section className='fechasTodas-detail'>
                         <article className='checkIn-detail'>
                             <label htmlFor="start">Check-in:</label>
-                            <input type="date" id="start" name="trip-start"value="2022-05-22" min="2022-05-22" max="2024-12-31" />
+                            <input type="date" id="start" name="trip-start"value="2022-05-22" min="2022-05-22" max="2024-12-31"  readOnly/>
                         </article>
                         <article className='checkOut-detail'>
                             <label htmlFor="start">Check-Out:</label>
-                            <input type="date" id="start" name="trip-start"value="2022-05-22" min="2022-05-22" max="2024-12-31" />
+                            <input type="date" id="start" name="trip-start"value="2022-05-22" min="2022-05-22" max="2024-12-31" readOnly />
                         </article>
                     </section>
-                    <button className='agregarACarrito-detail'><a href="App.js">Agregar a carrito</a></button>
+
                 </div>
             </div>
         </div>
