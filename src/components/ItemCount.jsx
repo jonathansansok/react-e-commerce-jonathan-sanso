@@ -23,9 +23,9 @@ const ItemCount = ({stock,initial,onAdd}) => {
 			alert('No puedes solicitar 0 pasajes');
 		}
 	};
-	const resultadoOk = (e) => {
+	const resultadoOk = () => {
 		setonAdder({Numero});
-		console.log(resultadoOk);
+		console.log(setonAdder);
 	};
 
 	return (

@@ -1,7 +1,7 @@
 import React from 'react';
 import '../hojas-de-estilo/Item.css';
 import ItemCount from './ItemCount.jsx';
-
+import { Link } from 'react-router-dom';
 export function Item({data}){
     return (
         <div className= 'contenedor-Item'>
@@ -31,7 +31,7 @@ export function Item({data}){
                         <input type="date" id="start" name="trip-start"value="2022-05-22" min="2022-05-22" max="2024-12-31" />
                     </article>
                 </section> */}
-                <button className='agregarACarrito'><a href="App.js">Mas detalles</a></button>
+                <Link to={`/item/${data.id}`} className='agregarACarrito'> Mas detalles</Link>
             </div>
         </div>
     );
