@@ -1,27 +1,34 @@
-import React from 'react';
-import '../hojas-de-estilo/Item.css';
+import React from "react";
+import "../hojas-de-estilo/Item.css";
 /* import ItemCount from './ItemCount.jsx'; */
-import { NavLink } from 'react-router-dom';
-export function Item({data}){
-    return (
-        <div className= 'contenedor-Item'>
-            <div className= 'anyTravel'>
-                <img className= 'imagen-Item'
-                src={`/imagenes/img-${data.imagen}.jpg`}
-                alt= {data.imagen} />
-                
-            </div>
-            <div className= 'contenedor-texto-Item'>
-                <p className='nombre-Item'><strong>{data.nombre} en {data.pais}</strong></p>
-                <p className='incluye-Item'>{data.incluye}</p>
+import { Link } from "react-router-dom";
 
-                <p className='precio-Item'>US$ {data.precio}.-</p>
-{/*                 <section className='numerales'>
+function Item({ data }) {         
+
+  return (
+    <Link to={`/item/${data.id}`} className="li_per contenedor-Item">
+      <div className="anyTravel">
+        <img
+          className="imagen-Item"
+          src={`./imagenes/img-${data.imagen}.jpg`}
+          alt={data.imagen}
+        />
+      </div>
+      <div className="contenedor-texto-Item">
+        <p className="nombre-Item">
+          <strong>
+            {data.nombre} en {data.pais}
+          </strong>
+        </p>
+        <p className="incluye-Item">{data.incluye}</p>
+
+        <p className="precio-Item">US$ {data.precio}.-</p>
+        {/*                 <section className='numerales'>
                 <ItemCount stock={10} initial={1} 
                 />
 
                 </section> */}
-                {/* <section className='fechasTodas'>
+        {/* <section className='fechasTodas'>
                     <article className='checkIn'>
                         <label htmlFor="start">Check-in:</label>
                         <input type="date" id="start" name="trip-start"value="2022-05-22" min="2022-05-22" max="2024-12-31" />
@@ -31,10 +38,10 @@ export function Item({data}){
                         <input type="date" id="start" name="trip-start"value="2022-05-22" min="2022-05-22" max="2024-12-31" />
                     </article>
                 </section> */}
-                <NavLink to={`/item/${data.id}`} className='agregarACarrito'> Mas detalles</NavLink>
-            </div>
-        </div>
-    );
+        { <Link to={`/item/${data.id}`} className='agregarACarrito'> Mas detalles</Link> }
+      </div>
+    </Link>
+  );
 }
 
- export default Item; 
+export default Item;

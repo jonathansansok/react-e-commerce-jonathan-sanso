@@ -4,19 +4,18 @@ import {getProductById} from './data.js';
 import ItemDetail from './ItemDetail.jsx';   
 import {useParams} from 'react-router';
 /* import {data} from './data.js'; */
-const ItemDetailContainer = () => {
 
+const ItemDetailContainer = () => {
 	
  	const [item, setItem] = useState([]);
 
-
 	let {id} = useParams();
-	console.log(id);	
+
 	 useEffect(() => {
 
 		getProductById(id)
 			.then(res=> { 
-				setItem(id)
+				setItem(res);
 			})
 			.catch(err=>console.log(err))
 	}, [id]); 
