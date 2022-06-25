@@ -1,6 +1,6 @@
 import React from 'react';
 import '../hojas-de-estilo/Footer.css';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 function Footer(){
     return (
         <footer className="footer">

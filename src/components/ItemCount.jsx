@@ -1,6 +1,6 @@
 import {useState} from 'react';
 import '../hojas-de-estilo/ItemCount.css';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 
 
@@ -38,7 +38,7 @@ const ItemCount = ({stock,initial,onAdd}) => {
 						<p className='botonera-pasaje'>  {Numero}</p>
 						<div className='botonera-sumaresta' onClick={sumar}> + </div>
 					</div>
-					<NavLink to="/cart"className='agregarACarrito-detail' onClick={resultadoOk}>Agregar a carrito</NavLink>
+					<Link to="/cart"className='agregarACarrito-detail' onClick={resultadoOk}>Agregar a carrito</Link>
 				</div>
 			</div>
 
