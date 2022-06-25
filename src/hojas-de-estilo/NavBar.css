@@ -19,7 +19,7 @@ header {
     align-items: center;
     padding: 0 4rem;
     height: 95px;
-    background-color: #f5f6f7;
+    background-color: rgb(235, 235, 235);
 }
 
 .header nav ul  {
