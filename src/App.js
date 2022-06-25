@@ -13,12 +13,10 @@ function App() {
     <div className="App">
       <NavBar 
       />
-
       <Routes>
         <Route path="/" element={ <ItemListContainer titulo2='Elige tu próximo destino!'/> } />
         <Route path="item/:id" element={  <ItemDetailContainer/>  } />
-
-        {/* <Route path="/detail/:id" element={<ItemListContainer/>  } /> */} 
+        <Route path="/categoria/:id" element={<ItemDetailContainer/>  } />  
         <Route path="/contacto" element={<Contacto />} />
         <Route path="/cart" element={<Cart />} /> 
         

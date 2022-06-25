@@ -19,6 +19,7 @@ const ItemDetailContainer = () => {
 			})
 			.catch(err=>console.log(err))
 	}, [id]); 
+	
 	return (
 		<div className='item-detail-container-estilo'>
 			<h1 className='item-detail-container-estilo-h1' >Tu próximo viaje!</h1>

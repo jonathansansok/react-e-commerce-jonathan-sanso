@@ -121,10 +121,11 @@
     font-size: 1em;
     text-align: center;
     border: 2px solid rgb(120, 9, 224);
-    transition: all 0.6s;
+    transition: all 0.7s;
 }
 .agregarACarrito:hover{
-    background-color: rgb(120, 9, 224);
+   /*  background-color: rgb(120, 9, 224); */
+    transform: scale(1.2);
 
 }
 .agregarACarrito a{
@@ -135,7 +136,7 @@
 }
 
 .agregarACarrito a:hover{
-    text-decoration: none;
+/*     text-decoration: none; */
     color : salmon;
 }
 

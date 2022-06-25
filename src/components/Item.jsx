@@ -38,7 +38,7 @@ function Item({ data }) {
                         <input type="date" id="start" name="trip-start"value="2022-05-22" min="2022-05-22" max="2024-12-31" />
                     </article>
                 </section> */}
-        { <Link to={`/item/${data.id}`} className='agregarACarrito'> Mas detalles</Link> }
+         <Link to={`/item/${data.id}`} className='agregarACarrito'> Mas detalles</Link> 
       </div>
     </Link>
   );

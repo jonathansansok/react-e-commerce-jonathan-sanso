@@ -32,7 +32,7 @@ const App = () => {
 		}
 		setTimeout(() => {
 			setIsLoading(false);
-		}, 500);
+		}, 100);
 		setValue('');
 	};
 
