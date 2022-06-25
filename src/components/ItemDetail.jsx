@@ -20,10 +20,7 @@ export function ItemDetail({item}){
                 </div>
                 <div className= 'contenedor-texto-Item-detail-bajo'>
                     <h3>{item.descripcion}</h3>
-                    <section className='numerales-detail'>
-                    <ItemCount stock={10} initial={1} 
-                    />
-                    </section>
+
                     <section className='fechasTodas-detail'>
                         <article className='checkIn-detail'>
                             <label htmlFor="start">Check-in:</label>
@@ -33,6 +30,10 @@ export function ItemDetail({item}){
                             <label htmlFor="start">Check-Out:</label>
                             <input type="date" id="start" name="trip-start"value="2022-05-22" min="2022-05-22" max="2024-12-31" readOnly />
                         </article>
+                    </section>
+                    <section className='numerales-detail'>
+                        <ItemCount stock={10} initial={1} 
+                        />
                     </section>
 
                 </div>

@@ -30,18 +30,15 @@ const ItemCount = ({stock,initial,onAdd}) => {
 
 	return (
 	/* 	<Router> */
-			<div className='botonera'>
 				<div className='CounterSection'>
-					<p className='botonera-pasaje'> Pasajes: </p>
 					<div className='botonera-acciones'>
+					<p className='botonera-pasaje'> Pasajes: </p>
 						<div className='botonera-sumaresta' onClick={restar}> - </div>
 						<p className='botonera-pasaje'>  {Numero}</p>
 						<div className='botonera-sumaresta' onClick={sumar}> + </div>
 					</div>
 					<Link to="/cart"className='agregarACarrito-detail' onClick={resultadoOk}>Agregar a carrito</Link>
 				</div>
-			</div>
-
 	);
 };
 

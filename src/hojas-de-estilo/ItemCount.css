@@ -1,15 +1,15 @@
-.botonera{
-    margin-top: 10px;
-}
 
 .CounterSection{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    height: 75px;
+    justify-content: start;
+    align-items: center;
 
 }
 
 .botonera-pasaje{
-    font-size: 0.9rem;
+    margin-top: 3px;
 }
 
 .botonera-sumaresta{
@@ -29,4 +29,5 @@
 .botonera-acciones{
     display: flex;
     flex-direction: row;
+    margin-bottom: 15px; 
 }
