@@ -3,7 +3,7 @@ import '../hojas-de-estilo/ItemDetailContainer.css';
 import {getProductById} from './data.js';
 import ItemDetail from './ItemDetail.jsx';   
 import {useParams} from 'react-router';
-
+/* import {data} from './data.js'; */
 const ItemDetailContainer = () => {
 
 	

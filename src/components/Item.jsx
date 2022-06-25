@@ -1,6 +1,6 @@
 import React from 'react';
 import '../hojas-de-estilo/Item.css';
-import ItemCount from './ItemCount.jsx';
+/* import ItemCount from './ItemCount.jsx'; */
 import { NavLink } from 'react-router-dom';
 export function Item({data}){
     return (
