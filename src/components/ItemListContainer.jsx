@@ -10,7 +10,7 @@ const ItemListContainer = ({ titulo2 }) => {
   useEffect(() => {
     setTimeout(() => {
       setProductos(data);      
-    }, 2000);
+    }, 500);
   }, []);
 
   return (
