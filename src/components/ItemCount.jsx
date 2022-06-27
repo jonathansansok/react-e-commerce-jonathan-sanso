@@ -37,7 +37,8 @@ const ItemCount = ({stock,initial,onAdd}) => {
 						<p className='botonera-pasaje'>  {Numero}</p>
 						<div className='botonera-sumaresta' onClick={sumar}> + </div>
 					</div>
-					<Link to="/cart"className='agregarACarrito-detail' onClick={resultadoOk}>Agregar a carrito</Link>
+					<button className='agregarACarrito-detail' onClick={Numero}>Agregar a carrito</button>
+					<Link to="/cart"className='agregarACarrito-detail' onClick={onAdd}>Terminar Compra</Link>
 				</div>
 	);
 };
