@@ -18,7 +18,7 @@ const Contacto = () => {
 
     const incluirTelefono = watch('incluirTelefono');
 
-    return <div>
+    return <div className="full-form">
         <h2>Formulario</h2>
         <p>Un gusto: {watch('nombre')}</p>
         <form onSubmit={handleSubmit(onSubmit)}>

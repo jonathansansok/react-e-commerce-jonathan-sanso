@@ -1,11 +1,11 @@
-.contacto-full{
+.full-form{
     margin-top: 40px;
-    height: 900px;
+    height: 1000px;
     background-color: white;
     width: 100%;
 }
-.contacto-full-h1{
-    letter-spacing: 1.2rem;
+h2{
+    letter-spacing: 1.1rem;
     font-size: 3rem;
     margin-top: 40px;
 }
