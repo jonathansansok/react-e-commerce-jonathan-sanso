@@ -22,22 +22,22 @@ export function ItemDetail({item}){
 
                 <div className= 'contenedor-texto-Item-detail-bajo'>
                     <h3>{item.descripcion}</h3>
-
-                    <section className='fechasTodas-detail'>
-                        <article className='checkIn-detail'>
-                            <label htmlFor="start">Check-in:</label>
-                            <input type="date" id="start" name="trip-start"value="2022-05-22" min="2022-05-22" max="2024-12-31"  readOnly/>
-                        </article>
-                        <article className='checkOut-detail'>
-                            <label htmlFor="start">Check-Out:</label>
-                            <input type="date" id="start" name="trip-start"value="2022-05-22" min="2022-05-22" max="2024-12-31" readOnly />
-                        </article>
-                    </section>
-                    <section className='numerales-detail'>
-                        <ItemCount stock={11} initial={1} 
-                        />
-                    </section>
-
+                    <article className= 'contenedor-texto-Item-detail-bajo letrasNumeros'>
+                        <section className='fechasTodas-detail'>
+                            <article className='checkIn-detail'>
+                                <label htmlFor="start">Check-in:</label>
+                                <input type="date" id="start" name="trip-start"value="2022-05-22" min="2022-05-22" max="2024-12-31"  readOnly/>
+                            </article>
+                            <article className='checkOut-detail'>
+                                <label htmlFor="start">Check-Out:</label>
+                                <input type="date" id="start" name="trip-start"value="2022-05-22" min="2022-05-22" max="2024-12-31" readOnly />
+                            </article>
+                        </section>
+                        <section className='numerales-detail'>
+                            <ItemCount stock={11} initial={1} 
+                            />
+                        </section>
+                    </article>
                 </div>
             </div>
         </div>

@@ -8,7 +8,7 @@
 .contenedor-Item-detail{
     margin-top: 20px;
     width: 900px;
-    height: 700px; 
+    height: 500px; 
 
     display: flex;
     flex-direction: column;
@@ -67,14 +67,24 @@
     flex-flow: wrap;
     font-size: 1rem;
     text-align: center;
-    padding: 40px;
+    padding: 20px 00px 40px 00px;
     font-family: Lato, sans-serif;
     font-weight: 400;
     line-height: 1.1;
-    height: 400px;
+    height: 200px;
 }
 
 .contenedor-texto-Item-detail-bajo h3{
+    width: 600px;
+}
+
+.letrasNumeros{
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-items: center;
+    justify-content: space-between;
+    height: 100px;
     width: 600px;
 }
 .nombre-Item-detail{
