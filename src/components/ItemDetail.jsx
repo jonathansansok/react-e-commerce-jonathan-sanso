@@ -32,7 +32,7 @@ export function ItemDetail({item}){
                         </article>
                     </section>
                     <section className='numerales-detail'>
-                        <ItemCount stock={10} initial={1} 
+                        <ItemCount stock={ 11} initial={1} 
                         />
                     </section>
 
