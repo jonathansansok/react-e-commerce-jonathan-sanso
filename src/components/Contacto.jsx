@@ -21,7 +21,7 @@ const Contacto = () => {
     return <div className="full-form">
         <h2>Formulario</h2>
         <p>Un gusto: {watch('nombre')}</p>
-        <form onSubmit={handleSubmit(onSubmit)}>
+        <form  className="formulario" onSubmit={handleSubmit(onSubmit)}>
             <div>
                 <label>Nombre</label>
                 <input type="text" {...register('nombre', {
