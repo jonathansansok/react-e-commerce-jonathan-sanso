@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 const ItemCount = ({stock,initial,onAdd}) => {
 	const [Numero, setNumero] = useState(initial);
-	const [Disponible, setDisponible] = useState(initial);
+	const [Disponible, setDisponible] = useState(stock);
 	const [onAdder, setonAdder] = useState('');
 	
 
