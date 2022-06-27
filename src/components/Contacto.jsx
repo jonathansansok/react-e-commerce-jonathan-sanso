@@ -22,7 +22,7 @@ const Contacto = () => {
         <h2>Formulario</h2>
         <p>Un gusto: {watch('nombre')}</p>
         <form  className="formulario" onSubmit={handleSubmit(onSubmit)}>
-            <div>
+            <div className= "reglon-de-form">
                 <label>Nombre</label>
                 <input type="text" {...register('nombre', {
                     required: true,
@@ -31,27 +31,27 @@ const Contacto = () => {
                 {errors.nombre?.type === 'required' && <p>El campo nombre es requerido</p>}
                 {errors.nombre?.type === 'maxLength' && <p>El campo nombre debe tener menos de 10 caracteres</p>}
             </div>
-            <div>
+            <div className= "reglon-de-form">
                 <label>Dirección</label>
                 <input type="text" {...register('direccion', {
                     required: true
                 })} />
             </div>
-            <div>
+            <div className= "reglon-de-form">
                 <label>Email</label>
                 <input type="text" {...register('email', {
                     pattern: /^[^\s@]+@[^\s@]+\.[^\s@]+$/i
                 })} />
                 {errors.email?.type === 'pattern' && <p>El formato del email es incorrecto</p>}
             </div>
-            <div>
+            <div className= "reglon-de-form">
                 <label>Edad</label>
                 <input type="text" {...register('edad', {
                     validate: edadValidator
                 })} />
                 {errors.edad && <p>La edad debe estar entre 18 y 100</p>}
             </div>
-            <div>
+            <div className= "reglon-de-form">
                 <label>País</label>
                 <select {...register('pais')}>
                     <option value="ar">Argentina</option>
@@ -60,17 +60,17 @@ const Contacto = () => {
                     <option value="fr">Francia</option>
                 </select>
             </div>
-            <div>
+            <div className= "reglon-de-form">
                 <label>¿Incluir teléfono?</label>
                 <input type="checkbox" {...register('incluirTelefono')} />
             </div>
             {incluirTelefono && (
-                <div>
+                <div className= "reglon-de-form">
                     <label>Teléfono</label>
                     <input type="text" {...register('telefono')} />
                 </div>
             )}
-            <input type="submit" value="Enviar" />
+            <input className= "reglon-de-form" type="submit" value="Enviar" />
         </form>
     </div>
 }

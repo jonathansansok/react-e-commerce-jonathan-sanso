@@ -19,3 +19,8 @@ h2{
     border: 1px solid rgb(120, 9, 224);
     border-radius: 3px;
 }
+
+.reglon-de-form{
+    font-size: 1.4rem;
+    margin: 15px 00px 15px 0px;
+}
