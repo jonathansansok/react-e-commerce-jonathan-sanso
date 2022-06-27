@@ -14,7 +14,7 @@ const ItemCount = ({stock,initial,onAdd}) => {
 	const sumar = () => {
 		if (Numero < stock) {
 			setNumero(Numero + 1);
-
+	/* 		acá se actualiza el stock tambien */
 		}else{
 			alert('No puedes agregar mas de 10 pasajes');
 		}
@@ -22,6 +22,7 @@ const ItemCount = ({stock,initial,onAdd}) => {
 	const restar = () => {
 		if (Numero > initial) {
 		setNumero(Numero - 1);
+			/* 		acá se actualiza el stock tambien */
 		}else{
 			alert('No puedes solicitar 0 pasajes');
 		}
@@ -49,7 +50,7 @@ const ItemCount = ({stock,initial,onAdd}) => {
 			<div className='botonera-sumaresta'> Stock: {stock }</div>
 			<button className='agregarACarrito-detail' onClick={toCartAction}>Agregar a carrito</button>
 			{toCartAction ? 
-				<Link to="/cart"className='agregarACarrito-detail' onClick={onAdd}>Terminar Compra</Link> 
+				<Link to="/cart" className='agregarACarrito-detail' >Terminar Compra</Link> 
 				: false }					
 		</div>
 	);
