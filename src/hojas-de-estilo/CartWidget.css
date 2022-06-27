@@ -12,7 +12,7 @@
 }
 .shoppingTodo:hover{
     transform: scale(1.2);
-    background-color: white;
+    background-color: rgb(235, 235, 235);
 }
 .contadorUnidades{
     display: flex;
