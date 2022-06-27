@@ -32,7 +32,7 @@ const ItemCount = ({stock,initial,onAdd}) => {
 	}
 	
 	
-	const resultadoOk = () => {
+	const toCartAction = () => {
 		setonAdder({Numero});
 		console.log(setonAdder);
 	};
@@ -46,9 +46,9 @@ const ItemCount = ({stock,initial,onAdd}) => {
 				<p className='botonera-pasaje'>  {Numero}</p>
 				<div className='botonera-sumaresta' onClick={sumar}> + </div>
 			</div>
-			<div className='botonera-sumaresta'> Stock: {{stock} - {Numero}}</div>
-			<button className='agregarACarrito-detail' onClick={resultadoOk}>Agregar a carrito</button>
-			{resultadoOk ? 
+			<div className='botonera-sumaresta'> Stock: {stock }</div>
+			<button className='agregarACarrito-detail' onClick={toCartAction}>Agregar a carrito</button>
+			{toCartAction ? 
 				<Link to="/cart"className='agregarACarrito-detail' onClick={onAdd}>Terminar Compra</Link> 
 				: false }					
 		</div>
