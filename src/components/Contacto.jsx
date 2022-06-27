@@ -7,20 +7,20 @@ import '../hojas-de-estilo/contacto.css';
 const Contacto = () => {
     const { register, formState: { errors }, watch, handleSubmit } = useForm({
         defaultValues: {
-            nombre: 'Luis',
-            direccion: 'Calle Gran Vía'
+            nombre: 'Sr./a',
+            direccion: 'Tu Calle'
         }
     });
 
-    const onSubmit = (data) => {
-        console.log(data);
+    const onSubmit = (datos) => {
+        console.log(datos);
     }
 
     const incluirTelefono = watch('incluirTelefono');
 
     return <div>
         <h2>Formulario</h2>
-        <p>Nombre: {watch('nombre')}</p>
+        <p>Un gusto: {watch('nombre')}</p>
         <form onSubmit={handleSubmit(onSubmit)}>
             <div>
                 <label>Nombre</label>
@@ -49,11 +49,12 @@ const Contacto = () => {
                 <input type="text" {...register('edad', {
                     validate: edadValidator
                 })} />
-                {errors.edad && <p>La edad debe estar entre 18 y 65</p>}
+                {errors.edad && <p>La edad debe estar entre 18 y 100</p>}
             </div>
             <div>
                 <label>País</label>
                 <select {...register('pais')}>
+                    <option value="ar">Argentina</option>
                     <option value="es">España</option>
                     <option value="it">Italia</option>
                     <option value="fr">Francia</option>
