@@ -10,7 +10,6 @@ export function ItemDetail({item}){
                     <img className= 'imagen-Item-detail'
                     src={`/imagenes/img-${item.imagen}.jpg`}
                     alt= {item.imagen} />
-                    
                 </div>
                 <div className= 'contenedor-texto-Item-detail'>
                     <p className='nombre-Item-detail'><strong>{item.nombre} en {item.pais}</strong></p>
@@ -32,7 +31,7 @@ export function ItemDetail({item}){
                         </article>
                     </section>
                     <section className='numerales-detail'>
-                        <ItemCount stock={ 11} initial={1} 
+                        <ItemCount stock={11} initial={1} 
                         />
                     </section>
 

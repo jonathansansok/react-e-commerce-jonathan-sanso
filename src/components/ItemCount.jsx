@@ -47,10 +47,10 @@ const ItemCount = ({stock,initial,onAdd}) => {
 				<p className='botonera-pasaje'>  {Numero}</p>
 				<div className='botonera-sumaresta' onClick={sumar}> + </div>
 			</div>
-			<div className='botonera-sumaresta'> Stock: {Disponible }</div>
+			<div className='botonera-sumaresta stock'> Stock: {Disponible }</div>
 			<button className='agregarACarrito-detail' onClick={toCartAction}>Agregar a carrito</button>
 			{toCartAction ? 
-				<Link to="/cart" className='agregarACarrito-detail' >Terminar Compra</Link> 
+				<Link to="/cart" className='agregarACarrito-detail terminar' >Terminar Compra</Link> 
 				: false }					
 		</div>
 	);

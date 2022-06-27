@@ -7,8 +7,9 @@
 }
 .contenedor-Item-detail{
     margin-top: 20px;
-    width: 800px;
-    height: auto;
+    width: 900px;
+    height: 600px;
+
 /*     margin: 10px 10px 50px; */
     display: flex;
     flex-direction: column;

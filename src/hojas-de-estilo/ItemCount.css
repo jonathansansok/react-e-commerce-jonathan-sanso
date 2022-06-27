@@ -24,10 +24,17 @@
     font-weight: bold;
 
 }
+.stock {
+    margin-bottom: 10px;
 
+}
 
 .botonera-acciones{
     display: flex;
     flex-direction: row;
     margin-bottom: 15px; 
+}
+
+.agregarACarrito-detail {
+    margin-bottom: 10px;
 }
