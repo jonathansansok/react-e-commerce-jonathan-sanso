@@ -6,17 +6,20 @@ export function ItemDetail({item}){
     return (
         <div className= 'top-contenedor-Item-detail'>
             <div className= 'contenedor-Item-detail'>
-                <div className= 'anyTravel-detail'>
-                    <img className= 'imagen-Item-detail'
-                    src={`/imagenes/img-${item.imagen}.jpg`}
-                    alt= {item.imagen} />
-                </div>
-                <div className= 'contenedor-texto-Item-detail'>
-                    <p className='nombre-Item-detail'><strong>{item.nombre} en {item.pais}</strong></p>
-                    <p className='incluye-Item-detail'>{item.incluye}</p>
+                <div className= 'contenedor-Item-detail-alto'>
+                    <div className= 'anyTravel-detail'>
+                        <img className= 'imagen-Item-detail'
+                        src={`/imagenes/img-${item.imagen}.jpg`}
+                        alt= {item.imagen} />
+                    </div>
+                    <div className= 'contenedor-texto-Item-detail'>
+                        <p className='nombre-Item-detail'><strong>{item.nombre} en {item.pais}</strong></p>
+                        <p className='incluye-Item-detail'>{item.incluye}</p>
 
-                    <p className='precio-Item-detail'>US$ {item.precio}.-</p>
+                        <p className='precio-Item-detail'>US$ {item.precio}.-</p>
+                    </div>
                 </div>
+
                 <div className= 'contenedor-texto-Item-detail-bajo'>
                     <h3>{item.descripcion}</h3>
 

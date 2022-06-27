@@ -1,25 +1,30 @@
 .top-contenedor-Item-detail{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: start;
+    align-items: start;
 
 }
 .contenedor-Item-detail{
     margin-top: 20px;
     width: 900px;
-    height: 600px;
+    height: 700px; 
 
-/*     margin: 10px 10px 50px; */
     display: flex;
     flex-direction: column;
-    align-items: center;
+/*     align-items: start; */
     justify-content: center;
     
     
     flex-flow: wrap;
     background-color: #fff;
     box-shadow: 0 3px 13px 1px rgba(0 0 0 / 9%); ;
+}
+
+.contenedor-Item-detail-alto{
+    display: flex;
+    flex-direction: row;
+
 }
 
 .anyTravel-detail{
@@ -56,7 +61,8 @@
 .contenedor-texto-Item-detail-bajo{
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: start;
+    justify-items: start;
     justify-content: space-around;
     flex-flow: wrap;
     font-size: 1rem;
@@ -65,6 +71,7 @@
     font-family: Lato, sans-serif;
     font-weight: 400;
     line-height: 1.1;
+    height: 400px;
 }
 
 .contenedor-texto-Item-detail-bajo h3{
