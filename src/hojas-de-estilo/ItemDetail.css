@@ -23,6 +23,7 @@
 
 .anyTravel-detail{
     margin-top: 18px;
+    margin-left: 11px;
     display: flex ;
     flex-direction: column;
     justify-content: end;
