@@ -183,11 +183,15 @@
     justify-content: end;
 
 } */
+
+/* .terminar{
+    display: none;
+}
+ */
 .terminar:hover{
     background-color: rgb(120, 9, 224);
     text-decoration: none;
     color : salmon;
 }
-
 
 
