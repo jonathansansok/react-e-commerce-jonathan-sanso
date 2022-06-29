@@ -1,13 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../hojas-de-estilo/ItemDetail.css';
 import ItemCount from './ItemCount.jsx';
 import { Link } from 'react-router-dom';
 
 export function ItemDetail({item}){
 
-    function onAdd(){
-        console.log('onAdd called');
-    }
+const [cantidad,setCantidad] = useState(0)
+
+const agregarAlCarrito=(Numero)=>{
+
+	alert(`Se agregaron ${cantidad} unidades al carrito `)
+
+	setCantidad(Numero)
+
+}
     return (
         <div className= 'top-contenedor-Item-detail'>
             <div className= 'contenedor-Item-detail'>
@@ -39,7 +45,7 @@ export function ItemDetail({item}){
                             </article>
                         </section>
                         <section className='numerales-detail'>
-                            <ItemCount stock={item.stock} initial={item.initial} onAdd
+                            <ItemCount stock={item.stock} initial={item.initial} onAdd={agregarAlCarrito}
                             />
                         </section>
                     </article>

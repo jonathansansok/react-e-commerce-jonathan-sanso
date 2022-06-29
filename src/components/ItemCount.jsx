@@ -10,7 +10,7 @@ const ItemCount = ({stock,initial,onAdd}) => {
 			setNumero(Numero + 1);
 			setDisponible(Disponible-1) ;
 		}else{
-			alert(`No puedes agregar mas de ${stock} pasajes`);
+			alert(`No puedes agregar mas de ${Numero} pasajes`);
 		}
 	};
 	const restar = () => {
@@ -22,11 +22,7 @@ const ItemCount = ({stock,initial,onAdd}) => {
 		}
 	};
 	
-	const agregarACarrito = () => {
-		setonAdder({onAdd});
-		console.log(setonAdder);
-	};
-	return (
+		return (
 		<div className='CounterSection'>
 			<div className='botonera-acciones'>
 			<p className='botonera-pasaje'> Pasajes: </p>
@@ -35,7 +31,7 @@ const ItemCount = ({stock,initial,onAdd}) => {
 				<div className='botonera-sumaresta' onClick={sumar}> + </div>
 			</div>
 			<div className='botonera-sumaresta stock'> Stock: {Disponible} </div>
-			<button className='agregarACarrito-detail' onClick={agregarACarrito}>Agregar a carrito</button>
+			<button className='agregarACarrito-detail' onClick={onAdd}>Agregar a carrito</button>
 				
 		</div>
 	);

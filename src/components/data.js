@@ -27,7 +27,7 @@ export const getProductByCategory = (categoria) =>{
 	return new Promise ((resolve, reject) => {
 		setTimeout(() => {
 			if(data.length > 0)	{
-				resolve(data.filter(unaCategoria => unaCategoria.id === parseInt(categoria)))}
+				resolve(data.filter(unaCategoria => unaCategoria.id === (categoria)))}
 			else{
 				reject('No hay productos')
 			}
