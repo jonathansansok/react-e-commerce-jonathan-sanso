@@ -45,8 +45,10 @@ const agregarAlCarrito=(Numero)=>{
                             </article>
                         </section>
                         <section className='numerales-detail'>
-                           {cantidad===0 ? <ItemCount stock={item.stock} initial={item.initial} onAdd={agregarAlCarrito}
-                            /> : <Link to='/cart' > <button className='agregarACarrito-detail terminar'> Finalizar Compra </button> </Link>} 
+                           {cantidad===0 ? 
+                           <ItemCount stock={item.stock} initial={item.initial} onAdd={agregarAlCarrito}/>
+                            : 
+                            <Link to='/cart' > <button className='agregarACarrito-detail terminar'> Finalizar Compra </button> </Link>} 
                         </section>
                     </article>
                 </div>
