@@ -15,7 +15,7 @@ const agregarAlCarrito=(Numero)=>{
 	alert(`Se agregaron ${Numero} unidades al carrito `)
 
 	setCantidad(Numero)
-}
+    }
 }
     return (
         <div className= 'top-contenedor-Item-detail'>
