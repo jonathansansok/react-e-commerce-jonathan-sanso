@@ -9,7 +9,7 @@ const [cantidad,setCantidad] = useState(0)
 
 const agregarAlCarrito=(Numero)=>{
     if (Numero === 0){
-        alert(`No se puede cero `)
+        alert(`No se puede agregar cero pasajes`)
     }
     else{
 	alert(`Se agregaron ${Numero} unidades al carrito `)
