@@ -39,3 +39,9 @@
     margin-bottom: 10px;
 }
 
+.agregarACarrito-detail:hover{
+    background-color: rgb(120, 9, 224);
+    text-decoration: none;
+    color : salmon;
+}
+

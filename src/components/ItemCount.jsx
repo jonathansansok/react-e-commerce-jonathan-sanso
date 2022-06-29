@@ -28,8 +28,8 @@ const ItemCount = ({stock,initial,onAdd}) => {
 		}
 	};
 	
-	const toCartAction = () => {
-		setonAdder({Numero});
+	const agregarACarrito = () => {
+		setonAdder({onAdd});
 		console.log(setonAdder);
 	};
 
@@ -42,11 +42,12 @@ const ItemCount = ({stock,initial,onAdd}) => {
 				<p className='botonera-pasaje'>  {Numero}</p>
 				<div className='botonera-sumaresta' onClick={sumar}> + </div>
 			</div>
-			<div className='botonera-sumaresta stock'> Stock: {Disponible }</div>
-			<button className='agregarACarrito-detail' onClick={toCartAction}>Agregar a carrito</button>
+			<div className='botonera-sumaresta stock'> Stock: {Disponible} </div>
+			<button className='agregarACarrito-detail' onClick={agregarACarrito}>Agregar a carrito</button>
 				
 		</div>
 	);
 };
 
  export default ItemCount; 
+
