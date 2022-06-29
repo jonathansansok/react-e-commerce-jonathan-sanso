@@ -9,7 +9,7 @@ const [cantidad,setCantidad] = useState(0)
 
 const agregarAlCarrito=(Numero)=>{
 
-	alert(`Se agregaron ${cantidad} unidades al carrito `)
+	alert(`Se agregaron ${Numero} unidades al carrito `)
 
 	setCantidad(Numero)
 
@@ -45,14 +45,10 @@ const agregarAlCarrito=(Numero)=>{
                             </article>
                         </section>
                         <section className='numerales-detail'>
-                            <ItemCount stock={item.stock} initial={item.initial} onAdd={agregarAlCarrito}
-                            />
+                           {cantidad===0 ? <ItemCount stock={item.stock} initial={item.initial} onAdd={agregarAlCarrito}
+                            /> : <Link to='/cart' > <button className='agregarACarrito-detail terminar'> Finalizar Compra </button> </Link>} 
                         </section>
                     </article>
-                    <section className='termino'>
-                        <Link to="/cart" className='agregarACarrito-detail terminar' >Finalizar Compra</Link>
-                        
-                    </section>
                 </div>
             </div>
         </div>
