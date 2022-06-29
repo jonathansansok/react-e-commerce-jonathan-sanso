@@ -4,6 +4,10 @@ import ItemCount from './ItemCount.jsx';
 import { Link } from 'react-router-dom';
 
 export function ItemDetail({item}){
+
+    function onAdd(){
+        console.log('onAdd called');
+    }
     return (
         <div className= 'top-contenedor-Item-detail'>
             <div className= 'contenedor-Item-detail'>
@@ -35,12 +39,12 @@ export function ItemDetail({item}){
                             </article>
                         </section>
                         <section className='numerales-detail'>
-                            <ItemCount stock={item.stock} initial={item.initial} 
+                            <ItemCount stock={item.stock} initial={item.initial} onAdd
                             />
                         </section>
                     </article>
                     <section className='termino'>
-                        <Link to="/cart" className='agregarACarrito-detail terminar'>Finalizar Compra</Link>
+                        <Link to="/cart" className='agregarACarrito-detail terminar' >Finalizar Compra</Link>
                         
                     </section>
                 </div>

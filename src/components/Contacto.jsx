@@ -20,7 +20,7 @@ const Contacto = () => {
 
     return <div className="full-form">
         <h2>Formulario</h2>
-        <p className= "reglon-de-form">Un gusto: {watch('nombre')}</p>
+        <p className= "reglon-de-form">Un gusto {watch('nombre')}</p>
         <form  className="formulario" onSubmit={handleSubmit(onSubmit)}>
             <div className= "reglon-de-form">
                 <label>Nombre </label>
@@ -70,7 +70,7 @@ const Contacto = () => {
                     <input type="text" {...register('telefono')} />
                 </div>
             )}
-            <input className= "reglon-de-form" type="submit" value="Enviar" />
+            <input className= "reglon-de-form enviar" type="submit" value="Enviar" />
         </form>
     </div>
 }

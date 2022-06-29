@@ -24,3 +24,18 @@ h2{
     font-size: 1.4rem;
     margin: 15px 00px 15px 0px;
 }
+
+
+.enviar {
+    cursor: pointer;
+    padding: 2px 30px;
+    border: 1px solid rgb(120, 9, 224);
+    border-radius: 8px;
+}
+
+.enviar:hover{
+    background-color: rgb(120, 9, 224);
+    text-decoration: none;
+    color : salmon;
+}
+
