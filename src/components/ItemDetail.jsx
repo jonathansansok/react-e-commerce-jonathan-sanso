@@ -8,11 +8,14 @@ export function ItemDetail({item}){
 const [cantidad,setCantidad] = useState(0)
 
 const agregarAlCarrito=(Numero)=>{
-
+    if (Numero === 0){
+        alert(`No se puede cero `)
+    }
+    else{
 	alert(`Se agregaron ${Numero} unidades al carrito `)
 
 	setCantidad(Numero)
-
+}
 }
     return (
         <div className= 'top-contenedor-Item-detail'>
