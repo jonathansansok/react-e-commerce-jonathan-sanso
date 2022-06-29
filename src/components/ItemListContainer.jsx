@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from "react";
 import "../hojas-de-estilo/ItemListContainer.css";
 import { data } from "./data.js";
+import {useParams} from 'react-router';
 import ItemList from "./ItemList";
 import MainHero from "./MainHero.jsx";
 
 const ItemListContainer = ({ titulo2 }) => {
   const [productos, setProductos] = useState([]);  
+
+/*   const {categoria} = useParams() */
 
   useEffect(() => {
     setTimeout(() => {

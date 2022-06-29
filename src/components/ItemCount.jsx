@@ -1,6 +1,6 @@
 import {useState} from 'react';
 import '../hojas-de-estilo/ItemCount.css';
-import { Link } from 'react-router-dom';
+
 
 
 
@@ -12,11 +12,11 @@ const ItemCount = ({stock,initial,onAdd}) => {
 
 
 	const sumar = () => {
-		if (Numero <= stock) {
+		if (Numero < stock) {
 			setNumero(Numero + 1);
 			setDisponible(Disponible-1) ;
 		}else{
-			alert('No puedes agregar mas de 12 pasajes');
+			alert(`No puedes agregar mas de ${stock} pasajes`);
 		}
 	};
 	const restar = () => {
@@ -27,11 +27,6 @@ const ItemCount = ({stock,initial,onAdd}) => {
 			alert('No puedes solicitar 0 pasajes');
 		}
 	};
-	const disponible = () => {
-		
-
-	}
-	
 	
 	const toCartAction = () => {
 		setonAdder({Numero});
@@ -49,9 +44,7 @@ const ItemCount = ({stock,initial,onAdd}) => {
 			</div>
 			<div className='botonera-sumaresta stock'> Stock: {Disponible }</div>
 			<button className='agregarACarrito-detail' onClick={toCartAction}>Agregar a carrito</button>
-			{toCartAction ? 
-				<Link to="/cart" className='agregarACarrito-detail terminar' >Terminar Compra</Link> 
-				: false }					
+				
 		</div>
 	);
 };

@@ -60,8 +60,8 @@
 }
 
 .contenedor-texto-Item-detail-bajo{
-    display: flex;
-    flex-direction: row;
+/*     display: flex; */
+    flex-direction: column;
     align-items: start;
     justify-items: start;
     justify-content: space-around;
@@ -72,7 +72,7 @@
     font-family: Lato, sans-serif;
     font-weight: 400;
     line-height: 1.1;
-    height: 200px;
+    height: 209px;
 }
 
 .contenedor-texto-Item-detail-bajo h3{
@@ -85,7 +85,7 @@
     align-items: start;
     justify-items: center;
     justify-content: space-between;
-    height: 100px;
+    height: 97px;
     width: 600px;
 }
 .nombre-Item-detail{
@@ -133,7 +133,7 @@
 
 .fechasTodas-detail{
     margin-bottom: 20px;
-    margin-top: 15px;
+    margin-top: 5px;
 }
 
 .checkIn-detail input{
@@ -177,7 +177,13 @@
     font-size: bold;
     cursor: pointer;
 }
-.agregarACarrito-detail:hover{
+/* .termino{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+
+} */
+.terminar:hover{
     background-color: rgb(120, 9, 224);
     text-decoration: none;
     color : salmon;

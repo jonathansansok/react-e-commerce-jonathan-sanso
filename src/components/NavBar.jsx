@@ -17,10 +17,10 @@ function NavBar(){
                     <Link to="/" className="liNav">Home </Link>
                 </li>
                 <li className="liNormal">
-                <Link to="/america" className="liNav">América</Link>
+                <Link to="/categoria/america" className="liNav">América</Link>
                 </li>
                 <li className="liNormal">
-                <Link to="/asiaoceania" className="liNav">Asia/Oceania</Link>
+                <Link to="/categoria/asiaoceania" className="liNav">Asia/Oceania</Link>
                 </li>
                 <li className="liNormal">
                 <Link to="/contacto" className="liNav">Contacto</Link>

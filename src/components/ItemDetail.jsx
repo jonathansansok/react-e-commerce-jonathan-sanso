@@ -1,7 +1,7 @@
 import React from 'react';
 import '../hojas-de-estilo/ItemDetail.css';
 import ItemCount from './ItemCount.jsx';
-
+import { Link } from 'react-router-dom';
 export function ItemDetail({item}){
     return (
         <div className= 'top-contenedor-Item-detail'>
@@ -34,10 +34,13 @@ export function ItemDetail({item}){
                             </article>
                         </section>
                         <section className='numerales-detail'>
-                            <ItemCount stock={11} initial={1} 
+                            <ItemCount stock={item.stock} initial={item.initial} 
                             />
                         </section>
                     </article>
+                    <section className='termino'>
+                        <Link to="/cart" className='agregarACarrito-detail terminar' >Finalizar Compra</Link>
+                    </section>
                 </div>
             </div>
         </div>
