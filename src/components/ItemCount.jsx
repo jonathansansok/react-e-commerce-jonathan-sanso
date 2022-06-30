@@ -3,7 +3,7 @@ import '../hojas-de-estilo/ItemCount.css';
 const ItemCount = ({stock,initial,onAdd}) => {
 	const [Numero, setNumero] = useState(initial);
 	const [Disponible, setDisponible] = useState(stock);
-	const [onAdder, setonAdder] = useState('');
+
 
 	const sumar = () => {
 		if (Numero < stock) {
