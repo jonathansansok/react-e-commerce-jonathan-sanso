@@ -6,7 +6,9 @@ import { useCartContext } from './CartContext.jsx';
 
 export function ItemDetail({item}){
     const { addToCart } = useCartContext()
+    
     const [cantidad,setCantidad] = useState(0)
+
     const agregarAlCarrito=(Numero)=>{
     
         if (Numero === 0){

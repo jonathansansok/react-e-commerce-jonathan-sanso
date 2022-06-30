@@ -21,8 +21,8 @@ function CartContextProvider({ children }) { //componente
       if (idx !== -1) {
           // la lógica
           const newArray = cartList
-          const newCant = cartList[idx].cantidad + item.cantidad
-          newArray[idx].cantidad = newCant
+          const newCant = cartList[idx].initial + item.initial
+          newArray[idx].initial = newCant
           setCartList([...newArray])
       } else {
           setCartList([
@@ -42,18 +42,18 @@ function CartContextProvider({ children }) { //componente
   }
 
   const totalAPagar = () => {
-      return cartList.reduce((acum, prod) => acum + (prod.cantidad * prod.precio), 0)
+      return cartList.reduce((acum, prod) => acum + (prod.initial * prod.precio), 0)
   }
 
   const totalPasajes = () => {
       let total = 0;
-      cartList.forEach((item) => (total += item.cantidad));
+      cartList.forEach((item) => (total += item.initial));
       return total;
 
   };
 
   const cantidadTotalItem = () => {
-      return cartList.reduce((acum, prod) => acum += prod.cantidad, 0)
+      return cartList.reduce((acum, prod) => acum += prod.initial, 0)
   };
 
   const eliminarItem = (id) => {
