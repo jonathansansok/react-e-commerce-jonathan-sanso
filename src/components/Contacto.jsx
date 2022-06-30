@@ -1,7 +1,7 @@
 import React from 'react';
 import { useForm } from "react-hook-form";
 import { edadValidator } from "./contactovalidators";
-import '../hojas-de-estilo/contacto.css';
+import '../hojas-de-estilo/Contacto.css';
 
 
 const Contacto = () => {
