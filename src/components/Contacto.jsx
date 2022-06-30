@@ -1,7 +1,7 @@
 import React from 'react';
 import { useForm } from "react-hook-form";
 import { edadValidator } from "./contactovalidators";
-import '../hojas-de-estilo/Contacto.css';
+import '../hojas-de-estilo/contacto.css';
 
 
 const Contacto = () => {
@@ -9,6 +9,7 @@ const Contacto = () => {
         defaultValues: {
             nombre: 'Sr./a',
             direccion: 'Tu Calle'
+
         }
     });
 
@@ -23,7 +24,7 @@ const Contacto = () => {
         <p className= "reglon-de-form">Un gusto {watch('nombre')}</p>
         <form  className="formulario" onSubmit={handleSubmit(onSubmit)}>
             <div className= "reglon-de-form">
-                <label>Nombre </label>
+                <label>Nombre y Apellido </label>
                 <input type="text" {...register('nombre', {
                     required: true,
                     maxLength: 10

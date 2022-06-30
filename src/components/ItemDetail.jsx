@@ -2,19 +2,23 @@ import React, { useState } from 'react';
 import '../hojas-de-estilo/ItemDetail.css';
 import ItemCount from './ItemCount.jsx';
 import { Link } from 'react-router-dom';
+import { useCartContext } from './CartContext.jsx';
 
 export function ItemDetail({item}){
+    const { addToCart } = useCartContext()
+    const [cantidad,setCantidad] = useState(0)
+    const agregarAlCarrito=(Numero)=>{
+    
+        if (Numero === 0){
+            alert(`No se puede agregar cero pasajes`)
+        }
+        else{
+        alert(`Se agregaron ${Numero} unidades al carrito `)
 
-const [cantidad,setCantidad] = useState(0)
-
-const agregarAlCarrito=(Numero)=>{
-    if (Numero === 0){
-        alert(`No se puede agregar cero pasajes`)
-    }
-    else{
-	alert(`Se agregaron ${Numero} unidades al carrito `)
-
-	setCantidad(Numero)
+        setCantidad(Numero)
+        
+        addToCart({ ...Numero, initial: Numero })
+        console.log(addToCart)
     }
 }
     return (
