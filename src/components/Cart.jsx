@@ -5,7 +5,7 @@ import React from 'react';
 const Cart = () => {
 	return (
     <div className='cart-full'>
-        <h1 className='cart-full-h1'>Este es CART que por detras tendra a CartContext.jsx</h1>
+        <h1 className='cart-full-h1'>Este es CART que por detrás tendrá a CartContext.jsx</h1>
     </div>
     )
 };
