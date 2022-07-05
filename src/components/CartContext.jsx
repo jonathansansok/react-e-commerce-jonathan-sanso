@@ -16,20 +16,18 @@ function CartContextProvider({ children }) { //componente
 
 
   const addToCart = (item) => {
-      const idx = cartList.findIndex(prod => item.id === prod.id);   // 0 -> 
-
-      if(isInCart(item.id)) {
-          // la lógica
-          const newArray = cartList
-          const newCant = cartList[idx].initial + item.initial
-          newArray[idx].initial = newCant
-          setCartList([...newArray])
-      } else {
-          setCartList([
-              ...cartList,
-              item
-          ])
-      }
+    if(isInCart(item.id)){
+        const newArray = cartList
+        const newCant = cartList[isInCart].initial + item.initial
+        newArray[isInCart].initial = newCant
+        setCartList([...newArray])
+        
+        }else{
+            setCartList([
+                ...cartList,
+                item
+            ])
+        }
   }
 
   const removeCart = () => {
