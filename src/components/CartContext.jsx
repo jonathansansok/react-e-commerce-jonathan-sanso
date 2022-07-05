@@ -12,9 +12,6 @@ export const useCartContext = () => useContext(CartContext)
 function CartContextProvider({ children }) { //componente
   const [cartList, setCartList] = useState([])
 
-
-
-
   const addToCart = (item) => {
     if(isInCart(item.id)){
         const newArray = cartList
