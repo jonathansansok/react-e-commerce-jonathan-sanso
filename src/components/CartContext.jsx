@@ -16,13 +16,13 @@ function CartContextProvider({ children }) { //componente
 
 
   const addToCart = (item) => {
-      const isInCart = cartList.some(prod => item.id === prod.id);   
+      const idx = cartList.findIndex(prod => item.id === prod.id);   // 0 -> 
 
       if(isInCart(item.id)) {
           // la lógica
           const newArray = cartList
-          const newCant = cartList[isInCart].initial + item.initial
-          newArray[isInCart].initial = newCant
+          const newCant = cartList[idx].initial + item.initial
+          newArray[idx].initial = newCant
           setCartList([...newArray])
       } else {
           setCartList([
