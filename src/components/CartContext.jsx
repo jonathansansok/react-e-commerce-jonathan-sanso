@@ -30,11 +30,6 @@ function CartContextProvider({ children }) { //componente
               item
           ])
       }
-
-      setCartList([
-          ...cartList,
-          item
-      ])
   }
 
   const removeCart = () => {
