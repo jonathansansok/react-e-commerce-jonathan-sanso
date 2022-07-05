@@ -55,6 +55,10 @@ function CartContextProvider({ children }) { //componente
       setCartList(cartList.filter(prod => prod.id !== id))
   }
 
+  const isInCart = (id) =>{
+    cartList(cartList.some(prod => prod.id === id))
+  }
+
   return (
       <CartContext.Provider value={{
           cartList,
@@ -63,7 +67,8 @@ function CartContextProvider({ children }) { //componente
           totalAPagar,
           totalPasajes,
           cantidadTotalItem,
-          eliminarItem
+          eliminarItem,
+          isInCart
       }}>
 
           {children}
