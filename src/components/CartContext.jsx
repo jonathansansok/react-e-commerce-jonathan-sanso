@@ -54,6 +54,7 @@ function CartContextProvider({ children }) { //componente
   const eliminarItem = (id) => {
       setCartList(cartList.filter(prod => prod.id !== id))
   }
+  
 
   return (
       <CartContext.Provider value={{
