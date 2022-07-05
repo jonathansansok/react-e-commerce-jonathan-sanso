@@ -51,7 +51,7 @@ function CartContextProvider({ children }) { //componente
   }
 
   const isInCart = (id) =>{
-    setCartList(cartList.some(prod => prod.id == id))
+    return cartList.some(prod => prod.id == id)
   }
 
   return (
