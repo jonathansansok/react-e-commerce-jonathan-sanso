@@ -16,13 +16,13 @@ function CartContextProvider({ children }) { //componente
 
 
   const addToCart = (item) => {
-      const idx = cartList.findIndex(prod => item.id === prod.id);   // 0 -> 
+      const isInCart = cartList.some(prod => item.id === prod.id);   
 
-      if (idx !== -1) {
+      if(isInCart(item.id)) {
           // la lógica
           const newArray = cartList
-          const newCant = cartList[idx].initial + item.initial
-          newArray[idx].initial = newCant
+          const newCant = cartList[isInCart].initial + item.initial
+          newArray[isInCart].initial = newCant
           setCartList([...newArray])
       } else {
           setCartList([
@@ -56,7 +56,7 @@ function CartContextProvider({ children }) { //componente
   }
 
   const isInCart = (id) =>{
-    cartList(cartList.some(prod => prod.id == id))
+    setCartList(cartList.some(prod => prod.id == id))
   }
 
   return (
