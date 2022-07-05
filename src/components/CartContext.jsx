@@ -12,24 +12,19 @@ export const useCartContext = () => useContext(CartContext)
 function CartContextProvider({ children }) { //componente
   const [cartList, setCartList] = useState([])
 
-
-
-
   const addToCart = (item) => {
-      const idx = cartList.findIndex(prod => item.id === prod.id);   // 0 -> 
-
-      if (idx !== -1) {
-          // la lógica
-          const newArray = cartList
-          const newCant = cartList[idx].initial + item.initial
-          newArray[idx].initial = newCant
-          setCartList([...newArray])
-      } else {
-          setCartList([
-              ...cartList,
-              item
-          ])
-      }
+    if(isInCart(item.id)){
+        const newArray = cartList
+        const newCant = cartList[isInCart].initial + item.initial
+        newArray[isInCart].initial = newCant
+        setCartList([...newArray])
+        
+        }else{
+            setCartList([
+                ...cartList,
+                item
+            ])
+        }
   }
 
   const removeCart = () => {
@@ -54,6 +49,10 @@ function CartContextProvider({ children }) { //componente
   const eliminarItem = (id) => {
       setCartList(cartList.filter(prod => prod.id !== id))
   }
+  const isInCart = (id) =>{
+    setCartList(cartList.some(prod => prod.id == id))
+  }
+
   const isInCart = (id) =>{
     setCartList(cartList.some(prod => prod.id == id))
   }
