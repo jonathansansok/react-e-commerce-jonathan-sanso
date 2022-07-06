@@ -30,7 +30,7 @@ function CartContextProvider({ children }) { //componente
   const removeCart = () => {
       setCartList([])
   }
-
+  
   const totalAPagar = () => {
       return cartList.reduce((acum, prod) => acum + (prod.initial * prod.precio), 0)
   }
