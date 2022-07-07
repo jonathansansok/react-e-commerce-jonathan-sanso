@@ -18,21 +18,12 @@ function CartContextProvider({ children }) { //componente
 
 
         const newArray = cartList.map(i => {
-
             if (i.id === item.id) {
-
                 i.initial = i.initial + item.initial
-
             }
-
             return i
-
         })
-
         setCartList(newArray)
-
-
-
     } else {
             setCartList([
                 ...cartList,
