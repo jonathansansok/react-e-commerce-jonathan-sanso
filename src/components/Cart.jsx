@@ -20,14 +20,12 @@ function Cart() {
         isInCart} = useCartContext()
     const [isLoading, setLoading] = useState(false);
   
-   /*  const generarOrden = async (e) => {
+    const generarOrden = async (e) => {
       setLoading(true);
       e.preventDefault();
   
       // Nuevo objeto de orders    
       let orden = {}
-   */
-
       orden.total = totalAPagar()
   
       orden.items = cartList.map(cartItem => {
