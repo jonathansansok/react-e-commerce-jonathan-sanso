@@ -4,7 +4,7 @@ import '../hojas-de-estilo/Cart.css';
 import { Link } from 'react-router-dom';
 import ItemListContainer from './ItemListContainer.jsx'
 import { useState, useEffect } from 'react'
-import { addDoc, collection, documentId, getDocs, getFirestore, query, where, writeBatch } from 'firebase/firestore'
+/* import { addDoc, collection, documentId, getDocs, getFirestore, query, where, writeBatch } from 'firebase/firestore' */
 import Container from 'react-bootstrap/Container'
 
 
@@ -20,13 +20,13 @@ function Cart() {
         isInCart} = useCartContext()
     const [isLoading, setLoading] = useState(false);
   
-    const generarOrden = async (e) => {
+   /*  const generarOrden = async (e) => {
       setLoading(true);
       e.preventDefault();
   
       // Nuevo objeto de orders    
       let orden = {}
-  
+   */
 
       orden.total = totalAPagar()
   
@@ -38,15 +38,7 @@ function Cart() {
   
         return { id, nombre, precio }
       })
-  
-      // creación de un documento
-      const db = getFirestore()
-      const queryCollection = collection(db, 'ordenesDeAlquiler')
-      await addDoc(queryCollection, orden)
-        .then(({ id }) => console.log(id))
-  
-      const queryCollectionStock = collection(db, 'Juegos')
-  
+ /*  
       const queryActulizarStock = await query(
         queryCollectionStock, //                 
         where(documentId(), 'in', cartList.map(it => it.id))     
@@ -54,15 +46,15 @@ function Cart() {
   
       const batch = writeBatch(db)
   
-      await getDocs(queryActulizarStock)
-        .then(resp => resp.docs.forEach(res => batch.update(res.ref, {
+      await getDocs(queryActulizarStock) */
+       /*  .then(resp => resp.docs.forEach(res => batch.update(res.ref, {
           cantidad: res.data().cantidad - cartList.find(item => item.id === res.id).cantidad
         })))
         .finally(() => 
-        alert("su pedido se realizo con exito"))
+        alert("su pedido se realizo con exito")) */
   
       removeCart();
-      batch.commit()
+ /*      batch.commit() */
     }
   
     function timeOutEjemplo() {

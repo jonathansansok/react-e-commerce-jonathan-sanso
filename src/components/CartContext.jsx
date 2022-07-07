@@ -13,13 +13,27 @@ function CartContextProvider({ children }) { //componente
   const [cartList, setCartList] = useState([])
 
   const addToCart = (item) => {
-    if(isInCart(item.id)){
-        const newArray = cartList
-        const newCant = cartList[isInCart].initial + item.initial
-        newArray[isInCart].initial = newCant
-        setCartList([...newArray])
-        
-        }else{
+    if (isInCart(item.id)) {
+
+
+
+        const newArray = cartList.map(i => {
+
+            if (i.id === item.id) {
+
+                i.initial = i.initial + item.initial
+
+            }
+
+            return i
+
+        })
+
+        setCartList(newArray)
+
+
+
+    } else {
             setCartList([
                 ...cartList,
                 item
