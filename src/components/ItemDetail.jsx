@@ -20,7 +20,6 @@ export function ItemDetail({item}){
         setCantidad(Numero)
         
         addToCart({ ...item, initial: Numero })
-        console.log(addToCart)
     }
 }
     return (
