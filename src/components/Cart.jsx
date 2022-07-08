@@ -27,7 +27,7 @@ function Cart() {
   
       // Nuevo objeto de orders    
       let orden = {}
-      orden.total = totalAPagar()
+      orden.total = totalAPagar() 
   
       orden.items = cartList.map(cartItem => {
         const id = cartItem.id
