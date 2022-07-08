@@ -58,7 +58,11 @@ export function ItemDetail({item}){
                            ? 
                            <ItemCount stock={item.stock} initial={item.initial} onAdd={agregarAlCarrito}/>
                             : 
-                            <Link to='/cart' > <button className='agregarACarrito-detail terminar'> Finalizar Compra </button> </Link>} 
+                            <>                           
+                             <Link to='/cart' > <button className='agregarACarrito-detail terminar'> Finalizar Compra </button> </Link>
+                            <Link to='/' > <button className='agregarACarrito-detail terminar'> Elegir mas </button> </Link>
+                            </>
+                            } 
                         </section>
                     </article>
                 </div>
