@@ -83,7 +83,7 @@ function Cart() {
           )}
           <div className=''>
             <p>Cantidad Total: {totalPasajes()}</p>
-            <p>Total ($) {totalAPagar()}</p>
+            <p>Total US ($) {totalAPagar()}</p>
             </div>
  
         </div>
