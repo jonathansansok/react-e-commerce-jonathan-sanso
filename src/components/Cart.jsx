@@ -77,7 +77,7 @@ function Cart() {
           {cartList.length !== 0 ? (
             <div className='cartIzquierda'>
               {cartList.map(producto => <div className='cartItem' key={producto.id} >
-                <img src={producto.foto} alt='' /> <div className='cartDetalle' > <p>{producto.nombre}</p>
+                <img src={`/imagenes/img-${producto.imagen}.jpg`} alt='' /> <div className='cartDetalle' > <p>{producto.nombre}</p>
                   <p>Cantidad: {producto.cantidad} - SubTotal ${producto.precio * producto.cantidad}</p>
                   <p> <button size="sm" onClick={() => eliminarItem(producto.id)} className="btn btn-danger">Eliminar</button>{' '}</p>
                 </div>
