@@ -59,18 +59,21 @@ function Cart() {
         <h1 className='cart-full-h1'>Detalles</h1>
           <div className=''>
           {cartList.length !== 0 ? (
+          <>
             <div className='cartIzquierda'>
-              {cartList.map(producto => <div className='' key={producto.id} >
-                  <img src={`/imagenes/img-${producto.imagen}.jpg`} alt='' /> <div className='' > <p>{producto.nombre}</p>
-
-                    <p>Cantidad: {cantidadTotalItem()} - SubTotal ${producto.precio * producto.cantidad}</p>
-                    
-                    <p> <button onClick={() => eliminarItem(producto.id)} className="">Eliminar</button>{' '}</p>
-                  </div>
+              {cartList.map(producto => <div className='' key={producto.id}>
+                <img src={`/imagenes/img-${producto.imagen}.jpg`} alt='' /> <div className=''> <p>{producto.nombre}</p>
+                  <p>Cantidad: {producto.initial} -  SubTotal ${Number(producto.precio) * producto.initial}</p>
+                  <p> <button onClick={() => eliminarItem(producto.id)} className="">Eliminar</button>{' '}</p>
                 </div>
-                )
-              }
               </div>
+              )}
+            </div><div className=''>
+                <p>Cantidad Total: {totalPasajes()}</p>
+                <p>Total U$D {totalAPagar()}</p>
+                <button className="" onClick={removeCart}>Vaciar Carrito</button>
+            </div>
+          </>
           ) : (
             <>
               <div className=''>
@@ -81,13 +84,10 @@ function Cart() {
               </div>
             </>
           )}
-          <div className=''>
-            <p>Cantidad Total: {totalPasajes()}</p>
-            <p>Total US ($) {totalAPagar()}</p>
-            </div>
+          
  
         </div>
-        <button className="" onClick={removeCart}>Vaciar Carrito</button>
+
       </Container>
     )
   }
