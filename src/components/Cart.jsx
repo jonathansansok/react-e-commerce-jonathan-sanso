@@ -2,7 +2,8 @@ import React from 'react';
 import { useCartContext } from './CartContext.jsx'; 
 import '../hojas-de-estilo/Cart.css'; 
 import { Link } from 'react-router-dom';
-import ItemListContainer from './ItemListContainer.jsx'
+import ItemListContainer from './ItemListContainer.jsx';
+/* import ItemCount from './ItemCount.jsx'; */
 import { useState, useEffect } from 'react'
 /* import { addDoc, collection, documentId, getDocs, getFirestore, query, where, writeBatch } from 'firebase/firestore' */
 import Container from 'react-bootstrap/Container'
@@ -36,21 +37,7 @@ function Cart() {
   
         return { id, nombre, precio }
       })
- /*  
-      const queryActulizarStock = await query(
-        queryCollectionStock, //                 
-        where(documentId(), 'in', cartList.map(it => it.id))     
-      )
-  
-      const batch = writeBatch(db)
-  
-      await getDocs(queryActulizarStock) */
-       /*  .then(resp => resp.docs.forEach(res => batch.update(res.ref, {
-          cantidad: res.data().cantidad - cartList.find(item => item.id === res.id).cantidad
-        })))
-        .finally(() => 
-        alert("su pedido se realizo con exito")) */
-  
+ 
       removeCart();
  /*      batch.commit() */
     }
@@ -67,23 +54,22 @@ function Cart() {
       }
     }, [isLoading]);
 
-  
-  
     return (
       <Container>
         <h1 className='cart-full-h1'>Detalles</h1>
-  
-        <div className='cartconteiner'>
+          <div className='cartconteiner'>
           {cartList.length !== 0 ? (
             <div className='cartIzquierda'>
               {cartList.map(producto => <div className='cartItem' key={producto.id} >
-                <img src={`/imagenes/img-${producto.imagen}.jpg`} alt='' /> <div className='cartDetalle' > <p>{producto.nombre}</p>
-                  <p>Cantidad: {producto.cantidad} - SubTotal ${producto.precio * producto.cantidad}</p>
-                  <p> <button size="sm" onClick={() => eliminarItem(producto.id)} className="btn btn-danger">Eliminar</button>{' '}</p>
+                  <img src={`/imagenes/img-${producto.imagen}.jpg`} alt='' /> <div className='cartDetalle' > <p>{producto.nombre}</p>
+
+                    <p>Cantidad: {cantidadTotalItem()} - SubTotal ${producto.precio * producto.cantidad}</p>
+                    <p> <button size="sm" onClick={() => eliminarItem(producto.id)} className="btn btn-danger">Eliminar</button>{' '}</p>
+                  </div>
                 </div>
-              </div>)}
-  
-            </div>
+                )
+              }
+              </div>
           ) : (
             <>
               <div className='cartconteiner'>
@@ -95,14 +81,10 @@ function Cart() {
             </>
           )}
           <div className='cartDerecha'>
-  
             <p>Cantidad Total: {totalPasajes()}</p>
-  
             <p>Total ($) {totalAPagar()}</p>
-  
-
-          </div>
-  
+            </div>
+ 
         </div>
         <button className="btn btn-danger" onClick={removeCart}>Vaciar Carrito</button>
       </Container>
