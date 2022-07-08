@@ -3,7 +3,8 @@
      padding: 0;
 }
 .cart-full{
-    height: 800px;
+    min-height: 800px;
+    margin-bottom: 40px;
 }
 .cart-full-h{
     letter-spacing: 3px;

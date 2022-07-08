@@ -6,8 +6,6 @@ export const useCartContext = () => useContext(CartContext)
 
 //state que le pasamos al useState desde los productos
 
-
-
 // 2 creo el provider
 function CartContextProvider({ children }) { //componente
   const [cartList, setCartList] = useState([])

@@ -7,12 +7,11 @@ function CartWidget(){
     const {totalPasajes} = useCartContext()
     return (
         <Link to='/cart'>
-        <div className="liNav shoppingTodo">
-        <img id="shoppingLogo" href="index.html" target="_blank" className="shoppingCart shoppingLogok" src="https://icongr.am/fontawesome/shopping-cart.svg?size=40&color=7809e0" alt="shopping cart" />
-       <div className="contadorUnidades" href="index.html" id="contadorId">{totalPasajes()}</div>
-       {/* <button className='ItemsContext' onClick={() => clear()}>alert items</button> */}
-   </div>
-   </Link>
+            <div className="liNav shoppingTodo">
+                <img id="shoppingLogo" href="index.html" target="_blank" className="shoppingCart shoppingLogok" src="https://icongr.am/fontawesome/shopping-cart.svg?size=40&color=7809e0" alt="shopping cart" />
+                <div className="contadorUnidades" href="index.html" id="contadorId">{totalPasajes()}</div>
+            </div>
+        </Link>
     );
 }
 
