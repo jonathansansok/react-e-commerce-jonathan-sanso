@@ -23,22 +23,7 @@ function Item({ data }) {
         <p className="incluye-Item">{data.incluye}</p>
 
         <p className="precio-Item">US$ {data.precio}.-</p>
-        {/*                 <section className='numerales'>
-                <ItemCount stock={10} initial={1} 
-                />
-
-                </section> */}
-        {/* <section className='fechasTodas'>
-                    <article className='checkIn'>
-                        <label htmlFor="start">Check-in:</label>
-                        <input type="date" id="start" name="trip-start"value="2022-05-22" min="2022-05-22" max="2024-12-31" />
-                    </article>
-                    <article className='checkOut'>
-                        <label htmlFor="start">Check-Out:</label>
-                        <input type="date" id="start" name="trip-start"value="2022-05-22" min="2022-05-22" max="2024-12-31" />
-                    </article>
-                </section> */}
-         <Link to={`/item/${data.id}`} className='agregarACarrito'> Mas detalles</Link> 
+         <div className='agregarACarrito'> Mas detalles</div> 
       </div>
     </Link>
   );
