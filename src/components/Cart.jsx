@@ -55,15 +55,22 @@ function Cart() {
     }, [isLoading]);
 
     return (
-      <Container>
-        <h1 className='cart-full-h1'>Detalles</h1>
+      <Container className='cart-full'>
+        <h1 className='cart-full-h detalles'>Detalles</h1>
           <div className=''>
           {cartList.length !== 0 ? (
           <>
             <div className='cartIzquierda'>
               {cartList.map(producto => <div className='' key={producto.id}>
                 <img src={`/imagenes/img-${producto.imagen}.jpg`} alt='' /> <div className=''> <p>{producto.nombre}</p>
-                  <p>Cantidad: {producto.initial} -  SubTotal ${Number(producto.precio) * producto.initial}</p>
+
+                <div className='botonera-item-cart'>
+                  <p>Cantidad: </p>
+                    <button onClick={() => addToCart({ id: producto.id, initial: -1 })} disabled={producto.initial === 1}>-</button>
+                    {producto.initial}  
+                    <button onClick={() => addToCart({ id: producto.id, initial: 1 })} disabled={producto.initial === producto.stock}>+ </button>
+                    <p className='subTotal'>SubTotal ${Number(producto.precio) * producto.initial}</p>
+                </div>
                   <p> <button onClick={() => eliminarItem(producto.id)} className="">Eliminar</button>{' '}</p>
                 </div>
               </div>
@@ -78,7 +85,7 @@ function Cart() {
             <>
               <div className=''>
                 <div className=''>
-                  <h2>Su Carrito Esta Vacio</h2>
+                  <h2 className='cart-full-h'>Su Carrito Esta Vacio</h2>
                   <Link className="" to="/" element={<ItemListContainer />}>Volver a tienda</Link>
                 </div>
               </div>
