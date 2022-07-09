@@ -3,7 +3,8 @@
      padding: 0;
 }
 .cart-full{
-    height: 800px;
+    min-height: 800px;
+    margin-bottom: 40px;
 }
 .cart-full-h{
     letter-spacing: 3px;
@@ -12,15 +13,84 @@
 
 .detalles{
     letter-spacing: 6px;
-/*     margin-top: 40px; */
+    font-size: 3rem;
 }
 
-.botonera-item-cart{
+.renderizada-card{
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    
+
+}
+
+.renderizada-card-unidad{
+    width: 848px;
+    display: flex;
+    margin-bottom: 40px;
+    background-color: #fff;
+    box-shadow: 0 3px 13px 1px rgba(0 0 0 / 9%); 
+}
+
+.renderizada-foto{
+    max-width: 300px;
+}
+
+
+
+.renderizada-botonera-item-cart{
     display: flex;
     flex-direction: row;
     justify-content: center;
     gap: 5px;
 }
+
+.renderizada-specs-todas{
+    margin: 60px 60px 40px 60px;
+    gap: 20px 30px;
+}
+
+.renderizada-specs-palabras p{
+    margin-bottom: 20px;
+}
+
+.botonera-sumaresta{
+    font-size: 1rem;    
+
+    cursor: pointer;
+    border: 1px solid black;
+    border-radius: 3px;
+    padding: 1px 6px 1px 6px;
+    margin-left: 10px;
+    margin-right: 10px;
+    color: rgb(120, 9, 224);
+    font-weight: bold;
+    height: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+
 .subTotal{
-    margin-left: 20px;
+    margin-left: 10px;
+}
+
+
+.agregarACarrito-detail{
+    margin-top: 20px;
+}
+
+.carrito-vacio{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.volver{
+    font-size: 1.5rem;
+    margin-top: 40px;
+    width: 300px;
+
 }

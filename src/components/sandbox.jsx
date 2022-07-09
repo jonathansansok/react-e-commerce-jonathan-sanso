@@ -1,9 +1,8 @@
+//imports
 import { useState, createContext, useContext } from "react";
-
+//exports
 export const CartContext = createContext();
-
 export const useCart = () => useContext(CartContext);
-
 const INITIAL_STATE = {
   addedItems: [{ name: "Bicicleta", quantity: 1 }],
   totalPrice: 0
