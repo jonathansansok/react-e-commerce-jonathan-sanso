@@ -1,4 +1,3 @@
-//creo el contexto
 //imports
 import { createContext, useContext, useState} from 'react'
 
@@ -6,13 +5,7 @@ const CartContext = createContext([])
 
 export const useCartContext = () => useContext(CartContext)
 
-<<<<<<< HEAD
-//state que le pasamos al useState desde los productos
-
-// 2 creo el provider
-=======
 //  creo el provider
->>>>>>> fb1
 function CartContextProvider({ children }) { //componente
   const [cartList, setCartList] = useState([])
 
