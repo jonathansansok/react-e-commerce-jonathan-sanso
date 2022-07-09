@@ -77,10 +77,6 @@
 }
 
 
-.agregarACarrito-detail{
-    margin-top: 20px;
-}
-
 .carrito-vacio{
     display: flex;
     flex-direction: column;

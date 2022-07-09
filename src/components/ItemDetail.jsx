@@ -46,21 +46,24 @@ export function ItemDetail({item}){
                         <section className='fechasTodas-detail'>
                             <article className='checkIn-detail'>
                                 <label htmlFor="start">Check-in:</label>
-                                <input type="date" id="start" name="trip-start"value="2022-05-22" min="2022-05-22" max="2024-12-31"  readOnly/>
+                                <input type="date" id="start" name="trip-start"value="2023-01-01" min="2023-01-01" max="2024-12-31"  readOnly/>
                             </article>
                             <article className='checkOut-detail'>
                                 <label htmlFor="start">Check-Out:</label>
-                                <input type="date" id="start" name="trip-start"value="2022-05-22" min="2022-05-22" max="2024-12-31" readOnly />
+                                <input type="date" id="start" name="trip-start"value="2023-01-07" min="2023-01-07" max="2024-12-31" readOnly />
                             </article>
                         </section>
                         <section className='numerales-detail'>
                            {cantidad===0 
-                           ? 
-                           <ItemCount stock={item.stock} initial={item.initial} onAdd={agregarAlCarrito}/>
+                           ?
+                           <section className='agregar-volver'>   
+                                <ItemCount stock={item.stock} initial={item.initial} onAdd={agregarAlCarrito}/>
+                                <Link to='/' > <button className='agregarACarrito-detail terminar'> Elegir mas </button> </Link>
+                           </section>
                             : 
-                            <>                           
-                             <Link to='/cart' > <button className='agregarACarrito-detail terminar'> Finalizar Compra </button> </Link>
-                            <Link to='/' > <button className='agregarACarrito-detail terminar'> Elegir mas </button> </Link>
+                            <>      
+                              <Link to='/' > <button className='agregarACarrito-detail terminar itemdetail'> Elegir mas </button> </Link>                    
+                              <Link to='/cart' > <button className='agregarACarrito-detail terminar itemdetail'> Finalizar Compra </button> </Link>
                             </>
                             } 
                         </section>

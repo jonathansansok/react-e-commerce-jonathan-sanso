@@ -159,7 +159,6 @@
 }
 
 .agregarACarrito-detail{
-
     border: 0;
     padding: 3px 4px;
     border-radius: 0.4rem;
@@ -167,24 +166,23 @@
     font-size: 1.1em;
     text-align: center;
     border: 2px solid rgb(120, 9, 224);
-    transition: all 0.6s;
     text-decoration: none;
     color : rgb(120, 9, 224);
     font-size: bold;
     cursor: pointer;
 }
-/* .termino{
+.agregar-volver{
+    width: 320px;
     display: flex;
     flex-direction: column;
-    justify-content: end;
-
-} */
-
-/* .terminar{
-    display: none;
+    height: 400px;
 }
- */
-.terminar:hover{
+
+.itemdetail{
+    margin-top: 40px;
+    margin-left: 10px;
+}
+.itemdetail:hover{
     background-color: rgb(120, 9, 224);
     text-decoration: none;
     color : salmon;
