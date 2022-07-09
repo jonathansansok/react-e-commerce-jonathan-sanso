@@ -1,18 +1,15 @@
+//imports
 import React, { useState, useEffect } from 'react';
 import '../hojas-de-estilo/ItemDetailContainer.css';
 import {getProductById} from './data.js';
 import ItemDetail from './ItemDetail.jsx';   
 import {useParams} from 'react-router';
-/* import {data} from './data.js'; */
 
 const ItemDetailContainer = () => {
-	
  	const [item, setItem] = useState([]);
-
 	let {id} = useParams();
 
 	 useEffect(() => {
-
 		getProductById(id)
 			.then(res=> { 
 				setItem(res);
