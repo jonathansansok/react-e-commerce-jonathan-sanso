@@ -4,7 +4,6 @@ import "../hojas-de-estilo/Item.css";
 import { Link } from "react-router-dom";
 
 function Item({ data }) {         
-
   return (
     <Link to={`/item/${data.id}`} className="li_per contenedor-Item">
       <div className="anyTravel">
