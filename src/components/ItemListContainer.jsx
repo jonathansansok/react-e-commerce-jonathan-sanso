@@ -6,8 +6,7 @@ import "../hojas-de-estilo/ItemListContainer.css";
 import MainHero from "./MainHero.jsx";
 import {db} from '../firebase/firebaseConfig.js'; 
 import { collection, query, getDocs,/*  where */} from "firebase/firestore";
-import Item from "./Item.jsx";
-
+import ItemList from "./ItemList.jsx";
 
 const ItemListContainer = ({ titulo2 }) => {
   const [productos, setProductos] = useState([]);  
@@ -21,7 +20,7 @@ const ItemListContainer = ({ titulo2 }) => {
       // doc.data() is never undefined for query doc snapshots
       docs.push({...doc.data(), id: doc.id});
     });
-    //console.log(docs);
+    console.log(docs);
     setProductos(docs);
   };
 
@@ -37,9 +36,7 @@ const ItemListContainer = ({ titulo2 }) => {
           <h2>{titulo2} </h2>
         </article>
         <article className="ItemListContainer-estilo"  >
-          {productos.map((travel) => {
-            return <Item maker={travel} key={travel.id} />;
-          })}     
+           <ItemList productos={productos}/>
         </article>
       </div>
     </>
