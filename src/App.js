@@ -8,7 +8,7 @@ import Footer from './components/Footer.jsx';
 import Contacto from './components/Contacto.jsx';
 import Cart from './components/Cart.jsx';
 //ahora import el ItemsProvider y envuelvo mi app
-import CartContextProvider from './components/CartContext.jsx';  
+import CartContextProvider from './components/CartContext.jsx';
 
 function App() {
   return (

@@ -1,4 +1,4 @@
-//imports
+/* //imports
 import React from "react";
 import Item from "./Item.jsx";
 import "../hojas-de-estilo/Item.css";
@@ -15,3 +15,4 @@ const ItemList = ({ productos }) => {
 };
 
 export default ItemList;
+ */
