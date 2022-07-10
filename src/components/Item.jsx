@@ -9,15 +9,15 @@ function Item({ travels }) {
       <div className="anyTravel">
         <img
           className="imagen-Item"
-          src={`./imagenes/${travels.imagen}.jpg`}
+          src={travels.imagen}
           alt={travels.imagen}
         />
       </div>
       <div className="contenedor-texto-Item">
         <p className="nombre-Item">
           <strong>
-            {travels.nombre} en {travels.pais}
-          </strong>
+            {travels.titulo} en {travels.pais}
+          </strong> 
         </p>
         <p className="incluye-Item">{travels.incluye}</p>
 
