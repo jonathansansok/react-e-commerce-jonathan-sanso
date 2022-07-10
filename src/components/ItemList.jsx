@@ -7,12 +7,12 @@ import Item from "./Item.jsx";
 const ItemList = ({ productos }) => {	
   return (
     <div className="todasLasItem">
-       {productos.map((travels) => {
-            <Item maker={travels} key={travels.id} />;
+      {productos.map((maker) => {
+        return <Item travels={maker} key={maker.id} />
           })}   
     </div>
   );
 };
 
 export default ItemList;
- 
+
