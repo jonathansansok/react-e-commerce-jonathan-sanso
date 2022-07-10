@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import "../hojas-de-estilo/ItemListContainer.css";
 /* import { data } from "./data.js"; */
- import ItemList from "./ItemList"; 
+/* import ItemList from "./ItemList"; */
 import MainHero from "./MainHero.jsx";
 import {db} from '../firebase/firebaseConfig.js'; 
 import { collection, query, getDocs,/*  where */} from "firebase/firestore";
@@ -37,8 +37,9 @@ const ItemListContainer = ({ titulo2 }) => {
           <h2>{titulo2} </h2>
         </article>
         <article className="ItemListContainer-estilo"  >
-          <ItemList  />;
-             
+          {productos.map((travel) => {
+            return <Item maker={travel} key={travel.id} />;
+          })}     
         </article>
       </div>
     </>
