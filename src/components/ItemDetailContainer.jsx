@@ -12,7 +12,7 @@ const ItemDetailContainer =  async () => {
 
 	const response = await getDocs(q)            
 	 
-	const doc = {id: doc.id, ...travels.data()}
+	const doc = {id: doc.id, ...id.data()}
 	
 	return (
 		<div className='item-detail-container-estilo'>
