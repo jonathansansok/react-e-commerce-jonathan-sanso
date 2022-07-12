@@ -4,24 +4,21 @@ import '../hojas-de-estilo/ItemDetailContainer.css';
 import {getProductById} from './data.js';
 import ItemDetail from './ItemDetail.jsx';   
 import {useParams} from 'react-router';
+import {db} from '../firebase/firebaseConfig.js'; 
+import { collection, query, getDocs,/*  where */} from "firebase/firestore";
 
-const ItemDetailContainer = () => {
- 	const [item, setItem] = useState([]);
-	let {id} = useParams();
+const ItemDetailContainer =  async () => {
+ 	const document = doc(db, "travels", idtravels)            
 
-	 useEffect(() => {
-		getProductById(id)
-			.then(res=> { 
-				setItem(res);
-			})
-			.catch(err=>console.log(err))
-	}, [id]); 
+	const response = await getDoc(q)            
+	 
+	const doc = {id: travels.id, ...travels.data()}
 	
 	return (
 		<div className='item-detail-container-estilo'>
 			<h1 className='item-detail-container-estilo-h1' >Tu próximo viaje!</h1>
-			<div key={item.id}>
-			<ItemDetail item={item}/> 
+			<div key={travels.id}>
+			<ItemDetail travels={travels}/> 
 			</div>
 		</div>
 	);
