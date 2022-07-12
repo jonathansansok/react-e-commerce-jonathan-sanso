@@ -5,20 +5,39 @@ import { useParams } from 'react-router';
 import ItemDetail from './ItemDetail.jsx';   
 /* import {useParams} from 'react-router'; */
 import {db} from '../firebase/firebaseConfig.js'; 
-import {getProductById} from './data.js';
+/* import {getProductById} from './data.js'; */
 
 
 const ItemDetailContainer = () => {
  	const [item, setItem] = useState([]);
-	let {id} = useParams();
+	const  {id} = useParams();
 
-	 useEffect(() => {
+	console.log(id);
+	const getProductos = async () => {
+		const q = query(collection(db, "travels"), /* where("categoria", "==", america) */);  
+		const querySnapshot = await getDocs(q);
+		const docs = [];
+		//console.log(querySnapshot);
+	
+		querySnapshot.forEach((doc) => {
+		  // doc.data() is never undefined for query doc snapshots
+		  docs.push({...doc.data(), id: doc.id});
+		});
+		console.log(docs);
+		setItem(docs);
+	  };
+
+	  useEffect(() => {
+		getProductos();
+	  }, []);
+
+	/*  useEffect(() => {
 		getProductById(id)
 			.then(res=> { 
 				setItem(res);
 			})
 			.catch(err=>console.log(err))
-	}, [id]); 
+	}, [id]);  */
 	
 	return (
 		<div className='item-detail-container-estilo'>
