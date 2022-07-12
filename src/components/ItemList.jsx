@@ -5,11 +5,11 @@ import "../hojas-de-estilo/ItemList.css";
 import Item from "./Item.jsx";
 import { Link } from 'react-router-dom';
 
-const ItemList = ({ productos }) => {	
+const ItemList = ({ travels }) => {	
   return (
-    <Link to={`item/${data.id}`} key={data.id}>
+    <Link to={`item/${travels.id}`} key={travels.id}>
     <div className="todasLasItem">
-      {productos.map((maker) => {
+      {travels.map((maker) => {
         return <Item travels={maker} key={maker.id} />
 
           })}   
