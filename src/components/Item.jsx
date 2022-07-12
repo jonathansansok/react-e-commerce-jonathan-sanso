@@ -20,7 +20,6 @@ function Item({ travels }) {
           </strong> 
         </p>
         <p className="incluye-Item">{travels.incluye}</p>
-
         <p className="precio-Item">US$ {travels.precio}.-</p>
          <div className='agregarACarrito'> Mas detalles</div> 
       </div>
