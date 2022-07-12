@@ -5,7 +5,7 @@ import ItemCount from './ItemCount.jsx';
 import { Link } from 'react-router-dom';
 import { useCartContext } from './CartContext.jsx';
 
-export function ItemDetail({travels}){
+export function ItemDetail({productos}){
     const { addToCart } = useCartContext()
     
     const [cantidad,setCantidad] = useState(0)
@@ -20,7 +20,7 @@ export function ItemDetail({travels}){
 
         setCantidad(Numero)
         
-        addToCart({ ...travels, initial: Numero })
+        addToCart({ ...productos, initial: Numero })
     }
 }
     return (
@@ -75,4 +75,4 @@ export function ItemDetail({travels}){
     );
 }
 
-export default ItemDetail; 
+ export default ItemDetail; 
