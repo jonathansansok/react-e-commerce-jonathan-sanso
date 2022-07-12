@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 // Firebase
 import { collection, addDoc } from 'firebase/firestore';
-/*  import {generarOrden()} from './Cart.jsx' */ 
+/*  import {{totalAPagar()}} from './Cart.jsx'  */
 import {db} from '../firebase/firebaseConfig.js'; 
 import '../hojas-de-estilo/shop.css';
 
@@ -14,8 +14,8 @@ const initialState = {
 	phone: '',
 	email: '',
     fecha: new Date(),
-/*     datosviajes : generarOrden(),  */
-
+    productos: [],
+/*     total: totalAPagar(), */
 };
 
 const styles = {
