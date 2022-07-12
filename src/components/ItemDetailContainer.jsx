@@ -8,7 +8,7 @@ import { collection, query, getDocs, documentId, where } from "firebase/firestor
 
 const ItemDetailContainer = () => {
  	const [item, setItem] = useState([]);
-	console.log(item);
+
 	const  {id} = useParams();
 
 	useEffect(() => {

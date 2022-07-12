@@ -60,9 +60,9 @@ function Cart() {
           <>
             <div className='renderizada-card'>
               {cartList.map(producto => <div className='renderizada-card-unidad' key={producto.id}>
-                <img className='renderizada-foto' src={`/imagenes/img-${producto.imagen}.jpg`} alt='' /> 
+                <img className='renderizada-foto' src={producto.imagen} alt='' /> 
                 <article className='renderizada-specs-todas'>
-                  <div className='renderizada-specs-palabras'> <p><strong>{producto.nombre}</strong> en <strong>{producto.pais}</strong></p>
+                  <div className='renderizada-specs-palabras'> <p><strong>{producto.titulo}</strong> en <strong>{producto.pais}</strong></p>
                     <div className='renderizada-botonera-item-cart'>
                       <p>Cantidad: </p>
                         <button className='botonera-sumaresta' onClick={() => addToCart({ id: producto.id, initial: -1 })} disabled={producto.initial === 1}><p>-</p></button>
