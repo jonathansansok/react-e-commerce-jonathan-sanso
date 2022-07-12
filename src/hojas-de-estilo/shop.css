@@ -1,0 +1,35 @@
+.FormContainer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin: 20px;
+}
+
+.Textfield {
+	width: 400px;
+}
+
+.btnASendAction {
+	background: rgb(108, 14, 14);
+	background: radial-gradient(
+		circle,
+		rgba(108, 14, 14, 1) 77%,
+		rgba(172, 34, 34, 1) 100%
+	);
+	color: white;
+	height: 54px;
+	width: 400px;
+	border-radius: 8px;
+	font-size: 18px;
+	transition: background, color 0.5s;
+	outline: #ff0000;
+	border: none;
+	margin: 10px;
+}
+
+.btnASendAction:hover {
+	color: red;
+	background: rgb(0, 0, 0);
+	background: radial-gradient(circle, rgb(11, 4, 4) 77%, rgb(0, 0, 0) 100%);
+}

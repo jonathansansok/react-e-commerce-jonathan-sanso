@@ -3,7 +3,7 @@ import React from 'react';
 import { useCartContext } from './CartContext.jsx'; 
 import '../hojas-de-estilo/Cart.css'; 
 import { Link } from 'react-router-dom';
-/* import ItemListContainer from './ItemListContainer.jsx'; */
+
 import { useState, useEffect } from 'react'
 /*  import { addDoc, collection, documentId, getDocs, getFirestore, query, where, writeBatch } from 'firebase/firestore'  */
 
@@ -88,6 +88,7 @@ function Cart() {
                   <h2 className='cart-full-h'>Su Carrito Esta Vacio</h2>
                   <Link  to="/" ><p className='agregarACarrito-detail volver'>Volver a tienda</p></Link>
                 </div>
+                
               </div>
             </>
           )}

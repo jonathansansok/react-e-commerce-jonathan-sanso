@@ -3,11 +3,17 @@ import '../hojas-de-estilo/NavBar.css';
 import CartWidget from './CartWidget';
 import { Link } from 'react-router-dom';
 
+
+
 function NavBar(){
     return (
         <header className="header">
         <h1 className="NaturAdventure" ><img src="https://icongr.am/jam/chevrons-square-right-f.svg?size=60&color=7809e0" alt="logo" />Travelfy</h1>
         <nav className="nav">
+            <Link to="/shop" className="liNav">shop 
+            
+            </Link>
+
             <CartWidget
              /> 
             <ul className="ulNav">
