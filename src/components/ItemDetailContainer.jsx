@@ -3,9 +3,9 @@ import React, { useState, useEffect } from 'react';
 import '../hojas-de-estilo/ItemDetailContainer.css';
 import { useParams } from 'react-router';
 import ItemDetail from './ItemDetail.jsx';   
-import {useParams} from 'react-router';
+/* import {useParams} from 'react-router'; */
 import {db} from '../firebase/firebaseConfig.js'; 
-
+import {getProductById} from './data.js';
 
 
 const ItemDetailContainer = () => {
