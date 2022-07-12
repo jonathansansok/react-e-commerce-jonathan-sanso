@@ -19,26 +19,24 @@ function Cart() {
         } = useCartContext()
     const [isLoading, setLoading] = useState(false);
   
-    const generarOrden = async (e) => {
-      setLoading(true);
-      e.preventDefault();
-  
+    const generarOrden =  () => {
       // Nuevo objeto de orders    
       let orden = {}
       orden.total = totalAPagar() 
   
       orden.items = cartList.map(cartItem => {
         const id = cartItem.id
-        const nombre = cartItem.nombre
-        const precio = cartItem.precio * cartItem.cantidad
-        // const cantidad = cartItem.cantidad
+        const titulo = cartItem.titulo
+        const precio = cartItem.precio * cartItem.initial
+        const cantidad = cartItem.initial
   
-        return { id, nombre, precio }
+        return { id, titulo, cantidad, precio }
       })
  
-      removeCart();
+     /*  removeCart(); */
  /*      batch.commit() */
     }
+    console.log(generarOrden());
   
     function timeOutEjemplo() {
       return new Promise((resolve) => setTimeout(resolve, 2000));
@@ -54,7 +52,7 @@ function Cart() {
 
     return (
       <main className='cart-full'>
-        <h1 className='cart-full-h detalles'>Detalles</h1>
+        <h1 className='cart-full-h detalles'>Cart-Detalles</h1>
           <div className=''>
           {cartList.length !== 0 ? (
           <>
@@ -75,13 +73,14 @@ function Cart() {
                 </article>
               </div>
               )}
-            </div><div className=''>
-                <p>Total Pasajes: <strong>{totalPasajes()}</strong></p>
-                <p>Total U$D <strong>{totalAPagar()}</strong>.-</p>
-
-                <button className='agregarACarrito-detail' onClick={removeCart}>Vaciar Carrito</button>
-                <Shop
-                />
+            </div>
+            <div className=''>
+                <div className='totales-cart'>
+                <button className='agregarACarrito-detail vaciar-carrito' onClick={removeCart}>Vaciar Carrito</button>
+                <p className='totales-cart-item'>Total Pasajes: <strong>{totalPasajes()}</strong></p>
+                <p className='totales-cart-item'>Total U$D <strong>{totalAPagar()}</strong>.-</p>
+                </div>
+                <Shop/>
 {/*                 <Link  to="/shop" ><button className='agregarACarrito-detail' onClick={removeCart}>Terminar y genID</button></Link> */}
             </div>
           </>

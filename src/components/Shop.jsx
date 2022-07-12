@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 // Firebase
 import { collection, addDoc } from 'firebase/firestore';
-
+/*  import {generarOrden()} from './Cart.jsx' */ 
 import {db} from '../firebase/firebaseConfig.js'; 
 import '../hojas-de-estilo/shop.css';
 
@@ -13,6 +13,8 @@ const initialState = {
 	name: '',
 	phone: '',
 	email: '',
+    fecha: new Date(),
+/*     datosviajes : generarOrden(),  */
 
 };
 
@@ -71,7 +73,7 @@ const Shop = () => {
 					value={values.email}
 					onChange={handleOnChange}
 				/>
-				<button className='btnASendAction'>Send</button>
+				<button className='agregarACarrito-detail'>FINALIZAR COMPRA</button>
 			</form>
 			{purchaseID && <MessageSuccess purchaseID={purchaseID} />}
 		</div>

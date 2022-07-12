@@ -63,7 +63,7 @@ export function ItemDetail({item}){
                             : 
                             <>      
                               <Link to='/' > <button className='agregarACarrito-detail terminar itemdetail'> Elegir mas </button> </Link>                    
-                              <Link to='/cart' > <button className='agregarACarrito-detail terminar itemdetail'> Finalizar Compra </button> </Link>
+                              <Link to='/cart' > <button className='agregarACarrito-detail terminar itemdetail'> Ir al Cart </button> </Link>
                             </>
                             } 
                         </section>

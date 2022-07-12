@@ -76,14 +76,26 @@
     margin-left: 10px;
 }
 
+.totales-cart{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
 
+    /* gap: 20px 20px; */
+}
+
+.vaciar-carrito{
+    margin-bottom: 0px;
+}
 .carrito-vacio{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-
+.totales-cart-item{
+    margin-top: 5px;
+}
 .volver{
     font-size: 1.5rem;
     margin-top: 40px;
