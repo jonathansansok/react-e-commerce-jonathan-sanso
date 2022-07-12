@@ -1,4 +1,3 @@
-//imports
 import React, { useState, useEffect } from "react";
 import "../hojas-de-estilo/ItemListContainer.css";
 import MainHero from "./MainHero.jsx";

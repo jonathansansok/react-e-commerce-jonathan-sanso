@@ -75,4 +75,4 @@ export function ItemDetail({travels}){
     );
 }
 
- export default ItemDetail; 
+export default ItemDetail; 

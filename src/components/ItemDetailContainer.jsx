@@ -7,12 +7,13 @@ import {useParams} from 'react-router';
 import {db} from '../firebase/firebaseConfig.js'; 
 import { collection, query, getDocs,/*  where */} from "firebase/firestore";
 
-const ItemDetailContainer =  async () => {
- 	const q = doc(db, "travels", travels.id)            
+const ItemDetailContainer =  async () => {	
 
-	const response = await getDocs(q)            
+ 	const document = doc(db, "travels", idtravels)                  
+
+	const response = await getDocs(document)            
 	 
-	const doc = {id: doc.id, ...id.data()}
+	const doc = {id: response.id, ...id.data()}
 	
 	return (
 		<div className='item-detail-container-estilo'>
