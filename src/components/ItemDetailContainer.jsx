@@ -8,11 +8,11 @@ import {db} from '../firebase/firebaseConfig.js';
 import { collection, query, getDocs,/*  where */} from "firebase/firestore";
 
 const ItemDetailContainer =  async () => {
- 	const document = doc(db, "travels", travels.id)            
+ 	const q = doc(db, "travels", travels.id)            
 
 	const response = await getDocs(q)            
 	 
-	const doc = {id: travels.id, ...travels.data()}
+	const doc = {id: doc.id, ...travels.data()}
 	
 	return (
 		<div className='item-detail-container-estilo'>
