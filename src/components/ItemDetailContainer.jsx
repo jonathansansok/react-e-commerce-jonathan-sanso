@@ -26,10 +26,8 @@ const ItemDetailContainer = () => {
 	}, [id]);
 
 	return (
-
 		<div className='item-detail-container-estilo'>
 			<h1 className='item-detail-container-estilo-h1' >Tu próximo viaje!</h1>
-
 			<div >
 			{item.map((item) => {
 			return	<ItemDetail item={item} key={item.id}/> 

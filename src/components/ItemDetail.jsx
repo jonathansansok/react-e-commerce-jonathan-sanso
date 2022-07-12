@@ -5,7 +5,7 @@ import ItemCount from './ItemCount.jsx';
 import { Link } from 'react-router-dom';
 import { useCartContext } from './CartContext.jsx';
 
-export function ItemDetail({productos}){
+export function ItemDetail({item}){
     const { addToCart } = useCartContext()
     
     const [cantidad,setCantidad] = useState(0)
@@ -20,7 +20,7 @@ export function ItemDetail({productos}){
 
         setCantidad(Numero)
         
-        addToCart({ ...productos, initial: Numero })
+        addToCart({ ...item, initial: Numero })
     }
 }
     return (
@@ -29,20 +29,20 @@ export function ItemDetail({productos}){
                 <div className= 'contenedor-Item-detail-alto'>
                     <div className= 'anyTravel-detail'>
                         <img className= 'imagen-Item-detail'
-                        src={travels.imagen}
-                        alt= {travels.imagen} />
+                        src={item.imagen}
+                        alt= {item.imagen} />
                     </div>
                     <div className= 'contenedor-texto-Item-detail'>
                         <p className='nombre-Item-detail'>          
-                            <strong> {travels.titulo} en {travels.pais} </strong> </p>
-                        <p className='incluye-Item-detail'>{travels.incluye}</p>
+                            <strong> {item.titulo} en {item.pais} </strong> </p>
+                        <p className='incluye-Item-detail'>{item.incluye}</p>
 
-                        <p className='precio-Item-detail'>US$ {travels.precio}.-</p>
+                        <p className='precio-Item-detail'>US$ {item.precio}.-</p>
                     </div>
                 </div>
 
                 <div className= 'contenedor-texto-Item-detail-bajo'>
-                    <h3>{travels.descripcion}</h3>
+                    <h3>{item.descripcion}</h3>
                     <article className= 'contenedor-texto-Item-detail-bajo letrasNumeros'>
                         <section className='fechasTodas-detail'>
                             <article className='checkIn-detail'>
@@ -58,7 +58,7 @@ export function ItemDetail({productos}){
                            {cantidad===0 
                            ?
                            <section className='agregar-volver'>   
-                                <ItemCount stock={travels.stock} initial={travels.initial} onAdd={agregarAlCarrito}/>
+                                <ItemCount stock={item.stock} initial={item.initial} onAdd={agregarAlCarrito}/>
                                 <Link to='/' > <button className='agregarACarrito-detail terminar'> Elegir mas </button> </Link>
                            </section>
                             : 
