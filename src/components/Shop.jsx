@@ -13,6 +13,7 @@ const initialState = {
 	name: '',
 	phone: '',
 	email: '',
+
 };
 
 const styles = {
@@ -47,7 +48,7 @@ const Shop = () => {
 	return (
 
 		<div style={styles.containerShop}>
-			<h1>Shop</h1>
+			<h1>Complete y viaje</h1>
 			<form className='FormContainer' onSubmit={onSubmit}>
 				<TextField
 					placeholder='Name'

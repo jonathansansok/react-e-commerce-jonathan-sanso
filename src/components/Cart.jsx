@@ -3,7 +3,7 @@ import React from 'react';
 import { useCartContext } from './CartContext.jsx'; 
 import '../hojas-de-estilo/Cart.css'; 
 import { Link } from 'react-router-dom';
-
+import Shop from './Shop.jsx';
 import { useState, useEffect } from 'react'
 /*  import { addDoc, collection, documentId, getDocs, getFirestore, query, where, writeBatch } from 'firebase/firestore'  */
 
@@ -78,7 +78,11 @@ function Cart() {
             </div><div className=''>
                 <p>Total Pasajes: <strong>{totalPasajes()}</strong></p>
                 <p>Total U$D <strong>{totalAPagar()}</strong>.-</p>
+
                 <button className='agregarACarrito-detail' onClick={removeCart}>Vaciar Carrito</button>
+                <Shop
+                />
+{/*                 <Link  to="/shop" ><button className='agregarACarrito-detail' onClick={removeCart}>Terminar y genID</button></Link> */}
             </div>
           </>
           ) : (
@@ -88,7 +92,7 @@ function Cart() {
                   <h2 className='cart-full-h'>Su Carrito Esta Vacio</h2>
                   <Link  to="/" ><p className='agregarACarrito-detail volver'>Volver a tienda</p></Link>
                 </div>
-                
+
               </div>
             </>
           )}

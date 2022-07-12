@@ -10,11 +10,7 @@ function NavBar(){
         <header className="header">
         <h1 className="NaturAdventure" ><img src="https://icongr.am/jam/chevrons-square-right-f.svg?size=60&color=7809e0" alt="logo" />Travelfy</h1>
         <nav className="nav">
-            <Link to="/shop" className="liNav">shop 
-            
-            </Link>
-
-            <CartWidget
+           <CartWidget
              /> 
             <ul className="ulNav">
                 <li className="liNormal">
