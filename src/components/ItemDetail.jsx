@@ -36,7 +36,6 @@ export function ItemDetail({item}){
                         <p className='nombre-Item-detail'>          
                             <strong> {item.titulo} en {item.pais} </strong> </p>
                         <p className='incluye-Item-detail'>{item.incluye}</p>
-
                         <p className='precio-Item-detail'>US$ {item.precio}.-</p>
                     </div>
                 </div>

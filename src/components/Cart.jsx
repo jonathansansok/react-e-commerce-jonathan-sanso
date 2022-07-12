@@ -3,9 +3,9 @@ import React from 'react';
 import { useCartContext } from './CartContext.jsx'; 
 import '../hojas-de-estilo/Cart.css'; 
 import { Link } from 'react-router-dom';
-import ItemListContainer from './ItemListContainer.jsx';
+/* import ItemListContainer from './ItemListContainer.jsx'; */
 import { useState, useEffect } from 'react'
- import { addDoc, collection, documentId, getDocs, getFirestore, query, where, writeBatch } from 'firebase/firestore' 
+/*  import { addDoc, collection, documentId, getDocs, getFirestore, query, where, writeBatch } from 'firebase/firestore'  */
 
 
 
