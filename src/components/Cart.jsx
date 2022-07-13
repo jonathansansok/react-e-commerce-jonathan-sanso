@@ -21,22 +21,11 @@ function Cart() {
   
     const generarOrden =  () => {
       // Nuevo objeto de orders    
-      let orden = {}
-      orden.total = totalAPagar() 
-  
-      orden.items = cartList.map(cartItem => {
-        const id = cartItem.id
-        const titulo = cartItem.titulo
-        const precio = cartItem.precio * cartItem.initial
-        const cantidad = cartItem.initial
-  
-        return { id, titulo, cantidad, precio }
-      })
- 
-     /*  removeCart(); */
- /*      batch.commit() */
+      let items = [];
+      cartList.forEach((item) => items.push({id: item.id, title: item.titulo, price: item.precio, quantity: item.initial}));
+      return items;
     }
-    console.log(generarOrden());
+    console.log(generarOrden()); // a estar orden me la tengo que llevar a la linea 17 de shop y listo
   
     function timeOutEjemplo() {
       return new Promise((resolve) => setTimeout(resolve, 2000));

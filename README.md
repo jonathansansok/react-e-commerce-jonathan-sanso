@@ -1,4 +1,4 @@
-## WEB DE VENTA DE PAQUETES DE TURISMO INTERNACIONAL
+## WEB DE VENTA DE PASAJES DE TURISMO INTERNACIONAL
 
   La idea de esta WEB es programar un E-commerce el cual el usuario elige los destinos de turimos internacional y cantidad de pasajes para luego finalizar la compra.
   
@@ -25,15 +25,15 @@ Estas instrucciones te permitirán obtener una copia del proyecto en funcionamie
 Es necesario contar minimamente con la última versión estable de Visual Studio Code y Google Chrome. Para verificar que versión tienen instalada: 
 Vsc -v 
 gch -v 
-Tener instalado el administrador de Base de Datos Postgres SQL 
+Tener instalado el administrador de Base de Datos Postgres SQL (a futuro)
 
 ## Instrucciones 🔧
 
 1 - Clonar repositorio
 
 Desde la consola de comandos, ubicarse en la carpeta en la cual se clonara el repositrio y luego ejecutar el comando git clone mas la url.
-git clone https://github.com/kryliin/tienda-saliwonczyk.git
-cd tienda-saliwonczyk
+git clone https://github.com/jonathansansok/ecommerce-react-jonathan-sanso.git
+cd MI-APP
 npm install
 npm start
 ```
@@ -45,12 +45,13 @@ Esta tienda actualmente usa los siguientes plugins.
 | Plugin | Install |
 | ------ | ------ |
 | React Router Dom |```install react-router-dom ```|
+| firebase | ``` npm install firebase``` |
+| Formik | ``` npm install formik --save``` |
+| useForm | ``` npm install --save react-hooks-useform``` |
 | Boostrap | ```npm install react-bootstrap bootstrap```|
 | Sweet Alert 2 | ```npm install sweetalert2 ```|
-| Formik |```npm install formik --save``` |
-| Imagen Galery |```npm install react-image-gallery ```|
-| Yup | ``` npm install -S yup``` |
-| firebase | ``` npm install firebase``` |
+
+
 ### React Router Dom  ([react-router-dom])
 
 React Router es una biblioteca de enrutamiento del lado del servidor y del cliente con todas las funciones para React, una biblioteca de JavaScript para crear interfaces de usuario. React Router se ejecuta en cualquier lugar React se ejecuta; en la web, en el servidor con node.js y en React Native.
