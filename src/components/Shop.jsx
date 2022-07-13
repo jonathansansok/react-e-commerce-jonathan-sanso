@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 // Firebase
 import { collection, addDoc } from 'firebase/firestore';
-/*    import {totalAPagar, generarOrden} from './Cart.jsx'   */ 
+import { useCartContext } from './CartContext.jsx'; 
 import {db} from '../firebase/firebaseConfig.js'; 
 import '../hojas-de-estilo/shop.css';
 
@@ -14,7 +14,8 @@ const initialState = {
 	phone: '',
 	email: '',
     fecha: new Date(),
-/*     productos: [totalAPagar(), generarOrden()], */
+    productos: [totalAPagar(), generarOrden()], 
+	
 
 };
 
@@ -46,6 +47,9 @@ const Shop = () => {
 		setPurchaseID(docRef.id);
 		setValues(initialState);
 	};
+
+
+	
 
 	return (
 
