@@ -1,4 +1,4 @@
-## WEB DE VENTA DE PASAJES DE TURISMO INTERNACIONAL
+## WEB DE VENTA DE PASAJES DE TURISMO INTERNACIONAL🌄
 
   La idea de esta WEB es programar un E-commerce el cual el usuario elige los destinos de turimos internacional y cantidad de pasajes para luego finalizar la compra.
   
@@ -72,7 +72,7 @@ El modelo de componentes de React nos da más control sobre la forma y función 
 
 Un reemplazo hermoso, con responsabilidad, personalizable y accesible (wai-aria) para las cajas emergentes de javascript con cero dependencias.
  
-### Yup ([yup])
+### Yup ([yup]) (a futuro se usará)
 
 Yup, es un generador de esquemas de JavaScript para el análisis y la validación de valores. Defina un esquema, transforme un valor para que coincida, valide la forma de un valor existente o ambos. Sí, los esquemas son extremadamente expresivos y permiten modelar validaciones complejas e interdependientes o transformaciones de valores.
 La API de Yup está fuertemente inspirada en Joi, pero es más sencilla y está construida con la validación del lado del cliente como su principal caso de uso. Sí, separa las funciones de análisis y validación en pasos separados. cast() transforma los datos mientras que la validación verifica que la entrada tenga la forma correcta. Cada uno se puede realizar en conjunto (como la validación de formularios HTML) o por separado (como deserializar datos confiables de las API).
