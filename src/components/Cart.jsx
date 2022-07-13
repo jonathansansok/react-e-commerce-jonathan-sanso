@@ -4,9 +4,9 @@ import { useCartContext } from './CartContext.jsx';
 import '../hojas-de-estilo/Cart.css'; 
 import { Link } from 'react-router-dom';
 import Shop from './Shop.jsx';
-import { useState, useEffect } from 'react'
-/*  import { addDoc, collection, documentId, getDocs, getFirestore, query, where, writeBatch } from 'firebase/firestore'  */
-
+/* import { useState, useEffect } from 'react' */
+/*  import { addDoc, collection, documentId, getDocs, getFirestore, query, where, writeBatch } from 'firebase/firestore'  
+ */
 
 
 function Cart() {
@@ -17,7 +17,7 @@ function Cart() {
         totalPasajes,
         eliminarItem,
         } = useCartContext()
-    const [isLoading, setLoading] = useState(false);
+/*     const [isLoading, setLoading] = useState(false); */
   
     const generarOrden =  () => {
       // Nuevo objeto de orders    
@@ -25,9 +25,10 @@ function Cart() {
       cartList.forEach((item) => items.push({id: item.id, title: item.titulo, price: item.precio, quantity: item.initial}));
       return items;
     }
-    console.log(generarOrden()); // a estar orden me la tengo que llevar a la linea 17 de shop y listo
+    console.log(generarOrden());
+    console.log(totalAPagar()); // a estos 2 console log me los tengo que llevar a la linea 17 de shop y listo
   
-    function timeOutEjemplo() {
+/*      function timeOutEjemplo() {
       return new Promise((resolve) => setTimeout(resolve, 2000));
     }
   
@@ -37,7 +38,7 @@ function Cart() {
           setLoading(false);
         });
       }
-    }, [isLoading]);
+    }, [isLoading]);  */
 
     return (
       <main className='cart-full'>
