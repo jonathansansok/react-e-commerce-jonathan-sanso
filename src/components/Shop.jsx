@@ -4,27 +4,23 @@ import { collection, addDoc } from 'firebase/firestore';
 import { useCartContext } from './CartContext.jsx'; 
 import {db} from '../firebase/firebaseConfig.js'; 
 import '../hojas-de-estilo/shop.css';
-
 import TextField from '@mui/material/TextField';
 import MessageSuccess from './MessageSuccess';
-
 
 const initialState = {
 	name: '',
 	phone: '',
 	email: '',
     fecha: new Date(),
-     productos: [totalAPagar(), generarOrden()], 
-	
+    productos: generarOrden(), 
+	totalPagar: totalAPagar(),
 };
-
 const styles = {
 	containerShop: {
 		textAlign: 'center',
 		paddingTop: 20,
 	},
 };
-
 const Shop = () => {
 	const [values, setValues] = useState(initialState);
 	// Este estado está destinado a guardar el id de la compra
@@ -49,9 +45,7 @@ const Shop = () => {
 
 	function masDatosAlPurchase() {
 		const {cartList,
-
-			totalAPagar,
-
+			   totalAPagar,
 			} = useCartContext()
 
 	const generarOrden =  () => {
