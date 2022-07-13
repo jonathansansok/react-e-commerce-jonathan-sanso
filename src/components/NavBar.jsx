@@ -3,7 +3,7 @@ import '../hojas-de-estilo/NavBar.css';
 import CartWidget from './CartWidget';
 import { Link } from 'react-router-dom';
 import { hamburgjs } from "./Responsiveburguer";
-
+//a esa funcion la debo implementar sobre el 
 
 function NavBar(){
     return (

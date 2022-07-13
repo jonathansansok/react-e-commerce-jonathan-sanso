@@ -100,7 +100,7 @@ a:-webkit-any-link {
 
 @media (max-width: 910px){
     
-    .cielo .cieloLista{  
+    .ulNav{  
         width: 100%;
         background-color: rgb(47, 54, 64, 0.6);
         opacity: 0.9;
