@@ -14,9 +14,8 @@ const initialState = {
 	phone: '',
 	email: '',
     fecha: new Date(),
-    productos: [totalAPagar(), generarOrden()], 
+     productos: [totalAPagar(), generarOrden()], 
 	
-
 };
 
 const styles = {
@@ -48,7 +47,22 @@ const Shop = () => {
 		setValues(initialState);
 	};
 
+	function masDatosAlPurchase() {
+		const {cartList,
 
+			totalAPagar,
+
+			} = useCartContext()
+
+	const generarOrden =  () => {
+		// Nuevo objeto de orders    
+		let items = [];
+		cartList.forEach((item) => items.push({id: item.id, title: item.titulo, price: item.precio, quantity: item.initial}));
+		return items;
+	  }
+	  console.log(generarOrden());
+	  console.log(cartList());
+	}
 	
 
 	return (
