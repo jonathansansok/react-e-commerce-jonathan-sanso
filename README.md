@@ -1,10 +1,8 @@
-## WEB DE VENTA DE PAQUETES DE TURISMO INTERNACIONAL
+## WEB DE VENTA DE PASAJES DE TURISMO INTERNACIONAL🌄
 
-  La idea de esta WEB es demostrar como se procesa un fragmento de canción a través de 4 consolas de sonido, las cuales son API - NEVE - SSL-E SS-G y NEVE. Cada usuario debería tener auriculares de gama media/alta o bafles/monitores de estudio.
+  La idea de esta WEB es programar un E-commerce el cual el usuario elige los destinos de turimos internacional y cantidad de pasajes para luego finalizar la compra.
   
-La pagina inicial es la presentación del autor y debajo se muestras las comparaciones a nivel visual y auditivo de un fragmento de canción de Hard-Rock.
-
-En el Header podemos encontar un menu con las opciones: HOME - API - NEVE - SSL-E SS-G - NEVE - CONTACTO
+En el Header podemos encontar un menu con las opciones: Home - América - Asia/Oceania - Contacto
 
 Al clickear en cada uno de ellos se verá la Respuesta de frecuencia de cad consola analizada de manera visual con un ecualizador analizador de espectro, el cual muestra su respuesta de frecuencia de 20 Hz. a 20Khz., Tambíen una imagen ampliada de los parámetros que utilizada cada equipo, un descripción general del mismo y una opinión personal sobre el ejemplo demostrado. 
 
@@ -18,7 +16,8 @@ CSS - Para darle estilos a todos los archivos *HTML.
 
 JAVASCRIPT - Para la funcionalidad del E-commerce y ciertas animaciones que favorecen al diseño responsive. 
 
- 
+REACT - Para la funcionalidad adaptada a la maxima velocidad de navegacion del usuario y creaciones de componentes que se puedan reutilizar.
+
 ## COMENZANDO 🚀 
 Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas.  
 
@@ -26,164 +25,54 @@ Estas instrucciones te permitirán obtener una copia del proyecto en funcionamie
 Es necesario contar minimamente con la última versión estable de Visual Studio Code y Google Chrome. Para verificar que versión tienen instalada: 
 Vsc -v 
 gch -v 
-Tener instalado el administrador de Base de Datos Postgres SQL 
+Tener instalado el administrador de Base de Datos Postgres SQL (a futuro)
 
 ## Instrucciones 🔧
 
 1 - Clonar repositorio
 
 Desde la consola de comandos, ubicarse en la carpeta en la cual se clonara el repositrio y luego ejecutar el comando git clone mas la url.
-User/Folder git clone https://github.com/jonathansansok/-art-tech-js-first-web.git
-
-2 - Abrir editor de codigo preferido
-
-3 - Abrir en navegador Web (Google Chrome como recomendación)
-
--- PARA PROYECTOS AVANZADOS: --
-
-En la ruta principal aparecen dos carpetas api y client.
-
-3 - Instalar las Dependencias
-
-
-Desde la consola de comandos ubicarse en la carpeta api, ejecutar el siguiente comando:
+git clone https://github.com/jonathansansok/ecommerce-react-jonathan-sanso.git
+cd MI-APP
 npm install
-Posteriormente ubicarse en la carpeta client y ejecutar el mismo comando.
-
-4 - Crear la Base De Datos
-
-
-Ingresar en una nueva ventana de la terminal de comandos. Ejecutar el siguiente comando:
-psql -U postgres 
-Ingresar la contraseña agregada en la instalacion de Postgres.
-
-Crear una Base de Datos nueva con el nombre ncr. Ingresar el siguiente comando:
-
-CREATE DATABASE ncr;
-No salir de esta linea de comandos porque posteriormente se utilizara para cargar datos.
-
-4 - Crear archivo .env
-
-
-Ubicado en la carpeta api crear un archivo con el nombre .env
-Ingresar los siguientes datos:
-# DB config
-
-DB_USER= 'postgres'
-DB_PASSWORD = 'tuContraseñaPostgres'
-DB_HOST = 'localhost'
-DB_PORT = '5432'
-DB_NAME = 'ncr'
-
-# Auth Config
-
-AUTH_SECRET = 'secretncr'
-AUTH_EXPIRES = 1D
-AUTH_ROUNDS = 10
-
-# HOST
-FRONTEND_URL= 'http://localhost:3000'
-
-5 - Inciar la Apliacion
-
-
-Desde la terminal de comandos ubicarse en la carpeta api y ejecutar el siguiente comando:
 npm start
-Repetir el mismo proceso ubicado en la carpeta client
+```
 
-6 - Poblar Base de Datos
+## Plugins
+
+Esta tienda actualmente usa los siguientes plugins.
+
+| Plugin | Install |
+| ------ | ------ |
+| React Router Dom |```install react-router-dom ```|
+| firebase | ``` npm install firebase``` |
+| Formik | ``` npm install formik --save``` |
+| useForm | ``` npm install --save react-hooks-useform``` |
+| Boostrap | ```npm install react-bootstrap bootstrap```|
+| Sweet Alert 2 | ```npm install sweetalert2 ```|
 
 
-Dentro de la carpeta api se encuentra una carpeta llamada sql, en esta ultima hay un archivo database.sql.
-Copiar las lineas correspondientes a las tiendas.
-Pegar estas lineas en la terminal donde se creo la Base de Datos. Luego Presionar Enter.
-Repetir el proceso con los datos de los usuarios.
+### React Router Dom  ([react-router-dom])
 
-7 - Loguearse
+React Router es una biblioteca de enrutamiento del lado del servidor y del cliente con todas las funciones para React, una biblioteca de JavaScript para crear interfaces de usuario. React Router se ejecuta en cualquier lugar React se ejecuta; en la web, en el servidor con node.js y en React Native.
 
+Si recién está comenzando con React en general, le recomendamos que siga la excelente guía de inicio en los documentos oficiales. Hay mucha información allí para ponerlo en marcha. React Router es compatible con React >= 16.8.
 
-En la aplicacion ingresar las siguientes credenciales:
-username: ssanchez
-password: 123456
+Mantendremos este tutorial rápido y directo. Al final, sabrá las API con las que trabaja día a día con React Router. Después de eso, puede profundizar en algunos de los otros documentos para obtener una comprensión más profunda.
 
-DOCUMENTACION API ✒️
-Esta documentacion se realizo enteramente con Swagger. En la misma se encuentran los endpoints que se utilizaron para acceder a los datos del Backend. Cada uno de ellos brinda un servicio distinto, los cuales pueden ser probados ingresando los datos solicitados. Para poder ingresar a la documentacion y hacer uso de ella debe seguir los siguientes pasos:
+### Boostrap ([bootstrap])
 
-Levantar el servidor: desde la consola, ubicado en la carpeta de proyecto, moverse a la carpeta api y ejecutar el comando npm start.
+React-Bootstrap reemplaza el JavaScript de Bootstrap. Cada componente se ha creado desde cero como un verdadero componente de React, sin dependencias innecesarias como jQuery. Como una de las bibliotecas de React más antiguas, React-Bootstrap ha evolucionado y crecido junto con React, lo que la convierte en una excelente opción como base de la interfaz de usuario.
 
-Ingresar en el navegador a la ruta http://localhost:3001/api-docs. Para un acceso mas rapido puede hacer clic en este link.
+Creado teniendo en cuenta la compatibilidad, adoptamos nuestro núcleo de arranque y nos esforzamos por ser compatibles con el ecosistema de interfaz de usuario más grande del mundo. Al confiar completamente en la hoja de estilo de Bootstrap, React-Bootstrap simplemente funciona con los miles de temas de Bootstrap que ya le encantan.
 
-Los Endpoint estan protegidos con un Token de seguridad. Para poder acceder a este debe loguearse. Para ello debe ingresar en el Endpoint de login (POST). Precionar el boton de Try it out. Con las credencialies existentes precionar el boton Execute. Esta accion arroja una respuesta 200 con los datos de un usuario y su token de autenticacion.
+El modelo de componentes de React nos da más control sobre la forma y función de cada componente. Cada componente se implementa teniendo en cuenta la accesibilidad. El resultado es un conjunto de componentes accesibles por defecto, sobre lo que es posible con Bootstrap simple.
 
-Seleccionar y copiar el Token de autenticacion. En la parte superior derecha de la documentacion aparece el boton de Authorize 🔒 , hacer clic en él y pegar el token en el campo value. Ahora podra ingresar al resto de los Endpoints.
+### Sweet Alert 2 ([sweetAlert2])
 
-# Getting Started with Create React App
+Un reemplazo hermoso, con responsabilidad, personalizable y accesible (wai-aria) para las cajas emergentes de javascript con cero dependencias.
+ 
+### Yup ([yup]) (a futuro se usará)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Yup, es un generador de esquemas de JavaScript para el análisis y la validación de valores. Defina un esquema, transforme un valor para que coincida, valide la forma de un valor existente o ambos. Sí, los esquemas son extremadamente expresivos y permiten modelar validaciones complejas e interdependientes o transformaciones de valores.
+La API de Yup está fuertemente inspirada en Joi, pero es más sencilla y está construida con la validación del lado del cliente como su principal caso de uso. Sí, separa las funciones de análisis y validación en pasos separados. cast() transforma los datos mientras que la validación verifica que la entrada tenga la forma correcta. Cada uno se puede realizar en conjunto (como la validación de formularios HTML) o por separado (como deserializar datos confiables de las API).

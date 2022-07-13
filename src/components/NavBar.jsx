@@ -1,16 +1,16 @@
-/* import React from 'react'; */
+//imports
 import '../hojas-de-estilo/NavBar.css';
 import CartWidget from './CartWidget';
 import { Link } from 'react-router-dom';
 
+
+
 function NavBar(){
     return (
         <header className="header">
-        
         <h1 className="NaturAdventure" ><img src="https://icongr.am/jam/chevrons-square-right-f.svg?size=60&color=7809e0" alt="logo" />Travelfy</h1>
-        
         <nav className="nav">
-            <CartWidget
+           <CartWidget
              /> 
             <ul className="ulNav">
                 <li className="liNormal">
@@ -32,4 +32,4 @@ function NavBar(){
     );
 }
 
- export default NavBar; 
+export default NavBar; 

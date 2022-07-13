@@ -1,14 +1,12 @@
+//creo el contexto
+//imports
 import { createContext, useContext, useState} from 'react'
-//1 crear el contexto 
+
 const CartContext = createContext([])
 
 export const useCartContext = () => useContext(CartContext)
 
-//state que le pasamos al useState desde los productos
-
-
-
-// 2 creo el provider
+//  creo el provider
 function CartContextProvider({ children }) { //componente
   const [cartList, setCartList] = useState([])
 
@@ -16,6 +14,7 @@ function CartContextProvider({ children }) { //componente
 
 
   const addToCart = (item) => {
+<<<<<<< HEAD
       const idx = cartList.findIndex(prod => item.id === prod.id);   // 0 -> 
 
       if (idx !== -1) {
@@ -31,6 +30,22 @@ function CartContextProvider({ children }) { //componente
           ])
       }
 zz
+=======
+    if (isInCart(item.id)) {
+        const newArray = cartList.map(i => {
+            if (i.id === item.id) {
+                i.initial = i.initial + item.initial
+            }
+            return i
+        })
+        setCartList(newArray)
+    } else {
+            setCartList([
+                ...cartList,
+                item
+            ])
+        }
+>>>>>>> shop
   }
 
   const removeCart = () => {
@@ -42,14 +57,13 @@ zz
   }
 
   const totalPasajes = () => {
-      let total = 0;
-      cartList.forEach((item) => (total += item.initial));
-      return total;
-
+    let total = 0;
+    cartList.forEach((item) => (total += item.initial));
+    return total;
   };
 
   const cantidadTotalItem = () => {
-      return cartList.reduce((acum, prod) => acum += prod.initial, 0)
+    return cartList.reduce((acum, prod) => acum += prod.initial, 0)
   };
 
   const eliminarItem = (id) => {
@@ -57,6 +71,7 @@ zz
   }
 
   return (
+<<<<<<< HEAD
       <CartContext.Provider value={{
           cartList,
           addToCart,
@@ -66,9 +81,21 @@ zz
           cantidadTotalItem,
           eliminarItem
       }}>
+=======
+    <CartContext.Provider value={{
+        // el isInCart fue reemplazado en otra parte ahorrar codigo. 
+        // el cantidadTotalItem fue reemplazado en otra parte ahorrar codigo. 
+        cartList,
+        addToCart,
+        removeCart,
+        totalAPagar,
+        totalPasajes,
+        eliminarItem,
+    }}>
+>>>>>>> shop
 
-          {children}
-      </CartContext.Provider>
+    {children}
+    </CartContext.Provider>
   )
 }
 
