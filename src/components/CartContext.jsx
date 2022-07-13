@@ -29,11 +29,11 @@ function CartContextProvider({ children }) { //componente
 
   const removeCart = () => {
       setCartList([])
-  }
+  };
   
   const totalAPagar = () => {
       return cartList.reduce((acum, prod) => acum + (prod.initial * prod.precio), 0)
-  }
+  };
 
   const totalPasajes = () => {
     let total = 0;
@@ -41,22 +41,21 @@ function CartContextProvider({ children }) { //componente
     return total;
   };
 
-  const cantidadTotalItem = () => {
-    return cartList.reduce((acum, prod) => acum += prod.initial, 0)
-  };
+    /*   const cantidadTotalItem = () => {
+        return cartList.reduce((acum, prod) => acum += prod.initial, 0)
+      }; */
+    // el cantidadTotalItem fue reemplazado en otra parte ahorrar codigo.
 
   const eliminarItem = (id) => {
       setCartList(cartList.filter(prod => prod.id !== id))
-  }
+  };
 
   const isInCart = (id) =>{
     return cartList.some(prod => prod.id == id)
-  }
+  };
 
   return (
     <CartContext.Provider value={{
-        // el isInCart fue reemplazado en otra parte ahorrar codigo. 
-        // el cantidadTotalItem fue reemplazado en otra parte ahorrar codigo. 
         cartList,
         addToCart,
         removeCart,
