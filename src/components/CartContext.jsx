@@ -10,9 +10,6 @@ export const useCartContext = () => useContext(CartContext)
 function CartContextProvider({ children }) { //componente
   const [cartList, setCartList] = useState([])
 
-
-
-
   const addToCart = (item) => {
     if (isInCart(item.id)) {
         const newArray = cartList.map(i => {
@@ -50,6 +47,10 @@ function CartContextProvider({ children }) { //componente
 
   const eliminarItem = (id) => {
       setCartList(cartList.filter(prod => prod.id !== id))
+  }
+
+  const isInCart = (id) =>{
+    return cartList.some(prod => prod.id == id)
   }
 
   return (
