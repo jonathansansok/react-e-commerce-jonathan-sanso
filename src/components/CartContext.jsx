@@ -14,23 +14,6 @@ function CartContextProvider({ children }) { //componente
 
 
   const addToCart = (item) => {
-<<<<<<< HEAD
-      const idx = cartList.findIndex(prod => item.id === prod.id);   // 0 -> 
-
-      if (idx !== -1) {
-          // la lógica
-          const newArray = cartList
-          const newCant = cartList[idx].initial + item.initial
-          newArray[idx].initial = newCant
-          setCartList([...newArray])
-      } else {
-          setCartList([
-              ...cartList,
-              item
-          ])
-      }
-zz
-=======
     if (isInCart(item.id)) {
         const newArray = cartList.map(i => {
             if (i.id === item.id) {
@@ -45,7 +28,6 @@ zz
                 item
             ])
         }
->>>>>>> shop
   }
 
   const removeCart = () => {
@@ -71,17 +53,6 @@ zz
   }
 
   return (
-<<<<<<< HEAD
-      <CartContext.Provider value={{
-          cartList,
-          addToCart,
-          removeCart,
-          totalAPagar,
-          totalPasajes,
-          cantidadTotalItem,
-          eliminarItem
-      }}>
-=======
     <CartContext.Provider value={{
         // el isInCart fue reemplazado en otra parte ahorrar codigo. 
         // el cantidadTotalItem fue reemplazado en otra parte ahorrar codigo. 
@@ -92,7 +63,6 @@ zz
         totalPasajes,
         eliminarItem,
     }}>
->>>>>>> shop
 
     {children}
     </CartContext.Provider>
