@@ -61,7 +61,7 @@ const Shop = () => {
 		return items;
 	  }
 	  console.log(generarOrden());
-	  console.log(cartList());
+	  console.log(totalAPagar());
 	}
 	
 
