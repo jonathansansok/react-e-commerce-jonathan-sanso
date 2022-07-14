@@ -13,7 +13,7 @@ const initialState = {
 	email: '',
     fecha: new Date(),
     productos: generarOrden(), 
-	totalPagar: totalAPagar(),
+	totalPagar: totalAPagar()
 };
 const styles = {
 	containerShop: {
@@ -45,7 +45,7 @@ const Shop = () => {
 
 	function masDatosAlPurchase() {
 		const {cartList,
-			   totalAPagar,
+			totalAPagar,
 			} = useCartContext()
 
 	const generarOrden =  () => {
@@ -54,8 +54,8 @@ const Shop = () => {
 		cartList.forEach((item) => items.push({id: item.id, title: item.titulo, price: item.precio, quantity: item.initial}));
 		return items;
 	  }
-	  console.log(generarOrden());
-	  console.log(totalAPagar());
+	console.log(generarOrden());
+	console.log(totalAPagar());
 	}
 	
 

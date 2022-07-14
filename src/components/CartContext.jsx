@@ -53,6 +53,7 @@ function CartContextProvider({ children }) { //componente
   const isInCart = (id) =>{
     return cartList.some(prod => prod.id == id)
   };
+  
 
   return (
     <CartContext.Provider value={{
