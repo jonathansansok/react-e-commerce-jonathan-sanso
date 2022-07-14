@@ -56,48 +56,55 @@ const Shop = () => {
 
 	const onSubmit = async (e) => {
 		e.preventDefault();
-/* 		console.log(values); */
-		// Add a new document with a generated id.
+
 		const docRef = await addDoc(collection(db, 'purchases'), {
 			values,
 		});
-		// console.log('Document written with ID: ', docRef.id);
+
 		setPurchaseID(docRef.id);
 		setValues(initialState);
+
 	};
 
-
-	
-
 	return (
-
 		<div style={styles.containerShop}>
-			<h1>Complete y viaje</h1>
-			<form className='FormContainer' onSubmit={onSubmit}>
-				<TextField
-					placeholder='Name'
-					style={{ margin: 10, width: 400 }}
-					name='name'
-					value={values.name}
-					onChange={handleOnChange}
-				/>
-				<TextField
-					placeholder='Last Name'
-					style={{ margin: 10, width: 400 }}
-					name='phone'
-					value={values.phone}
-					onChange={handleOnChange}
-				/>
-				<TextField
-					placeholder='City'
-					style={{ margin: 10, width: 400 }}
-					name='email'
-					value={values.email}
-					onChange={handleOnChange}
-				/>
-				<button className='agregarACarrito-detail'>FINALIZAR COMPRA</button>
-			</form>
-			{purchaseID && <MessageSuccess purchaseID={purchaseID} />}
+			{purchaseID ?   (
+			<>
+				{purchaseID && <MessageSuccess purchaseID={purchaseID} />
+				}
+			</>
+			)
+			:
+			(
+				<>
+					<h1>Complete y viaje</h1>
+					<form className='FormContainer' onSubmit={onSubmit}>
+						<TextField
+							placeholder='Name'
+							style={{ margin: 10, width: 400 }}
+							name='name'
+							value={values.name}
+							onChange={handleOnChange}
+						/>
+						<TextField
+							placeholder='Last Name'
+							style={{ margin: 10, width: 400 }}
+							name='phone'
+							value={values.phone}
+							onChange={handleOnChange}
+						/>
+						<TextField
+							placeholder='City'
+							style={{ margin: 10, width: 400 }}
+							name='email'
+							value={values.email}
+							onChange={handleOnChange}
+						/>
+						<button className='agregarACarrito-detail'>FINALIZAR COMPRA</button>
+					</form>
+				</>
+				)
+			}
 		</div>
 	);
 };

@@ -19,12 +19,12 @@ function Cart() {
         } = useCartContext()
 /*     const [isLoading, setLoading] = useState(false); */
   
-    const generarOrden =  () => {
+   /*  const generarOrden =  () => {
       // Nuevo objeto de orders    
       let items = [];
       cartList.forEach((item) => items.push({id: item.id, title: item.titulo, price: item.precio, quantity: item.initial}));
       return items;
-    }
+    } */
 /*     console.log(generarOrden());
     console.log(totalAPagar()); */ // a estos 2 console log me los tengo que llevar a la linea 17 de shop y listo
   
@@ -65,13 +65,12 @@ function Cart() {
               )}
             </div>
             <div className=''>
-                <div className='totales-cart'>
-                <button className='agregarACarrito-detail vaciar-carrito' onClick={removeCart}>Vaciar Carrito</button>
-                <p className='totales-cart-item'>Total Pasajes: <strong>{totalPasajes()}</strong></p>
-                <p className='totales-cart-item'>Total U$D <strong>{totalAPagar()}</strong>.-</p>
-                </div>
-                <Shop/>
-{/*                 <Link  to="/shop" ><button className='agregarACarrito-detail' onClick={removeCart}>Terminar y genID</button></Link> */}
+              <div className='totales-cart'>
+              <button className='agregarACarrito-detail vaciar-carrito' onClick={removeCart}>Vaciar Carrito</button>
+              <p className='totales-cart-item'>Total Pasajes: <strong>{totalPasajes()}</strong></p>
+              <p className='totales-cart-item'>Total U$D <strong>{totalAPagar()}</strong>.-</p>
+              </div>
+              <Shop/>
             </div>
           </>
           ) : (
@@ -81,7 +80,6 @@ function Cart() {
                   <h2 className='cart-full-h'>Su Carrito Esta Vacio</h2>
                   <Link  to="/" ><p className='agregarACarrito-detail volver'>Volver a tienda</p></Link>
                 </div>
-
               </div>
             </>
           )}
