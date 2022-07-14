@@ -7,21 +7,44 @@ import '../hojas-de-estilo/shop.css';
 import TextField from '@mui/material/TextField';
 import MessageSuccess from './MessageSuccess';
 
-const initialState = {
-	name: '',
-	phone: '',
-	email: '',
-    fecha: new Date(),
-    productos: generarOrden(), 
-	totalPagar: totalAPagar(),
-};
-const styles = {
-	containerShop: {
-		textAlign: 'center',
-		paddingTop: 20,
-	},
-};
+
 const Shop = () => {
+
+	const {
+		cartList,
+			   totalAPagar,
+			} = useCartContext()
+
+	const generarOrden =  () => {
+		// Nuevo objeto de orders    
+		let items = [];
+		cartList.forEach((item) => items.push({id: item.id, title: item.titulo, price: item.precio, quantity: item.initial}));
+		return items;
+	  }
+/* 	  console.log(generarOrden());
+	  console.log(totalAPagar());
+ */
+
+
+
+	const initialState = {
+		name: '',
+		phone: '',
+		email: '',
+		fecha: new Date(),
+/* 		productos: generarOrden(),  */
+		totalPagar: totalAPagar(),
+		ordenDetailed:  generarOrden(),
+	};
+	const styles = {
+		containerShop: {
+			textAlign: 'center',
+			paddingTop: 20,
+		},
+	};
+
+
+/* 	const totalAPagar  = useContext(CartContext); */
 	const [values, setValues] = useState(initialState);
 	// Este estado está destinado a guardar el id de la compra
 	const [purchaseID, setPurchaseID] = useState('');
@@ -33,7 +56,7 @@ const Shop = () => {
 
 	const onSubmit = async (e) => {
 		e.preventDefault();
-		console.log(values);
+/* 		console.log(values); */
 		// Add a new document with a generated id.
 		const docRef = await addDoc(collection(db, 'purchases'), {
 			values,
@@ -43,20 +66,7 @@ const Shop = () => {
 		setValues(initialState);
 	};
 
-	function masDatosAlPurchase() {
-		const {cartList,
-			   totalAPagar,
-			} = useCartContext()
 
-	const generarOrden =  () => {
-		// Nuevo objeto de orders    
-		let items = [];
-		cartList.forEach((item) => items.push({id: item.id, title: item.titulo, price: item.precio, quantity: item.initial}));
-		return items;
-	  }
-	  console.log(generarOrden());
-	  console.log(totalAPagar());
-	}
 	
 
 	return (

@@ -25,8 +25,8 @@ function Cart() {
       cartList.forEach((item) => items.push({id: item.id, title: item.titulo, price: item.precio, quantity: item.initial}));
       return items;
     }
-    console.log(generarOrden());
-    console.log(totalAPagar()); // a estos 2 console log me los tengo que llevar a la linea 17 de shop y listo
+/*     console.log(generarOrden());
+    console.log(totalAPagar()); */ // a estos 2 console log me los tengo que llevar a la linea 17 de shop y listo
   
 /*      function timeOutEjemplo() {
       return new Promise((resolve) => setTimeout(resolve, 2000));

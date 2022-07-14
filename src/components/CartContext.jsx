@@ -41,11 +41,6 @@ function CartContextProvider({ children }) { //componente
     return total;
   };
 
-    /*   const cantidadTotalItem = () => {
-        return cartList.reduce((acum, prod) => acum += prod.initial, 0)
-      }; */
-    // el cantidadTotalItem fue reemplazado en otra parte ahorrar codigo.
-
   const eliminarItem = (id) => {
       setCartList(cartList.filter(prod => prod.id !== id))
   };
