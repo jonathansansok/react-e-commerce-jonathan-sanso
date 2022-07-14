@@ -99,7 +99,6 @@ const Shop = () => {
 			</form>
 			{purchaseID && <MessageSuccess purchaseID={purchaseID} />}
 		</div>
-
 	);
 };
 

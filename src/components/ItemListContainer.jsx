@@ -19,7 +19,7 @@ const ItemListContainer = ({ titulo2 }) => {
       // doc.data() is never undefined for query doc snapshots
       docs.push({...doc.data(), id: doc.id});
     });
-    console.log(docs);
+/*     console.log(docs); */
     setProductos(docs);
   };
 
