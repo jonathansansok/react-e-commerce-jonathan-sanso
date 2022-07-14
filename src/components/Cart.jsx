@@ -4,7 +4,7 @@ import { useCartContext } from './CartContext.jsx';
 import '../hojas-de-estilo/Cart.css'; 
 import { Link } from 'react-router-dom';
 import Shop from './Shop.jsx';
-/* import {shop} from './Shop.jsx'; */
+ import {shop} from './Shop.jsx'; 
 function Cart() {
   const {cartList,
       addToCart,
@@ -26,7 +26,7 @@ function Cart() {
               <article className='renderizada-specs-todas'>
                 <div className='renderizada-specs-palabras'> <p><strong>{producto.titulo}</strong> en <strong>{producto.pais}</strong></p>
                   <div className='renderizada-botonera-item-cart'>
-                    <p>Cantidad: </p>
+                    <p>Pasajes: </p>
                       <button className='botonera-sumaresta' onClick={() => addToCart({ id: producto.id, initial: -1 })} disabled={producto.initial === 1}><p>-</p></button>
                       <strong className='botonera-sumaresta-numero' >{producto.initial}</strong>
                       <button className='botonera-sumaresta' onClick={() => addToCart({ id: producto.id, initial: 1 })} disabled={producto.initial === producto.stock}><p>+</p></button>

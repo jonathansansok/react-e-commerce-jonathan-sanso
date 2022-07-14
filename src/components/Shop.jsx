@@ -66,6 +66,7 @@ const Shop = () => {
 				<>
 					{purchaseID && <MessageSuccess purchaseID={purchaseID} />}
 					<button className='agregarACarrito-detail'>VOLVER A INICIO</button>
+					<p>*tengo que hacer desaparecer el Cart-Detalles </p>
 				</>
 				)
 				:
@@ -79,13 +80,15 @@ const Shop = () => {
 							name='name'
 							value={values.name}
 							onChange={handleOnChange}
+							required
 						/>
 						<TextField
-							placeholder='Last Name'
+							placeholder='Phone'
 							style={{ margin: 10, width: 400 }}
 							name='phone'
 							value={values.phone}
 							onChange={handleOnChange}
+							required
 						/>
 						<TextField
 							placeholder='City'
@@ -93,6 +96,7 @@ const Shop = () => {
 							name='email'
 							value={values.email}
 							onChange={handleOnChange}
+							required
 						/>
 						<button className='agregarACarrito-detail'>FINALIZAR COMPRA</button>
 					</form>
