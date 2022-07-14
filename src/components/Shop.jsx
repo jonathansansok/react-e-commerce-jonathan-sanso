@@ -43,7 +43,7 @@ const Shop = () => {
 		setValues(initialState);
 	};
 
-	function masDatosAlPurchase() {
+	const masDatosAlPurchase= () => {
 		const {cartList,
 			totalAPagar,
 			} = useCartContext()
