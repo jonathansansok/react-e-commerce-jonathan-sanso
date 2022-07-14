@@ -21,30 +21,24 @@ const Shop = () => {
 		cartList.forEach((item) => items.push({id: item.id, title: item.titulo, price: item.precio, quantity: item.initial}));
 		return items;
 	  }
-/* 	  console.log(generarOrden());
-	  console.log(totalAPagar());
- */
-
-
 
 	const initialState = {
 		name: '',
 		phone: '',
 		email: '',
 		fecha: new Date(),
-/* 		productos: generarOrden(),  */
 		totalPagar: totalAPagar(),
 		ordenDetailed:  generarOrden(),
 	};
 	const styles = {
 		containerShop: {
-			textAlign: 'center',
-			paddingTop: 20,
+		textAlign: 'center',
+		paddingTop: 20,
 		},
 	};
 
 
-/* 	const totalAPagar  = useContext(CartContext); */
+
 	const [values, setValues] = useState(initialState);
 	// Este estado está destinado a guardar el id de la compra
 	const [purchaseID, setPurchaseID] = useState('');
@@ -69,13 +63,13 @@ const Shop = () => {
 	return (
 		<div style={styles.containerShop}>
 			{purchaseID ?   (
-			<>
-				{purchaseID && <MessageSuccess purchaseID={purchaseID} />
-				}
-			</>
-			)
-			:
-			(
+				<>
+					{purchaseID && <MessageSuccess purchaseID={purchaseID} />}
+					<button className='agregarACarrito-detail'>VOLVER A INICIO</button>
+				</>
+				)
+				:
+				(
 				<>
 					<h1>Complete y viaje</h1>
 					<form className='FormContainer' onSubmit={onSubmit}>
@@ -103,7 +97,7 @@ const Shop = () => {
 						<button className='agregarACarrito-detail'>FINALIZAR COMPRA</button>
 					</form>
 				</>
-				)
+			)
 			}
 		</div>
 	);
