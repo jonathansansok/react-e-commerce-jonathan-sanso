@@ -66,7 +66,7 @@ const Shop = () => {
 				<>
 					{purchaseID && <MessageSuccess purchaseID={purchaseID} />}
 					<button className='agregarACarrito-detail'>VOLVER A INICIO</button>
-					<p>*tengo que hacer desaparecer el Cart-Detalles </p>
+					<p>*Podria hacer desaparecer el Cart-Detalles para mas visual </p>
 				</>
 				)
 				:
