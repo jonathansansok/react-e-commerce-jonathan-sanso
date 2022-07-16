@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-// Firebase
 import { collection, addDoc } from 'firebase/firestore';
 import { useCartContext } from './CartContext.jsx'; 
 import {db} from '../firebase/firebaseConfig.js'; 
@@ -12,24 +11,28 @@ const Shop = () => {
 
 	const {
 		cartList,
-			   totalAPagar,
-			} = useCartContext()
+		totalAPagar,
+		} = useCartContext()
 
 	const generarOrden =  () => {
 		// Nuevo objeto de orders    
 		let items = [];
 		cartList.forEach((item) => items.push({id: item.id, title: item.titulo, price: item.precio, quantity: item.initial}));
 		return items;
-	  }
+	}
 
-	const initialState = {
-		name: '',
-		phone: '',
-		email: '',
-		fecha: new Date(),
-		totalPagar: totalAPagar(),
-		ordenDetailed:  generarOrden(),
-	};
+	const buyer ={
+			name: '',
+			phone: '',
+			email: '',
+		}
+
+		const initialState2 = {
+	items: generarOrden(),
+	date: new Date(),
+	total: totalAPagar(),
+	}
+
 	const styles = {
 		containerShop: {
 		textAlign: 'center',
@@ -37,9 +40,7 @@ const Shop = () => {
 		},
 	};
 
-
-
-	const [values, setValues] = useState(initialState);
+	const [values, setValues] = useState(initialState2);
 	// Este estado está destinado a guardar el id de la compra
 	const [purchaseID, setPurchaseID] = useState('');
 
@@ -50,13 +51,11 @@ const Shop = () => {
 
 	const onSubmit = async (e) => {
 		e.preventDefault();
-
 		const docRef = await addDoc(collection(db, 'purchases'), {
 			values,
 		});
-
 		setPurchaseID(docRef.id);
-		setValues(initialState);
+		setValues(buyer);
 
 	};
 
@@ -65,6 +64,7 @@ const Shop = () => {
 			{purchaseID ?   (
 				<>
 					{purchaseID && <MessageSuccess purchaseID={purchaseID} />}
+
 					<button className='agregarACarrito-detail'>VOLVER A INICIO</button>
 					<p>*Podria hacer desaparecer el Cart-Detalles para mas visual </p>
 				</>

@@ -1,11 +1,7 @@
 //creo el contexto
-//imports
 import { createContext, useContext, useState} from 'react'
-
 const CartContext = createContext([])
-
 export const useCartContext = () => useContext(CartContext)
-
 //  creo el provider
 function CartContextProvider({ children }) { //componente
   const [cartList, setCartList] = useState([])
@@ -59,7 +55,6 @@ function CartContextProvider({ children }) { //componente
         totalPasajes,
         eliminarItem,
     }}>
-
     {children}
     </CartContext.Provider>
   )

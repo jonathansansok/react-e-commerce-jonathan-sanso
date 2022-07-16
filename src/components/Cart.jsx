@@ -6,13 +6,14 @@ import { Link } from 'react-router-dom';
 import Shop from './Shop.jsx';
  import {shop} from './Shop.jsx'; 
 function Cart() {
-  const {cartList,
-      addToCart,
-      removeCart,
-      totalAPagar,
-      totalPasajes,
-      eliminarItem,
-      } = useCartContext()
+  const {
+          cartList,
+          addToCart,
+          removeCart,
+          totalAPagar,
+          totalPasajes,
+          eliminarItem,
+        } = useCartContext()
 
   return (
     <main className='cart-full'>
