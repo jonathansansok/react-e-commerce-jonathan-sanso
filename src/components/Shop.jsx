@@ -4,7 +4,7 @@ import { useCartContext } from './CartContext.jsx';
 import {db} from '../firebase/firebaseConfig.js'; 
 import '../hojas-de-estilo/shop.css';
 import TextField from '@mui/material/TextField';
-import MessageSuccess from './MessageSuccess';
+import MessageSuccess from './MessageSuccess.jsx';
 
 
 const Shop = () => {
@@ -21,18 +21,11 @@ const Shop = () => {
 		return items;
 	}
 
-	const buyer ={
-			name: '',
-			phone: '',
-			email: '',
-		}
-
-		const initialState2 = {
-	items: generarOrden(),
-	date: new Date(),
-	total: totalAPagar(),
-	}
-
+	const initialState = {
+		name: '',
+		phone: '',
+		email: '',
+	};
 	const styles = {
 		containerShop: {
 		textAlign: 'center',
@@ -40,23 +33,25 @@ const Shop = () => {
 		},
 	};
 
-	const [values, setValues] = useState(initialState2);
+	const [buyer, setValues] = useState(initialState);
 	// Este estado está destinado a guardar el id de la compra
 	const [purchaseID, setPurchaseID] = useState('');
 
 	const handleOnChange = (e) => {
 		const { value, name } = e.target;
-		setValues({ ...values, [name]: value });
+		setValues({ ...buyer, [name]: value });
 	};
 
 	const onSubmit = async (e) => {
 		e.preventDefault();
 		const docRef = await addDoc(collection(db, 'purchases'), {
-			values,
+			buyer,
+			fecha: new Date(),
+			totalPagar: totalAPagar(),
+			items:  generarOrden(),
 		});
 		setPurchaseID(docRef.id);
-		setValues(buyer);
-
+		setValues(initialState);
 	};
 
 	return (
@@ -64,7 +59,6 @@ const Shop = () => {
 			{purchaseID ?   (
 				<>
 					{purchaseID && <MessageSuccess purchaseID={purchaseID} />}
-
 					<button className='agregarACarrito-detail'>VOLVER A INICIO</button>
 					<p>*Podria hacer desaparecer el Cart-Detalles para mas visual </p>
 				</>
@@ -78,7 +72,7 @@ const Shop = () => {
 							placeholder='Name'
 							style={{ margin: 10, width: 400 }}
 							name='name'
-							value={values.name}
+							value={buyer.name}
 							onChange={handleOnChange}
 							required
 						/>
@@ -86,7 +80,7 @@ const Shop = () => {
 							placeholder='Phone'
 							style={{ margin: 10, width: 400 }}
 							name='phone'
-							value={values.phone}
+							value={buyer.phone}
 							onChange={handleOnChange}
 							required
 						/>
@@ -94,7 +88,7 @@ const Shop = () => {
 							placeholder='City'
 							style={{ margin: 10, width: 400 }}
 							name='email'
-							value={values.email}
+							value={buyer.email}
 							onChange={handleOnChange}
 							required
 						/>
