@@ -5,7 +5,7 @@ import {db} from '../firebase/firebaseConfig.js';
 import '../hojas-de-estilo/shop.css';
 import TextField from '@mui/material/TextField';
 import MessageSuccess from './MessageSuccess.jsx';
-
+import { Link } from 'react-router-dom';
 
 const Shop = () => {
 
@@ -59,8 +59,7 @@ const Shop = () => {
 			{purchaseID ?   (
 				<>
 					{purchaseID && <MessageSuccess purchaseID={purchaseID} />}
-					<button className='agregarACarrito-detail'>VOLVER A INICIO</button>
-					<p>*Podria hacer desaparecer el Cart-Detalles para mas visual </p>
+					<Link  to="/" className='agregarACarrito-detail'> Volver a tienda</Link>
 				</>
 				)
 				:
