@@ -7,5 +7,5 @@ const hamburgjs = () => {
   });
 }
 
-export { hamburgjs }
+export default hamburgjs 
 //
