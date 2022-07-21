@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "../hojas-de-estilo/ItemListContainer.css";
+import "../hojas-de-estilo/ItemListContainer.css"; 
 import MainHero from "./MainHero.jsx";
 import {db} from '../firebase/firebaseConfig.js'; 
 import { collection, query, getDocs,  where } from "firebase/firestore";
@@ -30,7 +30,7 @@ const Category = ({ titulo2 }) => {
     <>
       <div className="contenedor-principal">
         <MainHero />
-        <article className="tituloElige">
+        <article className="tituloElige" >
           <h2>{titulo2} </h2>
         </article>
         <article className="ItemListContainer-estilo" >

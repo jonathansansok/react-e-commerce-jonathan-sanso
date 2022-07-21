@@ -12,13 +12,7 @@
     color: white;
     }
     
-    .hero h2{
-        font-size: 3rem;
-        color: white;
-        text-shadow:  4px 4px 4px black;
-        margin-bottom: 1rem;
-    
-    }
+
     .hero-button {
         background-color: rgb(120, 9, 224);
         border: 0;
@@ -39,4 +33,14 @@
     .hero-button a:hover {
         color: black;
     }
+    
+/*     .tituloCustom{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 2rem;
+        margin: 40px 0px 30px 0;
+        width: 100vw;
+    } */
     

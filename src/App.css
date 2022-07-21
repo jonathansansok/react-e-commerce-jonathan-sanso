@@ -13,6 +13,7 @@ html, body {
 
 .App{
     min-height: 100vh;
+    width: 100vw;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -29,16 +30,17 @@ display: flex;
 flex-direction: column;
 justify-content: center;
 align-items: center;
-width: 100%;
+
 height: 400px;
 color: white;
 }
 
-.hero h2{
+.tituloCustom{
     font-size: 3rem;
     color: white;
     text-shadow:  4px 4px 4px black;
     margin-bottom: 1rem;
+    width: 100vw;
 
 }
 .hero-button {
@@ -68,12 +70,30 @@ color: white;
     align-items: center;
     justify-content: center;
 }
-.tituloElige{
+ .tituloElige{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     font-size: 2rem;
     margin: 40px 0px 30px 0;
-    width: 1000px;
+    width: 100vw;
 }
+ 
+@media (max-width: 960px) {
+    .tituloCustom{
+        
+    font-size: 2rem;
+
+    }
+    .tituloElige h2{
+        font-size: 100%;
+    }
+
+
+
+
+}
+
+
+

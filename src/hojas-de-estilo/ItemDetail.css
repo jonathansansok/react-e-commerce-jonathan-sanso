@@ -1,8 +1,8 @@
 .top-contenedor-Item-detail{
     display: flex;
     flex-direction: column;
-    justify-content: start;
-    align-items: start;
+    justify-content: flex-start;
+    align-items: flex-start;
     margin-bottom: 30px;
 
 }
@@ -29,7 +29,7 @@
     margin-left: 11px;
     display: flex ;
     flex-direction: column;
-    justify-content: end;
+    justify-content: flex-end;
     font-size: 1.1rem;
     font-weight: bold;
     color: #000;
@@ -78,7 +78,7 @@
 .letrasNumeros{
     display: flex;
     flex-direction: row;
-    align-items: start;
+    align-items: flex-start;
     justify-items: center;
     justify-content: space-between;
     height: 97px;
