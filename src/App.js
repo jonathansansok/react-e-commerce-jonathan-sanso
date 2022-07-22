@@ -1,6 +1,6 @@
-//imports
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+// este Browser router es para poder linkear los <li> del header y otros componentes
 import NavBar from './components/NavBar.jsx';
 import ItemListContainer from './components/ItemListContainer.jsx';
 import ItemDetailContainer from './components/ItemDetailContainer.jsx'; 
@@ -15,6 +15,7 @@ import './App.css';
 
 function App() {
   return (
+    //el llamado a titulo2 es para ahorrar recursos y dinamizarlo
     <CartContextProvider>
       <Router> 
         <div className="App">
@@ -26,7 +27,6 @@ function App() {
             <Route path="/cart" element={<Cart />} /> 
             <Route path="/shop" element={<Shop />} /> 
             <Route path="/contacto" element={<Contacto />} />
-            
           </Routes>
           <Footer/>
         </div>

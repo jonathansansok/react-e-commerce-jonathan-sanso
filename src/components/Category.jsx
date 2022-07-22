@@ -10,8 +10,7 @@ const Category = ({ titulo2 }) => {
   const [productos, setProductos] = useState([]);  
 
   const  {categoria} = useParams();
-  
-
+  //desde firestore se traen a los productos que tengan la misma categoria, el where usa para filtrar por categoria america o asia/oceanía de firestore
   useEffect(() => {
 	const getProductos = async () => {
 		const q = query(collection(db, "travels"),  where("categoria", "==", categoria) );  
@@ -24,11 +23,12 @@ const Category = ({ titulo2 }) => {
 		setProductos(docs);
 	  };
 	  getProductos();
+    //se toman los productos por categoria
 	}, [categoria]);
 
-  return (
+  return (//aqui se reutiliza el MainHero e ItemList ya filtrado por categoria america o asia/oceanía
     <>
-      <div className="contenedor-principal">
+      <section className="contenedor-principal">
         <MainHero />
         <article className="tituloElige" >
           <h2>{titulo2} </h2>
@@ -36,7 +36,7 @@ const Category = ({ titulo2 }) => {
         <article className="ItemListContainer-estilo" >
           <ItemList productos={productos}/>
         </article>
-      </div>
+      </section>
     </>
   );
 };

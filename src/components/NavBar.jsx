@@ -1,10 +1,9 @@
 //imports
-import '../hojas-de-estilo/NavBar.css';
 import CartWidget from './CartWidget';
 import { Link } from 'react-router-dom';
-/* import  hamburgjs  from "./responsiveburguer"; */
-//a esa funcion la debo implementar sobre el navbar
+import '../hojas-de-estilo/NavBar.css';
 import React, { useState } from "react";
+// al no haber aprendido responsive, aprendí y adapté de youtube con react styled components
 import {
   Container,
   Wrapper,
@@ -12,7 +11,7 @@ import {
   MenuItem,
   MenuItemLink,
   MobileIcon,
-} from "./NavBar.elements.jsx";
+} from "../hojas-de-estilo/NavBar.elements.jsx";
 import {
   FaBars,
   FaTimes,

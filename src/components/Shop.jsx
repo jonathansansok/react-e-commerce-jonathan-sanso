@@ -55,7 +55,7 @@ const Shop = () => {
 	};
 
 	return (
-		<div style={styles.containerShop}>
+		<section style={styles.containerShop}>
 			{purchaseID ?   (
 				<>
 					{purchaseID && <MessageSuccess purchaseID={purchaseID} />}
@@ -96,7 +96,7 @@ const Shop = () => {
 				</>
 			)
 			}
-		</div>
+		</section>
 	);
 };
 

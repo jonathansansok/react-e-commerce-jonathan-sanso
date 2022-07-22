@@ -1,6 +1,6 @@
 *{
-     margin: 0;
-     padding: 0;
+    margin: 0;
+    padding: 0;
 }
 .cart-full{
     min-height: 800px;
@@ -35,8 +35,6 @@
 .renderizada-foto{
     max-width: 300px;
 }
-
-
 
 .renderizada-botonera-item-cart{
     display: flex;
@@ -80,8 +78,6 @@
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-
-    /* gap: 20px 20px; */
 }
 
 .vaciar-carrito{
@@ -100,5 +96,4 @@
     font-size: 1.5rem;
     margin-top: 40px;
     width: 300px;
-
 }

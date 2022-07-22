@@ -3,7 +3,7 @@ h2{
 }
 
 .ItemListContainer-estilo {
-    width: 90%;
+    width: 100vw;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;

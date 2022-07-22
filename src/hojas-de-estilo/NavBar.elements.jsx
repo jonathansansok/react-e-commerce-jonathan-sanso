@@ -1,13 +1,14 @@
+// al no haber aprendido responsive, aprendí y adapté de youtube
 import styled from "styled-components";
 
 export const Container = styled.div`
-  width: 100%;
+  width: 100vw;
   height: 70px;
   background-color: rgb(235, 235, 235);
 `;
 
 export const Wrapper = styled.div`
-  width: 100%;
+  width: 100vw;
   max-width: 1300px;
   height: 100%;
   display: flex;

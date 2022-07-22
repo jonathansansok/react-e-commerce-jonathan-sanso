@@ -3,8 +3,7 @@ import "../hojas-de-estilo/Item.css";
 import { Link } from "react-router-dom";
 
 function Item({ travels }) {         
-
-  return (
+  return ( //se cargan todos los campos de cada card, a travez de su ID para cada producto que ya venian desde firestone/ItemListContainer... 
     <Link to={`/item/${travels.id}`} className="li_per contenedor-Item">
       <div className="anyTravel">
         <img

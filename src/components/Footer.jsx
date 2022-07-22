@@ -1,10 +1,10 @@
 //imports
 import React from 'react';
 import '../hojas-de-estilo/Footer.css';
-
+//Este componente simple se muestra en todas las paginas con links a mis redes.
 function Footer(){
     return (
-        <footer className="footer">
+    <footer className="footer">
         <p className="creador"><small>Website made by Jonathan Sansó 🖥️</small></p>
         <ul className="iconostodos">
             <li className="icon"><a href="https://www.instagram.com/jonathan.sanso/"  ><img src="https://icongr.am/fontawesome/instagram.svg?size=30&color=901886" alt="instagram" /></a></li>

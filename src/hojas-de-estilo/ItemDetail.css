@@ -21,7 +21,6 @@
 .contenedor-Item-detail-alto{
     display: flex;
     flex-direction: row;
-
 }
 
 .anyTravel-detail{
@@ -56,7 +55,6 @@
 }
 
 .contenedor-texto-Item-detail-bajo{
-/*     display: flex; */
     flex-direction: column;
     align-items: start;
     justify-items: start;
@@ -116,13 +114,14 @@
     font-size: 1em;
     text-align: center;
 }
+
 .contador-detail input a {
-    
     color: green;
     text-decoration: none;
     font-size: bold;
     margin-left: 10px;
 }
+
 .contador-detail a:hover {
     color: salmon;
 }
@@ -144,9 +143,7 @@
 
 .checkOut-detail {
     margin-right: 10px;
-
 }
-
 
 .checkOut-detail input{
     margin-left: 10px;
@@ -171,6 +168,7 @@
     font-size: bold;
     cursor: pointer;
 }
+
 .agregar-volver{
     width: 320px;
     display: flex;
@@ -189,3 +187,50 @@
 }
 
 
+@media  (max-width: 975px) {
+    .contenedor-Item-detail{
+        height: 1000px;
+        width: 80vw;
+
+    }
+    .contenedor-Item-detail-alto{
+        flex-direction: column;
+        align-items: center;
+        height: 300px;
+    }
+    .contenedor-texto-Item-detail{
+        padding-bottom: 5px;
+    }
+    .contenedor-texto-Item-detail-bajo{
+        display: flex;
+        flex-direction: column;
+        height: 600px;
+        align-items: center;
+        
+
+    }
+    .contenedor-texto-Item-detail-bajo h3 {
+        width: 40vw;
+    }
+    .contenedor-texto-Item-detail-bajo{
+        flex-wrap: nowrap;
+        width: 60vw;
+        height: 300px;
+    }
+    .letrasNumeros{
+        justify-content: start;
+    }
+    .agregar-volver{
+        height: 300px;
+    }
+}
+
+@media  (max-width: 518px) {
+    .contenedor-texto-Item-detail{
+        padding: 40px 0px;
+        padding: 40px 0px;
+    }
+    .imagen-Item-detail{
+        width: 300px;
+    }
+}  

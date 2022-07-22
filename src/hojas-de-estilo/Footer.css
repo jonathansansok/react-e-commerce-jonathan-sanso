@@ -1,49 +1,44 @@
 .footer { 
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(235, 235, 235);
-    width: 100%;
-  }
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(235, 235, 235);
+  width: 100%;
+}
 
-  .iconostodos { 
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    margin-right: 22px;
-    text-decoration: none;
+.iconostodos { 
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+/*   margin-right: 22px; */
+  text-decoration: none;
+}
 
-  }
-
-  .iconostodos li:hover{
+.iconostodos li:hover{
     background-color: salmon;
     text-decoration: none;
     border-radius: 5px;
   }
 
-  li.icon { 
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    margin-right: 22px;
-    text-decoration: none;
-
+li.icon { 
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-right: 22px;
+  text-decoration: none;
 }
-  .icon { 
-    margin: 2rem 1rem 1rem 1rem;
-    padding: 4px;
-    text-decoration: none;
+.icon { 
+  margin: 2rem 1rem 1rem 1rem;
+  padding: 4px;
+  text-decoration: none;
+}
 
-  }
-  
+.creador {
+  font-size: 1.2re;
+  font-weight: bold;
+  margin: 30px 00px 18px 00px; 
+}
 
-  .creador {
-    font-size: 1.2re;
-    font-weight: bold;
-    /* justify-content: flex-end; */
-    margin: 30px 30px 18px 5px; 
-  }
-  

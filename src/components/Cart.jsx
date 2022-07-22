@@ -39,23 +39,23 @@ function Cart() {
           </div>
           )}
         </div>
-        <div className=''>
-          <div className='totales-cart'>
+        <section className=''>
+          <article className='totales-cart'>
           <button className='agregarACarrito-detail vaciar-carrito' onClick={removeCart}>Vaciar Carrito</button>
           <p className='totales-cart-item'>Total Pasajes: <strong>{totalPasajes()}</strong></p>
           <p className='totales-cart-item'>Total U$D <strong>{totalAPagar()}</strong>.-</p>
-          </div>
+          </article>
           <Shop/>
-        </div>
+        </section>
       </>
       ) : (
         <>
-          <div className=''>
-            <div className='carrito-vacio'>
+          <section className=''>
+            <article className='carrito-vacio'>
               <h2 className='cart-full-h'>Su Carrito Esta Vacio</h2>
               <Link  to="/" ><p className='agregarACarrito-detail volver'>Volver a tienda</p></Link>
-            </div>
-          </div>
+            </article>
+          </section>
         </>
       )}
     </div>

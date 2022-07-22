@@ -6,7 +6,6 @@
     align-items: center;
     letter-spacing: 3px;
     font-size: 2rem;
-
 }
 
 header {
@@ -37,9 +36,7 @@ header {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-
 }
-
 
 .liNav {
     text-decoration: none;
@@ -51,7 +48,6 @@ header {
     padding: 0.3rem;
 }
 
-
 .liNav:hover {
     color: white;
     background-color: rgb(120, 9, 224);
@@ -59,8 +55,8 @@ header {
     padding: 6px 8px 6px 8px;
     background-color: rgb(120, 9, 224);
     border-radius: 0.4rem;
-    
 }
+
 .ulNav {
     display: flex;
     list-style: none;

@@ -50,6 +50,7 @@ Esta tienda actualmente usa los siguientes plugins.
 | useForm | ``` npm install --save react-hooks-useform``` |
 | Boostrap | ```npm install react-bootstrap bootstrap```|
 | Sweet Alert 2 | ```npm install sweetalert2 ```|
+| styled | ```npm i styled-components ```|
 
 
 ### React Router Dom  ([react-router-dom])

@@ -4,15 +4,13 @@ import "../hojas-de-estilo/Item.css";
 import "../hojas-de-estilo/ItemList.css";
 import Item from "./Item.jsx";
 
-
 const ItemList = ({ productos }) => {	
-  return (
-
-    <div className="todasLasItem">
+  return ( //aqui se mapea para que se forme cada cart de los 12 productos
+    <section className="todasLasItem">
       {productos.map((maker) => {
         return <Item travels={maker} key={maker.id} />
-          })}   
-    </div>
+        })}   
+    </section>
   );
 };
 

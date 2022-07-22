@@ -1,11 +1,9 @@
-
 .CounterSection{
     display: flex;
     flex-direction: column;
     height: 120px;
     justify-content: flex-start;
     align-items: center;
-
 }
 
 .botonera-pasaje{
@@ -22,11 +20,9 @@
     margin-right: 10px;
     color: rgb(120, 9, 224);
     font-weight: bold;
-
 }
 .stock {
     margin-bottom: 10px;
-
 }
 
 .botonera-acciones{
