@@ -22,7 +22,7 @@ html, body {
 }
 
 
-.hero{background-image: url("https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80");
+/* .hero{background-image: url("https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80");
 background-position: center;
 background-repeat: no-repeat;
 background-size: cover;
@@ -34,7 +34,7 @@ align-items: center;
 height: 400px;
 color: white;
 }
-
+ */
 .tituloCustom{
     font-size: 3rem;
     color: white;
@@ -43,7 +43,7 @@ color: white;
     width: 100vw;
 
 }
-.hero-button {
+/* .hero-button {
     background-color: rgb(120, 9, 224);
     border: 0;
     padding: 1rem 1.5rem;
@@ -70,6 +70,8 @@ color: white;
     align-items: center;
     justify-content: center;
 }
+  */
+  
  .tituloElige{
     display: flex;
     flex-direction: column;
@@ -79,7 +81,7 @@ color: white;
     margin: 40px 0px 30px 0;
     width: 100vw;
 }
- 
+
 @media (max-width: 960px) {
     .tituloCustom{
         
