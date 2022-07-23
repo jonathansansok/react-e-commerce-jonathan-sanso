@@ -26,6 +26,10 @@ function CartContextProvider({ children }) { //componente
   const removeCart = () => {
       setCartList([])
   };
+  const disableCart = () => {
+    setCartList([])
+};
+
   
   const totalAPagar = () => {
       return cartList.reduce((acum, prod) => acum + (prod.initial * prod.precio), 0)
@@ -54,6 +58,7 @@ function CartContextProvider({ children }) { //componente
         totalAPagar,
         totalPasajes,
         eliminarItem,
+        disableCart,
     }}>
     {children}
     </CartContext.Provider>

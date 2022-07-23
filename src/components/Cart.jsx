@@ -11,6 +11,7 @@ import TextField from '@mui/material/TextField';
 import MessageSuccess from './MessageSuccess.jsx';
  import  { useState } from 'react'; 
 import { collection, addDoc } from 'firebase/firestore';
+import { Alert } from '@mui/material';
 /////
 
 
@@ -53,6 +54,12 @@ function Cart() {
 		setValues({ ...buyer, [name]: value });
 	};
 
+/*   const Mostrarmeid = ({ purchaseID }) => {
+    return (
+    alert( {purchaseID})
+    )
+  } */
+
 	const onSubmit = async (e) => {
 		e.preventDefault();
 		const docRef = await addDoc(collection(db, 'purchases'), {
@@ -61,17 +68,25 @@ function Cart() {
 			totalPagar: totalAPagar(),
 			items:  generarOrden(),
 		});
-    
-
-    setPurchaseID(docRef.id);
+		setPurchaseID(docRef.id);
 		setValues(initialState);
-    
+    removeCart();
     
 	};
   ////////////////////////
 
   return (
     <main className='cart-full'>
+                      {purchaseID ?   
+                  (
+                    <>
+                      {purchaseID && <MessageSuccess purchaseID={purchaseID} />}
+                      <Link  to="/" className='agregarACarrito-detail'> Volver a tienda</Link>
+                    </>
+                  )
+                  :
+                  (
+      <>              
       <h1 className='cart-full-h detalles'>Cart-Detalles</h1>
         <div className=''>
           {cartList.length !== 0 ? (
@@ -101,15 +116,7 @@ function Cart() {
                 <p className='totales-cart-item'>Total U$D <strong>{totalAPagar()}</strong>.-</p>
               </article>
               <section >
-                {purchaseID ?   
-                  (
-                    <>
-                      {purchaseID && <MessageSuccess purchaseID={purchaseID} />}
-                      <Link  to="/" className='agregarACarrito-detail'> Volver a tienda</Link>
-                    </>
-                  )
-                  :
-                  (
+
                     <div style={styles.containerShop}>
                       <h1>Complete y viaje</h1>
                       <form className='FormContainer' onSubmit={onSubmit}>
@@ -140,8 +147,7 @@ function Cart() {
                         <button className='agregarACarrito-detail'>FINALIZAR COMPRA</button>
                       </form>
                     </div>
-                  )
-                }
+
               </section>
             </section>
           </>
@@ -158,6 +164,9 @@ function Cart() {
             </>
           )}
       </div>
+      </>
+        )//insertala sola en 
+      }
     </main>
   )
 }

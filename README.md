@@ -52,7 +52,8 @@ Esta tienda actualmente usa los siguientes plugins.
 | Sweet Alert 2 | ```npm install sweetalert2 ```|
 | styled | ```npm i styled-components ```|
 
-
+| Sweet Alert 2 | ```npm i @sweetalert/with-react ```|
+npm install --save sweetalert2 sweetalert2-react-content
 ### React Router Dom  ([react-router-dom])
 
 React Router es una biblioteca de enrutamiento del lado del servidor y del cliente con todas las funciones para React, una biblioteca de JavaScript para crear interfaces de usuario. React Router se ejecuta en cualquier lugar React se ejecuta; en la web, en el servidor con node.js y en React Native.
