@@ -3,7 +3,6 @@ import React from 'react';
 import { useCartContext } from './CartContext.jsx'; 
 import '../hojas-de-estilo/Cart.css'; 
 import { Link } from 'react-router-dom';
-
 ////
 import {db} from '../firebase/firebaseConfig.js'; 
 import '../hojas-de-estilo/shop.css';
@@ -11,7 +10,6 @@ import TextField from '@mui/material/TextField';
 import MessageSuccess from './MessageSuccess.jsx';
  import  { useState } from 'react'; 
 import { collection, addDoc } from 'firebase/firestore';
-import { Alert } from '@mui/material';
 /////
 
 
@@ -25,14 +23,14 @@ function Cart() {
     eliminarItem,
   } = useCartContext()
 
-
+    ///// Empieza algoritmo del formulario con Purchase ID
 	const generarOrden =  () => {
-		// Nuevo objeto de orders    
+		// Para llevarme lo comprado a firebase
 		let items = [];
 		cartList.forEach((item) => items.push({id: item.id, title: item.titulo, price: item.precio, quantity: item.initial}));
 		return items;
 	}
-
+    //Aquí se llenan los datos personales del comprador
 	const initialState = {
 		name: '',
 		phone: '',
@@ -45,21 +43,17 @@ function Cart() {
 		},
 	};
 
+      //En buyer se guardan los datos personales del comprador
 	const [buyer, setValues] = useState(initialState);
 	// Este estado está destinado a guardar el id de la compra
 	const [purchaseID, setPurchaseID] = useState('');
-
+    //
 	const handleOnChange = (e) => {
 		const { value, name } = e.target;
 		setValues({ ...buyer, [name]: value });
 	};
 
-/*   const Mostrarmeid = ({ purchaseID }) => {
-    return (
-    alert( {purchaseID})
-    )
-  } */
-
+  // Cuando el cliente clickea en FINALIZAR COMPRA  se prepara todo el objeto con fecha, purchaseID, total a pagar , los productos, etc.
 	const onSubmit = async (e) => {
 		e.preventDefault();
 		const docRef = await addDoc(collection(db, 'purchases'), {
@@ -73,19 +67,21 @@ function Cart() {
     removeCart();
     
 	};
-  ////////////////////////
+  ///// Termina algoritmo del formulario con Purchase ID Y vacia carrito removeCart()
 
   return (
+      ///// Creo un "IF": Si hay PURCHASE ID se muestra el mismo en pantalla y NADA MAS, SI NO se despliega todo el CART con FORMULARIO
+      ///// y dentro del ELSE DE ARRIBA hay otro IF(linea 150)--> el cual indica: Si hay productos: MOSTRAR a los mismos, SI NO que muestre un: "CARRITO VACIO, VOLVER A INICIO"...
     <main className='cart-full'>
-                      {purchaseID ?   
-                  (
-                    <>
-                      {purchaseID && <MessageSuccess purchaseID={purchaseID} />}
-                      <Link  to="/" className='agregarACarrito-detail'> Volver a tienda</Link>
-                    </>
-                  )
-                  :
-                  (
+      {purchaseID ?   
+      (
+      <>
+        {purchaseID && <MessageSuccess purchaseID={purchaseID} />}
+        <Link  to="/" className='agregarACarrito-detail'> Volver a tienda</Link>
+      </>
+      )
+      :
+      (
       <>              
       <h1 className='cart-full-h detalles'>Cart-Detalles</h1>
         <div className=''>
@@ -115,39 +111,37 @@ function Cart() {
                 <p className='totales-cart-item'>Total Pasajes: <strong>{totalPasajes()}</strong></p>
                 <p className='totales-cart-item'>Total U$D <strong>{totalAPagar()}</strong>.-</p>
               </article>
-              <section >
-
-                    <div style={styles.containerShop}>
-                      <h1>Complete y viaje</h1>
-                      <form className='FormContainer' onSubmit={onSubmit}>
-                        <TextField
-                          placeholder='Name'
-                          style={{ margin: 10, width: 400 }}
-                          name='name'
-                          value={buyer.name}
-                          onChange={handleOnChange}
-                          required
-                        />
-                        <TextField
-                          placeholder='Phone'
-                          style={{ margin: 10, width: 400 }}
-                          name='phone'
-                          value={buyer.phone}
-                          onChange={handleOnChange}
-                          required
-                        />
-                        <TextField
-                          placeholder='City'
-                          style={{ margin: 10, width: 400 }}
-                          name='email'
-                          value={buyer.email}
-                          onChange={handleOnChange}
-                          required
-                        />
-                        <button className='agregarACarrito-detail'>FINALIZAR COMPRA</button>
-                      </form>
-                    </div>
-
+              <section className='full-form-ending'>
+                <div style={styles.containerShop}>
+                  <h1>Complete y viaje</h1>
+                  <form className='FormContainer' onSubmit={onSubmit}>
+                    <TextField 
+                      placeholder='Name'
+                      style={{ margin: 10, width: 350 }}
+                      name='name'
+                      value={buyer.name}
+                      onChange={handleOnChange}
+                      required
+                    />
+                    <TextField
+                      placeholder='Phone'
+                      style={{ margin: 10, width: 350 }}
+                      name='phone'
+                      value={buyer.phone}
+                      onChange={handleOnChange}
+                      required
+                    />
+                    <TextField
+                      placeholder='City'
+                      style={{ margin: 10, width: 350 }}
+                      name='email'
+                      value={buyer.email}
+                      onChange={handleOnChange}
+                      required
+                    />
+                    <button className='agregarACarrito-detail'>FINALIZAR COMPRA</button>
+                  </form>
+                </div>
               </section>
             </section>
           </>

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+/* import React, { useState } from 'react';
 import { collection, addDoc } from 'firebase/firestore';
 import { useCartContext } from './CartContext.jsx'; 
 import {db} from '../firebase/firebaseConfig.js'; 
@@ -101,3 +101,4 @@ const Shop = () => {
 };
 
 export default Shop;
+ */
