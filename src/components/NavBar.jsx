@@ -26,13 +26,12 @@ const Navbar = () => {
     return (
       // la etiqueta <MenuItemLink> solo es un div que da propiedades      
       <Container>
-        <Wrapper className="header-full" >
+        <Wrapper >
           <IconContext.Provider value={{ style: { fontSize: "2em"} }}>
             <h1 className="NaturAdventure" >
             <img className="NaturAdventurelogo" src="https://icongr.am/jam/chevrons-square-right-f.svg?size=60&color=7809e0" alt="logo" />Travelfy</h1>
             <CartWidget
             /> 
-  
             <MobileIcon onClick={() => setShowMobileMenu(!showMobileMenu)}>
               {showMobileMenu ? <FaTimes /> : <FaBars />}
             </MobileIcon>

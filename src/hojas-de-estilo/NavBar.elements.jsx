@@ -5,15 +5,18 @@ export const Container = styled.div`
   width: 100vw;
   height: 90px;
   background-color: rgb(235, 235, 235);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 `;
 
 export const Wrapper = styled.div`
   width: 100vw;
-  max-width: 1300px;
+/*   max-width: 1300px; */
   height: 100%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   margin: auto;
 `;
@@ -46,7 +49,7 @@ export const MenuItem = styled.li`
     width: 100%;
     height: 70px;
     display: flex;
-    justify-content: ce;
+    justify-content: center;
     align-items: center;
   }
 `;
@@ -66,12 +69,12 @@ export const MenuItemLink = styled.div`
 
   &:hover {
     color: #fff;
-    background-color: rgb(120, 9, 224);
+    background-color: salmon;
     transition: 0.5s all ease;
     border-radius: 5px;
 
     div {
-      color: white;
+      color: black;
         svg {
         fill: rgb(120, 9, 224);
       }

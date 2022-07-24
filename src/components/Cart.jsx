@@ -151,7 +151,7 @@ function Cart() {
             <>
               <section className=''>
                 <article className='carrito-vacio'>
-                  <h2 className='cart-full-h'>Su Carrito Esta Vacio</h2>
+                  <h2 className='cart-full-h vacio1'>Su Carrito Esta Vacio</h2>
                   <Link  to="/" ><p className='agregarACarrito-detail volver'>Volver a tienda</p></Link>
                 </article>
               </section>

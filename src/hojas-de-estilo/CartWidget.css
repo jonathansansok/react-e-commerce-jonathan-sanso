@@ -1,4 +1,7 @@
-
+.cartzoom{
+    align-self: flex;
+    
+}
 .shoppingTodo{
     display: flex;
     flex-direction: row;
