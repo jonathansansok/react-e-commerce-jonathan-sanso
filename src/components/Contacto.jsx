@@ -1,26 +1,30 @@
 import React from 'react';
 import { useForm } from "react-hook-form";
 import { edadValidator } from "./contactovalidators";
+import { Link } from 'react-router-dom';
 import '../hojas-de-estilo/contacto.css';
 //formulario de contacto basado en hook-form bastante aislado del resto de los componentes( no itera a otro comp...)
 //los errors son para que el usuario tenga que escribir sus campos
 const Contacto = () => {
     const { register, formState: { errors }, watch, handleSubmit } = useForm({
         defaultValues: {
-            nombre: 'Sr./a',
-            direccion: 'Tu Calle'
+            nombre: ' ',
+            direccion: ''
         }
     });
 
     const onSubmit = (datos) => {
         console.log(datos);
+        alert("Gracis por contactarnos!")
+        
+
     }
 
     const incluirTelefono = watch('incluirTelefono');
 
     return <section className="full-form">
                 <h2>Formulario</h2>
-                <p className= "reglon-de-form">Un gusto {watch('nombre')}</p>
+                <p className= "reglon-de-form">Un gusto: {watch('nombre')}</p>
                 <form  className="formulario" onSubmit={handleSubmit(onSubmit)}>
                 <article className= "reglon-de-form">
                     <label>Nombre y Apellido </label>
@@ -58,6 +62,7 @@ const Contacto = () => {
                     <option value="es">España</option>
                     <option value="it">Italia</option>
                     <option value="fr">Francia</option>
+                    <option value="fr">Otro</option>
                 </select>
             </article>
             <article className= "reglon-de-form">
