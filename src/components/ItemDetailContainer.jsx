@@ -5,10 +5,10 @@ import { useParams } from 'react-router-dom';
 import ItemDetail from './ItemDetail.jsx';   
 import {db} from '../firebase/firebaseConfig.js'; 
 import { collection, query, getDocs, documentId, where } from "firebase/firestore";
-
+//En este componente se mapea al producto luego de que el comprador clickea en Mas Detalles
 const ItemDetailContainer = () => {
  	const [item, setItem] = useState([]);
-
+	//se vuelve a importar el producto desde firestore
 	const  {id} = useParams();
 
 	useEffect(() => {
@@ -25,18 +25,17 @@ const ItemDetailContainer = () => {
 	  getProductos();
 	}, [id]);
 
-	return (
-		<div className='item-detail-container-estilo'>
+	return ( //mapeo del producto que sirve a ItemDetail.jsx
+		<section className='item-detail-container-estilo'>
 			<h1 className='item-detail-container-estilo-h1' >Tu próximo viaje!</h1>
-			<div >
-			{item.map((item) => {
-			return	<ItemDetail item={item} key={item.id}/> 
-			})}
-			</div>
-		</div>
-
+			<article >
+				{item.map((item) => {
+				return	<ItemDetail item={item} key={item.id}/> 
+				})}
+			</article>
+		</section>
 	);
 };
 
- export default ItemDetailContainer; 
+export default ItemDetailContainer; 
 

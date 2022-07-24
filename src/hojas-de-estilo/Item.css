@@ -6,7 +6,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: start;
+    justify-content: flex-start;
     background-color: #fff;
     box-shadow: 0 3px 13px 1px rgba(0 0 0 / 9%); ;
 }
@@ -70,7 +70,6 @@
     text-align: center;
 }
 .contador input a {
-    
     color: green;
     text-decoration: none;
     font-size: bold;
@@ -97,9 +96,7 @@
 
 .checkOut {
     margin-right: 10px;
-
 }
-
 
 .checkOut input{
     margin-left: 10px;
@@ -112,7 +109,6 @@
 }
 
 .agregarACarrito{
-
     border: 0;
     margin-top: 10px;
     padding: 3px 4px;
@@ -123,11 +119,11 @@
     border: 2px solid rgb(120, 9, 224);
     transition: all 0.7s;
 }
-.agregarACarrito:hover{
-   /*  background-color: rgb(120, 9, 224); */
-    transform: scale(1.2);
 
+.agregarACarrito:hover{
+    transform: scale(1.2);
 }
+
 .agregarACarrito a{
     text-decoration: none;
     color : rgb(120, 9, 224);
@@ -136,7 +132,6 @@
 }
 
 .agregarACarrito a:hover{
-/*     text-decoration: none; */
     color : salmon;
 }
 

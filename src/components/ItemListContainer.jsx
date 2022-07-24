@@ -2,24 +2,24 @@ import React, { useState, useEffect } from "react";
 import "../hojas-de-estilo/ItemListContainer.css";
 import MainHero from "./MainHero.jsx";
 import {db} from '../firebase/firebaseConfig.js'; 
-import { collection, query, getDocs,/*  where */} from "firebase/firestore";
+import { collection, query, getDocs,} from "firebase/firestore";
 import ItemList from "./ItemList.jsx";
 
 const ItemListContainer = ({ titulo2 }) => {
   const [productos, setProductos] = useState([]);  
   
-  //llamo a los elementos desde firestone
+  //llamo a los productos de firestone
   const getProductos = async () => {
-    const q = query(collection(db, "travels"), /* where("categoria", "==", america) */);  
+    const q = query(collection(db, "travels"),);  
     const querySnapshot = await getDocs(q);
     const docs = [];
     //console.log(querySnapshot);
 
     querySnapshot.forEach((doc) => {
-      // doc.data() is never undefined for query doc snapshots
+      // pusheamos lo que ya hay y firestone
       docs.push({...doc.data(), id: doc.id});
     });
-    console.log(docs);
+/*     seteamos los productos */
     setProductos(docs);
   };
 
@@ -27,9 +27,9 @@ const ItemListContainer = ({ titulo2 }) => {
     getProductos();
   }, []);
 
-  return (
-    <>
-      <div className="contenedor-principal">
+  return ( //cargamos el mainhero y los productos del useState
+    <> 
+      <section className="contenedor-principal">
         <MainHero />
         <article className="tituloElige">
           <h2>{titulo2} </h2>
@@ -37,7 +37,7 @@ const ItemListContainer = ({ titulo2 }) => {
         <article className="ItemListContainer-estilo" >
           <ItemList productos={productos}/>
         </article>
-      </div>
+      </section>
     </>
   );
 };

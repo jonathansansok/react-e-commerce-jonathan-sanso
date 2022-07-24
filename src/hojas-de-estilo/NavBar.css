@@ -6,7 +6,9 @@
     align-items: center;
     letter-spacing: 3px;
     font-size: 2rem;
-
+}
+.NaturAdventurelogo{
+    width: 50px;
 }
 
 header {
@@ -37,9 +39,7 @@ header {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-
 }
-
 
 .liNav {
     text-decoration: none;
@@ -51,16 +51,13 @@ header {
     padding: 0.3rem;
 }
 
-
 .liNav:hover {
     color: white;
-    background-color: rgb(120, 9, 224);
-    border-radius: 5px;
-    padding: 6px 8px 6px 8px;
-    background-color: rgb(120, 9, 224);
-    border-radius: 0.4rem;
-    
+
 }
+
+
+
 .ulNav {
     display: flex;
     list-style: none;
@@ -72,5 +69,29 @@ a:-webkit-any-link {
 
     cursor: pointer;
     text-decoration: none;
+}
+
+/* responsive abajo */
+.menu-btn{
+    position: absolute;
+    cursor: pointer;
+    top: 15px;
+/*      right: 30px;  */
+   z-index: 2;
+   font-size: 1.5rem;
+   padding-left: 12px;
+   padding-right: 12px;
+   padding-bottom: 4px;
+   margin-left: 20px;
+   vertical-align: middle;
+   border-radius: 4px;
+   background-color: rgb(26, 26, 26, 0.9);
+   display: none;
+}
+.menu-btn img{
+    padding-top: 5px;
+    padding-bottom: 1px;
+   vertical-align: middle;
+
 }
 

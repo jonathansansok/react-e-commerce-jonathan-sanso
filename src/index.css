@@ -5,6 +5,10 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+/*   font-size: 15px; */
+
 }
 
 code {
@@ -14,4 +18,8 @@ code {
 
 .li_per {
   text-decoration: none;  
+}
+
+body{
+  overflow-x: hidden ;
 }

@@ -1,6 +1,5 @@
 
 .shoppingTodo{
-
     display: flex;
     flex-direction: row;
     justify-content: right;
@@ -8,39 +7,36 @@
     width: 60px;
     cursor: pointer;
     transform: transition (all 1s);
+}
 
-}
-.shoppingTodo:hover{
-    transform: scale(1.2);
-    background-color: rgb(235, 235, 235);
-}
+
 .contadorUnidades{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-
     height: 25px;
     margin-left: 5px;
-/*     border:  8px; */
     background-color: rgb(120, 9, 224);
     color: salmon ;
     border-radius: 5px;
-
 }
 
 .contadorUnidades{
-     padding: 0px 3px; 
+    padding: 0px 3px; 
 }
 
-
 .shoppingTodo{
-
     display: flex;
     flex-direction: row;
     justify-content: right;
     align-items: center;
     width: 60px;
+}
 
+@media (max-width: 960px){
+    .shoppingTodo{
+        align-self: flex-end;
+    }
 }
