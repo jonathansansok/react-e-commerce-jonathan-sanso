@@ -1,7 +1,4 @@
-.cartzoom{
-    align-self: flex;
-    
-}
+
 .shoppingTodo{
     display: flex;
     flex-direction: row;
@@ -38,8 +35,3 @@
     width: 60px;
 }
 
-@media (max-width: 960px){
-    .shoppingTodo{
-        align-self: flex-end;
-    }
-}

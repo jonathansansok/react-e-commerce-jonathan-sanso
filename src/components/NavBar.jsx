@@ -6,6 +6,7 @@ import React, { useState } from "react";
 import {
   Container,
   Wrapper,
+  CartUbi,
   Menu,
   MenuItem,
   MenuItemLink,
@@ -21,22 +22,28 @@ import '../hojas-de-estilo/NavBar.css';
 
 
 const Navbar = () => {
-    const [showMobileMenu, setShowMobileMenu] = useState(false);
   
+    const [showMobileMenu, setShowMobileMenu] = useState(false);
+
     return (
-      // la etiqueta <MenuItemLink> solo es un div que da propiedades      
+      // la etiqueta <MenuItemLink> solo es un div que da propiedades
+      //el componenente <CartUbi/>  es para que el carrito de <CartWidget/> en un (min-width: 960px) se esconda     
       <Container>
         <Wrapper >
           <IconContext.Provider value={{ style: { fontSize: "2em"} }}>
             <h1 className="NaturAdventure" >
             <img className="NaturAdventurelogo" src="https://icongr.am/jam/chevrons-square-right-f.svg?size=60&color=7809e0" alt="logo" />Travelfy</h1>
-            <CartWidget
-            /> 
+              
+              <CartUbi>
+                <CartWidget/>
+              </CartUbi>
+
             <MobileIcon onClick={() => setShowMobileMenu(!showMobileMenu)}>
               {showMobileMenu ? <FaTimes /> : <FaBars />}
             </MobileIcon>
   
             <Menu  open={showMobileMenu}>
+            <CartWidget/>
               <MenuItem>
                 <MenuItemLink>
                   <Link onClick= {() => setShowMobileMenu(!showMobileMenu) } to="/" >

@@ -21,6 +21,11 @@ export const Wrapper = styled.div`
   margin: auto;
 `;
 
+export const CartUbi = styled.div`
+  @media screen and (min-width: 960px){
+    display: none;
+  }
+`;
 
 export const Menu = styled.ul`
   display: flex;
