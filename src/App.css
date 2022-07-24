@@ -46,14 +46,23 @@ html, body {
     font-size: 2rem;
 
     }
+
     .tituloElige h2{
-        font-size: 100%;
+        font-size: 40px;
+        width: 80%;
     }
 
+}
 
+@media (max-width: 560px) {
 
+    .tituloElige h2{
+        font-size: 25px;
+        width: 80%;
+    }
 
 }
+
 
 
 

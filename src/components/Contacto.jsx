@@ -1,7 +1,6 @@
 import React from 'react';
 import { useForm } from "react-hook-form";
 import { edadValidator } from "./contactovalidators";
-import { Link } from 'react-router-dom';
 import '../hojas-de-estilo/contacto.css';
 //formulario de contacto basado en hook-form bastante aislado del resto de los componentes( no itera a otro comp...)
 //los errors son para que el usuario tenga que escribir sus campos
