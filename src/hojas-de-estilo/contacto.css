@@ -43,3 +43,9 @@ input{
     color : salmon;
 }
 
+@media (max-width: 960px){
+    .full-form h2{
+        font-size: 7vw;
+    }
+    
+}

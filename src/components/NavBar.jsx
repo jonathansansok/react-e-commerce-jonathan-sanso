@@ -57,7 +57,7 @@ const Navbar = () => {
               <MenuItem>
                 <MenuItemLink>
                   <Link onClick= {() => setShowMobileMenu(!showMobileMenu) } to="/categoria/asiaoceania" >
-                    <div>ASIA-OCEANÍA</div>
+                    <div>ASIA/OCN</div>
                   </Link>
                   </MenuItemLink>
               </MenuItem>

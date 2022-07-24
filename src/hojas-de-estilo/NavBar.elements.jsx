@@ -26,11 +26,11 @@ export const Menu = styled.ul`
   list-style: none;
 
   @media screen and (max-width: 960px) {
-    background-color: rgb(235, 235, 235, 0.5);
+    background-color: rgb(235, 235, 235, 0.8);
     position: absolute;
     top: 69px;
     left: ${({ open }) => (open ? "0" : "-100%")}; //Import
-    width: 30%;
+    width: 45%;
     height: 70vh;
     justify-content: center;
     flex-direction: column;
