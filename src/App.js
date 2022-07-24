@@ -6,7 +6,7 @@ import ItemListContainer from './components/ItemListContainer.jsx';
 import ItemDetailContainer from './components/ItemDetailContainer.jsx'; 
 import Category from './components/Category';
 import Cart from './components/Cart.jsx';
-import Shop from './components/Shop.jsx';
+
 import Contacto from './components/Contacto.jsx';
 import Footer from './components/Footer.jsx';
 //ahora import el ItemsProvider y envuelvo mi app
@@ -25,7 +25,7 @@ function App() {
             <Route path="/item/:id" element={  <ItemDetailContainer/>  } />
             <Route path="/categoria/:categoria" element={<Category className="tituloElige" titulo2='Vamos por continente!'/>  } />  
             <Route path="/cart" element={<Cart />} /> 
-            <Route path="/shop" element={<Shop />} /> 
+
             <Route path="/contacto" element={<Contacto />} />
           </Routes>
           <Footer/>

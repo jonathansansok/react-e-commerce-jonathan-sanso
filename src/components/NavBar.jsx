@@ -1,7 +1,6 @@
 //imports
 import CartWidget from './CartWidget';
 import { Link } from 'react-router-dom';
-import '../hojas-de-estilo/NavBar.css';
 import React, { useState } from "react";
 // al no haber aprendido responsive, aprendí y adapté de youtube con react styled components
 import {
@@ -17,7 +16,8 @@ import {
   FaTimes,
 } from "react-icons/fa";
 import { IconContext } from "react-icons";
-
+///NavBar.css es destinado solo al  estilo solo al logo,titulo Travelfy 
+import '../hojas-de-estilo/NavBar.css';
 
 
 const Navbar = () => {
@@ -26,18 +26,18 @@ const Navbar = () => {
     return (
       // la etiqueta <MenuItemLink> solo es un div que da propiedades      
       <Container>
-        <Wrapper>
+        <Wrapper className="header-full" >
           <IconContext.Provider value={{ style: { fontSize: "2em"} }}>
             <h1 className="NaturAdventure" >
-            <img src="https://icongr.am/jam/chevrons-square-right-f.svg?size=60&color=7809e0" alt="logo" />Travelfy</h1>
+            <img className="NaturAdventurelogo" src="https://icongr.am/jam/chevrons-square-right-f.svg?size=60&color=7809e0" alt="logo" />Travelfy</h1>
             <CartWidget
-             /> 
+            /> 
   
             <MobileIcon onClick={() => setShowMobileMenu(!showMobileMenu)}>
               {showMobileMenu ? <FaTimes /> : <FaBars />}
             </MobileIcon>
   
-            <Menu open={showMobileMenu}>
+            <Menu  open={showMobileMenu}>
               <MenuItem>
                 <MenuItemLink>
                   <Link onClick= {() => setShowMobileMenu(!showMobileMenu) } to="/" >

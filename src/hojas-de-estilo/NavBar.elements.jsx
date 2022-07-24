@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   width: 100vw;
-  height: 70px;
+  height: 90px;
   background-color: rgb(235, 235, 235);
 `;
 
@@ -20,7 +20,6 @@ export const Wrapper = styled.div`
 
 
 export const Menu = styled.ul`
-/*   height: 100%; */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -43,7 +42,6 @@ export const Menu = styled.ul`
 
 export const MenuItem = styled.li`
   height: 40%;
-
   @media screen and (max-width: 960px) {
     width: 100%;
     height: 70px;
@@ -58,7 +56,6 @@ export const MenuItemLink = styled.div`
   justify-content: center;
   align-items: center;
   height: 100%;
-/*   padding: 0.5rem 1.7rem; */
   color: #64b2ff;
   font-size: 1.1rem;
   font-weight: 300;
@@ -98,7 +95,6 @@ export const MenuItemLink = styled.div`
 
   @media screen and (max-width: 960px) {
     width: 100%;
-
     div {
       width: 200px;
       justify-content: left;
@@ -112,7 +108,7 @@ export const MenuItemLink = styled.div`
 
   @media screen and (max-width: 880px) {
     div {
-      width: 40%;
+/*       width: 40%; */
       justify-content: left;
 
       svg {
@@ -153,8 +149,11 @@ export const MobileIcon = styled.div`
     cursor: pointer;
 
     svg {
-      fill: #e07924;
-      margin-right: 0.5rem;
+      fill: rgb(120, 9, 224);
+      padding-right: 0.8rem;
     }
   }
+
+  
 `;
+

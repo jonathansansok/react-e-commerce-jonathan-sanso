@@ -7,6 +7,9 @@
     letter-spacing: 3px;
     font-size: 2rem;
 }
+.NaturAdventurelogo{
+    width: 50px;
+}
 
 header {
     padding-right: 0px;
@@ -50,12 +53,10 @@ header {
 
 .liNav:hover {
     color: white;
-    background-color: rgb(120, 9, 224);
-    border-radius: 5px;
-    padding: 6px 8px 6px 8px;
-    background-color: rgb(120, 9, 224);
-    border-radius: 0.4rem;
+
 }
+
+
 
 .ulNav {
     display: flex;
