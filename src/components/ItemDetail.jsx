@@ -6,13 +6,16 @@ import { Link } from 'react-router-dom';
 import { useCartContext } from './CartContext.jsx';
 //Aquí se logra que el comprador pueda ver el producto en detalle y pueda cambiar la cantidad de pasajes.
 //initial es, previamente, la cantidad de pasajes que elegirá el usuario.
-
+//Me traigo como parametro el Item de ItemDetailContainer
 export function ItemDetail({item}){
+    //importo el AddToCart para que se usado en la funcion agregarAlCarrito()
     const { addToCart } = useCartContext()
+    //estado para que el usuario pueda setear la cantidad de pasajes
     const [cantidad,setCantidad] = useState(0)
 
     const agregarAlCarrito=(Numero)=>{
-    
+        //funcion que no permite que se agreguen Cero pasajes, que de alert de cuantos se agregaron
+        //... y envia al addToCart() todo lo elegido por el comprador.
         if (Numero === 0){
             alert(`No se puede agregar cero pasajes`)
         }
@@ -44,6 +47,7 @@ export function ItemDetail({item}){
                     <div className= 'contenedor-texto-Item-detail-bajo letrasNumeros'>
                         <div className='fechasTodas-detail'>
                             <div className='checkIn-detail'>
+                               {/*  Por el momento me dijo el tutor que no se califica el uso de FECHAS porque no lo vimos, que lo deje en readOnly */}
                                 <label htmlFor="start">Check-in:</label>
                                 <input type="date" id="start" name="trip-start"value="2023-01-01" min="2023-01-01" max="2024-12-31"  readOnly/>
                             </div>

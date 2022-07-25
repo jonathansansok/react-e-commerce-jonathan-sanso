@@ -33,7 +33,8 @@ const ItemListContainer = ({ titulo2 }) => {
         <article className="tituloElige">
           <h2>{titulo2} </h2>
         </article>
-        <article className="ItemListContainer-estilo" >
+        <article className="ItemListContainer-estilo">
+          {/* // Me llevo los productos al mapeo de ItemList.jsx con parametro ({ productos }) */}
           <ItemList productos={productos}/>
         </article>
       </section>

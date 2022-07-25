@@ -42,7 +42,8 @@ const Navbar = () => {
             <CartUbi>
               <CartWidget/>
             </CartUbi>
-
+              {/*El componenente <CartUbi/>  es para que el carrito de <CartWidget/>  se esconda en un (MIN-width: 960px) 
+              //...y solo aparezca en un (MAX-width: 960px)    */}
             <MobileIcon onClick={() => setShowMobileMenu(!showMobileMenu)}>
               {/* Ternario que logra el State de hamburguesa o ¨X¨ */}
               {showMobileMenu ? <FaTimes /> : <FaBars />}
@@ -52,6 +53,7 @@ const Navbar = () => {
             <CartWidget/>
               <MenuItem>
                 <MenuItemLink>
+                  {/*Cuando se clickea una seccion del header desaparece este y me lleva al link   */}                
                   <Link onClick= {() => setShowMobileMenu(!showMobileMenu) } to="/" >
                     <div>HOME</div>
                   </Link>

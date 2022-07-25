@@ -2,8 +2,8 @@
 import {useState} from 'react';
 import '../hojas-de-estilo/ItemCount.css';
 //Este componente es para modificacion de unidades de cada producto con suma, resta y stock disponible
-//Nótese que el onAdd es para el onClick de agregar al carrito el numero de pasajes
-//Nótese que se importa la funcion addToCart de CartContext.jsx que agrega al carrito lo que el comprador decida
+//El onAdd es para el onClick de agregar al carrito el numero de pasajes
+//Se importa la funcion addToCart de CartContext.jsx que agrega al carrito lo que el comprador decida
 //initial es, previamente, la cantidad de pasajes que elegirá el usuario, proviene desde firestore como punto de partida real.
 
 const ItemCount = ({stock,initial,onAdd}) => {

@@ -1,12 +1,14 @@
-## WEB DE VENTA DE PASAJES DE TURISMO INTERNACIONAL🌄
+## WEB E-COMMERCE DE VENTA DE PASAJES DE TURISMO INTERNACIONAL🌄
 
-  La idea de esta WEB es programar un E-commerce el cual el usuario elige los destinos de turimos internacional y cantidad de pasajes para luego finalizar la compra.
+  La idea de esta WEB es programar un E-commerce en el cual el usuario elige los destinos de turimos internacional y cantidad de pasajes para luego finalizar la compra.
   
-En el Header podemos encontar un menu con las opciones: Home - América - Asia/Oceania - Contacto
+En el Header podemos encontar un menu con las opciones: Home - América - Asia/OCN - Contacto
 
-Al clickear en cada uno de ellos se verá la Respuesta de frecuencia de cad consola analizada de manera visual con un ecualizador analizador de espectro, el cual muestra su respuesta de frecuencia de 20 Hz. a 20Khz., Tambíen una imagen ampliada de los parámetros que utilizada cada equipo, un descripción general del mismo y una opinión personal sobre el ejemplo demostrado. 
-
-En la Sección de "CONTACTOS" el usuario puede contactarme a mis redes sociales o bien enviarme un mail. 
+Home: Despliega en Hero y muestra todos los productos sin filtar
+América: Muestra los destinos que pertenecen al continente Americano
+Asia/OCN : Muestra los destinos que pertenecen al Asia/Oceania
+En la Sección de "CONTACTOS" el usuario puede enviarme un mail. 
+Footer: contiene links a todos mis plataformas.
 
 ## TECNOLOGIAS UTILIZADAS 🛠️
 
@@ -16,7 +18,7 @@ CSS - Para darle estilos a todos los archivos *HTML.
 
 JAVASCRIPT - Para la funcionalidad del E-commerce y ciertas animaciones que favorecen al diseño responsive. 
 
-REACT - Para la funcionalidad adaptada a la maxima velocidad de navegacion del usuario y creaciones de componentes que se puedan reutilizar.
+REACT - Para la funcionalidad adaptada a la maxima velocidad de navegacion del usuario y creaciones de componentes que se puedan reutilizar y reescalar.
 
 ## COMENZANDO 🚀 
 Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas.  
@@ -52,10 +54,6 @@ Esta tienda actualmente usa los siguientes plugins.
 | Sweet Alert 2 | ```npm install sweetalert2 ```|
 | styled | ```npm i styled-components ```|
 
-| Sweet Alert 2 | ```npm i @sweetalert/with-react ```|
-npm install --save sweetalert2 sweetalert2-react-content
-### React Router Dom  ([react-router-dom])
-
 React Router es una biblioteca de enrutamiento del lado del servidor y del cliente con todas las funciones para React, una biblioteca de JavaScript para crear interfaces de usuario. React Router se ejecuta en cualquier lugar React se ejecuta; en la web, en el servidor con node.js y en React Native.
 
 Si recién está comenzando con React en general, le recomendamos que siga la excelente guía de inicio en los documentos oficiales. Hay mucha información allí para ponerlo en marcha. React Router es compatible con React >= 16.8.
@@ -78,3 +76,12 @@ Un reemplazo hermoso, con responsabilidad, personalizable y accesible (wai-aria)
 
 Yup, es un generador de esquemas de JavaScript para el análisis y la validación de valores. Defina un esquema, transforme un valor para que coincida, valide la forma de un valor existente o ambos. Sí, los esquemas son extremadamente expresivos y permiten modelar validaciones complejas e interdependientes o transformaciones de valores.
 La API de Yup está fuertemente inspirada en Joi, pero es más sencilla y está construida con la validación del lado del cliente como su principal caso de uso. Sí, separa las funciones de análisis y validación en pasos separados. cast() transforma los datos mientras que la validación verifica que la entrada tenga la forma correcta. Cada uno se puede realizar en conjunto (como la validación de formularios HTML) o por separado (como deserializar datos confiables de las API).
+
+### useForm ([useForm])
+
+useForm es un generador de formularios de contacto adaptado a React que contiene varias acciones 
+optimizadas para su funcionalidad.
+
+
+### styled ([styled])
+Componente que nos permite llevar a cabo estilar desde js o jsx. especial para responsive.

@@ -9,7 +9,7 @@ import Cart from './components/Cart.jsx';
 
 import Contacto from './components/Contacto.jsx';
 import Footer from './components/Footer.jsx';
-//ahora import el ItemsProvider y envuelvo mi app
+//ahora importo el CartContextProvider y envuelvo mi app
 import CartContextProvider from './components/CartContext.jsx';
 import './App.css';
 
@@ -25,7 +25,6 @@ function App() {
             <Route path="/item/:id" element={  <ItemDetailContainer/>  } />
             <Route path="/categoria/:categoria" element={<Category className="tituloElige" titulo2='Vamos por continente!'/>  } />  
             <Route path="/cart" element={<Cart />} /> 
-
             <Route path="/contacto" element={<Contacto />} />
           </Routes>
           <Footer/>
