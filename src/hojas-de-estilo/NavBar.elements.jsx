@@ -25,6 +25,10 @@ export const CartUbi = styled.div`
   @media screen and (min-width: 960px){
     display: none;
   }
+  @media screen and (max-width: 960px){
+
+    justify-self: start;
+  }
 `;
 
 export const Menu = styled.ul`
