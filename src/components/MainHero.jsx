@@ -2,7 +2,8 @@
 import React from 'react';
 import '../hojas-de-estilo/MainHero.css';
 import { Link } from 'react-router-dom';
-//este es el hero reutilizable para otras paginas futuras
+//este es el MainHero reutilizable para otras paginas futuras
+//solo tiene un link hacia contacto.
 function MainHero(){
   return (
     <article className="hero">

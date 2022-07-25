@@ -13,7 +13,6 @@ const ItemListContainer = ({ titulo2 }) => {
     const q = query(collection(db, "travels"),);  
     const querySnapshot = await getDocs(q);
     const docs = [];
-    //console.log(querySnapshot);
 
     querySnapshot.forEach((doc) => {
       // pusheamos lo que ya hay y firestone
@@ -22,12 +21,12 @@ const ItemListContainer = ({ titulo2 }) => {
 /*     seteamos los productos */
     setProductos(docs);
   };
-
+/*   El array vacio se llenará con productos */
   useEffect(() => {
     getProductos();
   }, []);
 
-  return ( //cargamos el mainhero y los productos del useState
+  return ( //cargamos el mainhero.jsx y los productos del useState
     <> 
       <section className="contenedor-principal">
         <MainHero />

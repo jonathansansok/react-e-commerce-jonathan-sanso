@@ -4,8 +4,8 @@ import '../hojas-de-estilo/ItemDetail.css';
 import ItemCount from './ItemCount.jsx';
 import { Link } from 'react-router-dom';
 import { useCartContext } from './CartContext.jsx';
-//Aquí se logra que el comprador pueda ver el producto en detalle y pueda cambiar la cantidad de pasajes
-//initial es, previamente, la cantidad de pasajes que elegirá el usuario
+//Aquí se logra que el comprador pueda ver el producto en detalle y pueda cambiar la cantidad de pasajes.
+//initial es, previamente, la cantidad de pasajes que elegirá el usuario.
 
 export function ItemDetail({item}){
     const { addToCart } = useCartContext()
@@ -54,15 +54,15 @@ export function ItemDetail({item}){
                         </div>
                         <div className='numerales-detail'>
                         {cantidad===0 
-                        ? //se importa el Itemcount.jsx 
+                        ? 
                         <div className='agregar-volver'>   
-                                <ItemCount stock={item.stock} initial={item.initial} onAdd={agregarAlCarrito}/>
-                                <Link to='/' > <button className='agregarACarrito-detail terminar'> Elegir mas </button> </Link>
+                            <ItemCount stock={item.stock} initial={item.initial} onAdd={agregarAlCarrito}/>
+                            <Link to='/' > <button className='agregarACarrito-detail terminar'> Elegir mas </button> </Link>
                         </div>
                             : 
                             <>      
-                            <Link to='/' > <button className='agregarACarrito-detail terminar itemdetail'> Elegir mas </button> </Link>                    
-                            <Link to='/cart' > <button className='agregarACarrito-detail terminar itemdetail'> Ir al Cart </button> </Link>
+                            <Link to='/'> <button className='agregarACarrito-detail terminar itemdetail'> Elegir mas </button> </Link>                    
+                            <Link to='/cart'> <button className='agregarACarrito-detail terminar itemdetail'> Ir al Cart </button> </Link>
                             </>
                             } 
                         </div>

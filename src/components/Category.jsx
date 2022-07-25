@@ -11,6 +11,8 @@ const Category = ({ titulo2 }) => {
 
   const  {categoria} = useParams();
   //desde firestore se traen a los productos que tengan la misma categoria, el where usa para filtrar por categoria america o asia/oceanía de firestore
+  // el getProductos() es el mismo de ItemDetailContainer.jsx e ItemListContainer.jsx
+  // el resto del useEffect es provisto por firebase y con where filtro por categoria.
   useEffect(() => {
 	const getProductos = async () => {
 		const q = query(collection(db, "travels"),  where("categoria", "==", categoria) );  

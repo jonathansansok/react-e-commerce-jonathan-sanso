@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 
 function Item({ travels }) {         
   return ( //se cargan todos los campos de cada card, a travez de su ID para cada producto que ya venian desde firestone/ItemListContainer... 
+  // el Link toma el ID del producto en particular
     <Link to={`/item/${travels.id}`} className="li_per contenedor-Item">
       <div className="anyTravel">
         <img
