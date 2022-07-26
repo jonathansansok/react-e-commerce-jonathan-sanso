@@ -43,14 +43,14 @@ function Cart() {
 		},
 	};
 
-      //En buyer se guardan los datos/valores personales del comprador seteando los Valores con SetValues
-	const [buyer, setValues] = useState(initialState);
+      //En buyer se guardan los datos/valores personales del comprador seteando los Valores con setBuyer
+	const [buyer, setBuyer] = useState(initialState);
 	// Este estado está destinado a guardar el id de la compra
 	const [purchaseID, setPurchaseID] = useState('');
     //
 	const handleOnChange = (e) => {
 		const { value, name } = e.target;
-		setValues({ ...buyer, [name]: value });
+		setBuyer({ ...buyer, [name]: value });
 	};
 
   // Cuando el cliente clickea en FINALIZAR COMPRA  se prepara todo el objeto con fecha, purchaseID, total a pagar , los productos, etc.
@@ -61,10 +61,15 @@ function Cart() {
 			fecha: new Date(),
 			totalPagar: totalAPagar(),
 			items:  generarOrden(),
+
 		});
 		setPurchaseID(docRef.id);
-		setValues(initialState);
+		setBuyer(initialState);
     removeCart();
+    //Los siguientes console.log son para que se pueda comprobar que se envian bien 
+/*     console.log(totalAPagar())
+    console.log(buyer)
+    console.log(generarOrden()) */
     
 	};
   ///// Termina algoritmo del formulario con Purchase ID Y vacia carrito removeCart()
