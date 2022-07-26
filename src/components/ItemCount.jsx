@@ -15,7 +15,7 @@ const ItemCount = ({stock,initial,onAdd}) => {
 	const sumar = () => {
 		if (Numero < stock) {
 			setNumero(Numero + 1);
-			setDisponible(Disponible-1) ;
+			setDisponible(Disponible-1);
 		}else{
 			alert(`No puedes agregar mas de ${Numero} pasajes`);
 		}
