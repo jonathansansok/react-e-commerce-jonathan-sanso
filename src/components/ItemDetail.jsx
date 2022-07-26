@@ -13,8 +13,11 @@ export function ItemDetail({item}){
     //estado para que el usuario pueda setear la cantidad de pasajes
     const [cantidad,setCantidad] = useState(0)
 
+    //APLICO DESTRUCTURING
+    const  {imagen, titulo, pais, incluye, precio, descripcion} = item;
     const agregarAlCarrito=(Numero)=>{
-        //funcion que no permite que se agreguen Cero pasajes, que de alert de cuantos se agregaron
+        
+        //funcion que no permite que se agreguen Cero pasajes Y que da alert de cuantos se agregaron
         //... y envia al addToCart() todo lo elegido por el comprador.
         if (Numero === 0){
             alert(`No se puede agregar cero pasajes`)
@@ -25,25 +28,26 @@ export function ItemDetail({item}){
         addToCart({ ...item, initial: Numero })
         }
     }
+    //renderizo en pantalla todo:
     return (
         <section className= 'top-contenedor-Item-detail'>
             <article className= 'contenedor-Item-detail'>
                 <div className= 'contenedor-Item-detail-alto'>
                     <div className= 'anyTravel-detail'>
                         <img className= 'imagen-Item-detail'
-                        src={item.imagen}
-                        alt= {item.imagen} />
+                        src={imagen}
+                        alt= {imagen} />
                     </div>
                     <div className= 'contenedor-texto-Item-detail'>
                         <p className='nombre-Item-detail'>          
-                            <strong> {item.titulo} en {item.pais} </strong>
+                            <strong> {titulo} en {pais} </strong>
                         </p>
-                        <p className='incluye-Item-detail'>{item.incluye}</p>
-                        <p className='precio-Item-detail'>US$ {item.precio}.-</p>
+                        <p className='incluye-Item-detail'>{incluye}</p>
+                        <p className='precio-Item-detail'>US$ {precio}.-</p>
                     </div>
                 </div>
                 <div className= 'contenedor-texto-Item-detail-bajo'>
-                    <h3>{item.descripcion}</h3>
+                    <h3>{descripcion}</h3>
                     <div className= 'contenedor-texto-Item-detail-bajo letrasNumeros'>
                         <div className='fechasTodas-detail'>
                             <div className='checkIn-detail'>
