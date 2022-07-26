@@ -15,16 +15,25 @@ export const Wrapper = styled.div`
   height: 100%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   margin: auto;
+  padding-left: 40px;
+  padding-right: 40px;
+
+  @media screen and (max-width: 480px){
+  padding-left: 00px;
+  padding-right: 00px;
+}
+
+
 `;
 
 export const CartUbi = styled.div`
-  @media screen and (min-width: 960px){
+  @media screen and (min-width: 973px){
     display: none;
   }
-  @media screen and (max-width: 960px){
+  @media screen and (max-width: 973px){
 
     justify-self: start;
   }
@@ -36,7 +45,7 @@ export const Menu = styled.ul`
   align-items: center;
   list-style: none;
 
-  @media screen and (max-width: 960px) {
+  @media screen and (max-width: 973px) {
   background-color: rgb(235, 235, 235, 0.9);
   position: absolute;
   top: 90px;
@@ -53,7 +62,7 @@ export const Menu = styled.ul`
 
 export const MenuItem = styled.li`
   height: 40%;
-  @media screen and (max-width: 960px) {
+  @media screen and (max-width: 973px) {
   width: 100%;
   height: 70px;
   display: flex;
@@ -104,7 +113,7 @@ export const MenuItemLink = styled.div`
     }
   }
 
-  @media screen and (max-width: 960px) {
+  @media screen and (max-width: 973px) {
     width: 100%;
     div {
       width: 200px;
@@ -153,7 +162,7 @@ export const MenuItemLink = styled.div`
 export const MobileIcon = styled.div`
 display: none;
 
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 973px) {
   display: flex;
   align-items: center;
   cursor: pointer;

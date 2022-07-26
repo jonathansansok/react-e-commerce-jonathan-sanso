@@ -63,6 +63,12 @@ html, body {
 
 }
 
+@media (max-width: 390px) {
+.tituloCustom{
+        
+    font-size: 1.6rem;
 
+    }
 
+}
 

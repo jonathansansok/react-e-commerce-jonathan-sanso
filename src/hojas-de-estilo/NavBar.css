@@ -71,26 +71,3 @@ a:-webkit-any-link {
     text-decoration: none;
 }
 
-/* responsive abajo */
-.menu-btn{
-    position: absolute;
-    cursor: pointer;
-    top: 15px;
-/*      right: 30px;  */
-   z-index: 2;
-   font-size: 1.5rem;
-   padding-left: 12px;
-   padding-right: 12px;
-   padding-bottom: 4px;
-   margin-left: 20px;
-   vertical-align: middle;
-   border-radius: 4px;
-   background-color: rgb(26, 26, 26, 0.9);
-   display: none;
-}
-.menu-btn img{
-    padding-top: 5px;
-    padding-bottom: 1px;
-   vertical-align: middle;
-
-}
