@@ -5,16 +5,16 @@ import { useParams } from 'react-router-dom';
 import ItemDetail from './ItemDetail.jsx';   
 import {db} from '../firebase/firebaseConfig.js'; 
 import { collection, query, getDocs, documentId, where } from "firebase/firestore";
-//En este componente se mapea al producto luego de que el comprador clickea en Mas Detalles
 // importe db y ciertas caracteristicas de firebase
+//En este componente se mapea al producto luego de que el comprador clickea en Mas Detalles
 
 //  useEffect provisto por firebase y con where filtro por ID del producto.
   //travels se llama mi coleccion de productos
 const ItemDetailContainer = () => {
  	const [item, setItem] = useState([]);
-	//se vuelve a importar el producto desde firestore
+	//como el id es dinámico se uso useParams
 	const  {id} = useParams();
-
+	//se vuelve a importar el producto desde firestore
 	useEffect(() => {
 	const getProductos = async () => {
 		const q = query(collection(db, "travels"),  where(documentId(), "==", id) );  
@@ -25,6 +25,7 @@ const ItemDetailContainer = () => {
 		  docs.push({...doc.data(), id: doc.id});
 		});
 		setItem(docs);
+		//se mandan al useState los docs que serian el producto por id.
 	  };
 	  getProductos();
 	  // por ID se llanará con un producto.
