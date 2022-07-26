@@ -35,10 +35,12 @@ const Navbar = () => {
       <Container>
         <Wrapper >
           <IconContext.Provider value={{ style: { fontSize: "2em"} }}>
-            <h1 className="NaturAdventure" >
-            <img className="NaturAdventurelogo" src="https://icongr.am/jam/chevrons-square-right-f.svg?size=60&color=7809e0" alt="logo" />Travelfy</h1>
+            <Link to="/" >
+              <h1 className="NaturAdventure" ><img className="NaturAdventurelogo" src="https://icongr.am/jam/chevrons-square-right-f.svg?size=60&color=7809e0" alt="logo" />Travelfy</h1>
+            </Link>
             {/*El componenente <CartUbi/>  es para que el carrito de <CartWidget/>  se esconda en un (MIN-width: 960px) 
               //...y solo aparezca en un (MAX-width: 960px)    */}
+
             <CartUbi>
               <CartWidget/>
             </CartUbi>
