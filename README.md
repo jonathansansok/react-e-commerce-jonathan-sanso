@@ -89,3 +89,5 @@ optimizadas para su funcionalidad.
 
 ### styled ([styled])
 Componente que nos permite llevar a cabo estilar desde js o jsx. especial para responsive.
+
+Contacto: jonasans@live.com.ar
