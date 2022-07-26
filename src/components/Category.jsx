@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "../hojas-de-estilo/ItemListContainer.css"; 
 import MainHero from "./MainHero.jsx";
 import {db} from '../firebase/firebaseConfig.js'; 
+// importe db y ciertas caracteristicas de firebase
 import { collection, query, getDocs,  where } from "firebase/firestore";
 import ItemList from "./ItemList.jsx";
 import { useParams } from 'react-router-dom';
@@ -11,8 +12,7 @@ const Category = ({ titulo2 }) => {
 
   const  {categoria} = useParams();
   //desde firestore se traen a los productos que tengan la misma categoria, el where usa para filtrar por categoria america o asia/oceanía de firestore
-  // el getProductos() es el mismo de ItemDetailContainer.jsx e ItemListContainer.jsx
-  // el resto del useEffect es provisto por firebase y con where filtro por categoria.
+  //travels se llama mi coleccion de productos
   useEffect(() => {
 	const getProductos = async () => {
 		const q = query(collection(db, "travels"),  where("categoria", "==", categoria) );  

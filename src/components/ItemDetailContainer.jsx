@@ -6,10 +6,10 @@ import ItemDetail from './ItemDetail.jsx';
 import {db} from '../firebase/firebaseConfig.js'; 
 import { collection, query, getDocs, documentId, where } from "firebase/firestore";
 //En este componente se mapea al producto luego de que el comprador clickea en Mas Detalles
+// importe db y ciertas caracteristicas de firebase
 
-// el getProductos() es el mismo de Category.jsx e ItemListContainer.jsx
-// el resto del useEffect es provisto por firebase y con where filtro por categoria.
-
+//  useEffect provisto por firebase y con where filtro por ID del producto.
+  //travels se llama mi coleccion de productos
 const ItemDetailContainer = () => {
  	const [item, setItem] = useState([]);
 	//se vuelve a importar el producto desde firestore
@@ -27,6 +27,7 @@ const ItemDetailContainer = () => {
 		setItem(docs);
 	  };
 	  getProductos();
+	  // por ID se llanará con un producto.
 	}, [id]);
 
 	return ( //mapeo del producto que sirve a ItemDetail.jsx

@@ -19,7 +19,7 @@ export function ItemDetail({item}){
     const agregarAlCarrito=(Numero)=>{
         
         //funcion que no permite que se agreguen Cero pasajes Y que da alert de cuantos se agregaron
-        //... y envia al addToCart() todo lo elegido por el comprador.
+        //... y envia al addToCart() todo lo elegido por el comprador, tambien setea la cantidad con Numero, el cual "inicialmente" se llamaba "initial".
         if (Numero === 0){
             Swal.fire(
                 `No se puede agregar cero pasajes`)
@@ -64,6 +64,7 @@ export function ItemDetail({item}){
                             </div>
                         </div>
                         <div className='numerales-detail'>
+                        {/* Ternario IF que el usuario elija la cantidad y Agregar al carrito, ELSE> volver a inicio o IR al CART */}
                         {cantidad===0 
                         ? 
                         <div className='agregar-volver'>   

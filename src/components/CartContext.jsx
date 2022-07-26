@@ -2,7 +2,7 @@
 import { createContext, useContext, useState} from 'react'
 //  creo el provider
 const CartContext = createContext([])
-
+//aqui arriba primero es un array vacio que luego se llena.
 
 export const useCartContext = () => useContext(CartContext)
 //  creo el provider
@@ -11,7 +11,6 @@ const [cartList, setCartList] = useState([])
 
 //funcion que agregar el producto al carrito pero sin repetir gracias al isInCart(item.id)
 //recordar que initial es igual a la cantidad de pasajes ya modificada, se deja el initial por la referencia con firebase
-
 const addToCart = (item) => {
   if (isInCart(item.id)) {
     const newArray = cartList.map(i => {
@@ -55,7 +54,7 @@ const isInCart = (id) =>{
 return cartList.some(prod => prod.id === id)
 };
 
-//Aquí CartContext.Provider 
+//Aquí CartContext.Provider para llevarme a otros componentes estas funciones 
 return (
   <CartContext.Provider value={{
       cartList,

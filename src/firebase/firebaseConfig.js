@@ -1,7 +1,7 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
-//Aquí se cargó todo el código necesario para usar mi coleccion de firestore a mi web.
+//Aquí se cargó todo el código necesario para usar mi coleccion de firestore a mi web/App.
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 

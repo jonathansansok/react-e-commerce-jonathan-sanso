@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 
-//Aquí se carga el App.jsx
+//Aquí se carga el App.jsx dentro del div root de index.html
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>

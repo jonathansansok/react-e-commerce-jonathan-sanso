@@ -159,7 +159,7 @@ function Cart() {
           )}
       </div>
       </>
-        )//insertala sola en 
+        )
       }
     </main>
   )
