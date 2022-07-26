@@ -43,7 +43,7 @@ function Cart() {
 		},
 	};
 
-      //En buyer se guardan los datos personales del comprador
+      //En buyer se guardan los datos/valores personales del comprador seteando los Valores con SetValues
 	const [buyer, setValues] = useState(initialState);
 	// Este estado está destinado a guardar el id de la compra
 	const [purchaseID, setPurchaseID] = useState('');
