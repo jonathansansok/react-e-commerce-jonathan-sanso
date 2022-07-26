@@ -5,6 +5,7 @@
 .cart-full{
     min-height: 800px;
     margin-bottom: 40px;
+    min-width: 340px;
 }
 .cart-full-h{
     letter-spacing: 3px;
@@ -116,7 +117,11 @@
         justify-content: center;
     }
     .full-form-ending{
-        width: 350px;
+         min-width: 350px; 
+/*         display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; */
     }
     .vacio1{
         font-size: 5vw;
