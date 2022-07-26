@@ -2,6 +2,7 @@ import React from 'react';
 import { useForm } from "react-hook-form";
 import { edadValidator } from "./contactovalidators";
 import '../hojas-de-estilo/contacto.css';
+import Swal from 'sweetalert2';
 //formulario de contacto basado en hook-form bastante aislado del resto de los componentes( no interrume a ningun comp...)
 //los errors son para que el usuario tenga que escribir sus campos
 
@@ -15,7 +16,9 @@ const Contacto = () => {
     //Con el onSubmit y con parametros datos se mandan a consola los datos del usuario
     const onSubmit = (datos) => {
         console.log(datos);
-        alert("Gracis por contactarnos!")
+        Swal.fire(
+            'Gracias por Contactarnos!',
+        )
     }
     //constante que se activa cuando el usuario quiere agregar telefono clickeando el su checkbox
     const incluirTelefono = watch('incluirTelefono');

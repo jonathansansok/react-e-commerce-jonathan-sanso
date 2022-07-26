@@ -4,6 +4,7 @@ import '../hojas-de-estilo/ItemDetail.css';
 import ItemCount from './ItemCount.jsx';
 import { Link } from 'react-router-dom';
 import { useCartContext } from './CartContext.jsx';
+import Swal from 'sweetalert2';
 //Aquí se logra que el comprador pueda ver el producto en detalle y pueda cambiar la cantidad de pasajes.
 //initial es, previamente, la cantidad de pasajes que elegirá el usuario.
 //Me traigo como parametro el Item de ItemDetailContainer
@@ -20,12 +21,14 @@ export function ItemDetail({item}){
         //funcion que no permite que se agreguen Cero pasajes Y que da alert de cuantos se agregaron
         //... y envia al addToCart() todo lo elegido por el comprador.
         if (Numero === 0){
-            alert(`No se puede agregar cero pasajes`)
+            Swal.fire(
+                `No se puede agregar cero pasajes`)
         }
+
         else{
-        alert(`Se agregarán ${Numero} unidades al carrito! `)
-        setCantidad(Numero)
-        addToCart({ ...item, initial: Numero })
+            Swal.fire(`Se agregarán ${Numero} unidades al carrito! `);
+            setCantidad(Numero);
+            addToCart({ ...item, initial: Numero });
         }
     }
     //renderizo en pantalla todo:

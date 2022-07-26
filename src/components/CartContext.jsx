@@ -1,4 +1,4 @@
-//creo el contexto
+//importo el contexto
 import { createContext, useContext, useState} from 'react'
 //  creo el provider
 const CartContext = createContext([])
