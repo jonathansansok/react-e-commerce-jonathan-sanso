@@ -2,12 +2,16 @@
 
   La idea de esta WEB es programar un E-commerce en el cual el usuario elige los destinos de turimos internacional y cantidad de pasajes para luego finalizar la compra.
   
-En el Header podemos encontar un menu con las opciones: Home - América - Asia/OCN - Contacto
+En el Header podemos encontrar un menu con las opciones: Home - América - Asia/OCN - Contacto
 
 Home: Despliega en Hero y muestra todos los productos sin filtar
+
 América: Muestra los destinos que pertenecen al continente Americano
+
 Asia/OCN : Muestra los destinos que pertenecen al Asia/Oceania
-En la Sección de "CONTACTOS" el usuario puede enviarme un mail. 
+
+CONTACTOS: En la Sección de el usuario puede enviarme un mail. 
+
 Footer: contiene links a todos mis plataformas.
 
 ## TECNOLOGIAS UTILIZADAS 🛠️
