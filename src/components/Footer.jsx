@@ -2,8 +2,7 @@
 import React from 'react';
 import '../hojas-de-estilo/Footer.css';
 //Este componente simple se muestra en todas las paginas con links a mis redes.
-// no usé los href y noreferer... porque daba warning en consola de node .(la idea es tener Cero warnings)
-function Footer(){
+// no usé los href y noreferer... porque daba warning en consola de node .y la idea era de cero warnings
     return (
     <footer className="footer">
         <p className="creador"><small>Website made by Jonathan Sansó 🖥️</small></p>
