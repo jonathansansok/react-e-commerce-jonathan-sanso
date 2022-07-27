@@ -10,7 +10,7 @@ import Swal from 'sweetalert2';
 //Me traigo como parametro el Item de ItemDetailContainer
 export function ItemDetail({item}){
     //importo el AddToCart para que se usado en la funcion agregarAlCarrito()
-    const { addToCart, } = useCartContext()
+    const { addToCart, isInCart } = useCartContext()
     //estado para que el usuario pueda setear la cantidad de pasajes
     const [cantidad,setCantidad] = useState(0)
 
@@ -65,20 +65,41 @@ export function ItemDetail({item}){
                             </div>
                         </div>
                         <div className='numerales-detail'>
-                        {/* Ternario IF que el usuario elija la cantidad y Agregar al carrito, ELSE> volver a inicio o IR al CART */}
-                        {cantidad===0 
-                        ? 
-                        <div className='agregar-volver'>   
-                        {/* //Mas destructuring */}
-                            <ItemCount stock={stock} initial={initial} onAdd={agregarAlCarrito}/>
-                            <Link to='/' > <button className='agregarACarrito-detail terminar'> Elegir mas </button> </Link>
-                        </div>
-                            : 
-                            <>      
-                            <Link to='/'> <button className='agregarACarrito-detail terminar itemdetail'> Elegir mas </button> </Link>                    
-                            <Link to='/cart'> <button className='agregarACarrito-detail terminar itemdetail'> Ir al Cart </button> </Link>
+                        {isInCart(item.id) ? (
+                            <>
+                            <Link to={"/"} className="itemDetail__buttonLink">
+                            <button className="buttonsDetail" style={{marginBottom:"0.8rem"}}> Seguir comprando </button>
+                            </Link>
+                            <Link to={"/cart"} className="itemDetail__buttonLink">
+                            <button className="buttonsDetail"> Terminar mi compra </button>
+                            </Link>
                             </>
-                            } 
+
+                            ) 
+                            :
+                            (
+                              <>
+                                {cantidad===0 
+                                    ? 
+                                    <div className='agregar-volver'>   
+                                    {/* //Mas destructuring */}
+                                        <ItemCount stock={stock} initial={initial} onAdd={agregarAlCarrito}/>
+                                        <Link to='/' > <button className='agregarACarrito-detail terminar'> Elegir mas </button> </Link>
+                                    </div>
+                                        : 
+                                    <>      
+                                    <Link to='/'> <button className='agregarACarrito-detail terminar itemdetail'> Elegir mas </button> </Link>                    
+                                    <Link to='/cart'> <button className='agregarACarrito-detail terminar itemdetail'> Ir al Cart </button> </Link>
+                                    </>
+                                    }
+
+                                    </>  
+
+
+
+
+                            )}
+                            {/* Ternario IF que el usuario elija la cantidad y Agregar al carrito, ELSE> volver a inicio o IR al CART */}
                         </div>
                     </div>
                 </div>
@@ -88,3 +109,4 @@ export function ItemDetail({item}){
 }
 
  export default ItemDetail; 
+

@@ -55,6 +55,8 @@ return cartList.some(prod => prod.id === id)
 };
 
 
+
+
 //Aquí CartContext.Provider para llevarme a otros componentes estas funciones 
 return (
   <CartContext.Provider value={{
@@ -64,6 +66,7 @@ return (
       totalAPagar,
       totalPasajes,
       eliminarItem,
+      isInCart,
   }}>
   {children}
   </CartContext.Provider>
