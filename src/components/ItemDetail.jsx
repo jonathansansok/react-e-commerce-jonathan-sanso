@@ -15,7 +15,7 @@ export function ItemDetail({item}){
     const [cantidad,setCantidad] = useState(0)
 
     //APLICO DESTRUCTURING
-    const  {imagen, titulo, pais, incluye, precio, descripcion, stock, initial} = item;
+    const  {id, imagen, titulo, pais, incluye, precio, descripcion, stock, initial} = item;
     const agregarAlCarrito=(Numero)=>{
         
         //funcion que no permite que se agreguen Cero pasajes Y que da alert de cuantos se agregaron
@@ -65,7 +65,8 @@ export function ItemDetail({item}){
                             </div>
                         </div>
                         <div className='numerales-detail'>
-                        {isInCart(item.id) ? (
+                        {/* EL Primer Ternario IF que el usuario elija la cantidad y Agregar al carrito, ELSE> volver a inicio o IR al CART */}    
+                        {isInCart(id) ? (
                             <>
                             <Link to={"/"} className="itemDetail__buttonLink">
                             <button className="buttonsDetail" style={{marginBottom:"0.8rem"}}> Seguir comprando </button>
