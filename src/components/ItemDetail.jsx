@@ -10,12 +10,12 @@ import Swal from 'sweetalert2';
 //Me traigo como parametro el Item de ItemDetailContainer
 export function ItemDetail({item}){
     //importo el AddToCart para que se usado en la funcion agregarAlCarrito()
-    const { addToCart } = useCartContext()
+    const { addToCart, } = useCartContext()
     //estado para que el usuario pueda setear la cantidad de pasajes
     const [cantidad,setCantidad] = useState(0)
 
     //APLICO DESTRUCTURING
-    const  {imagen, titulo, pais, incluye, precio, descripcion} = item;
+    const  {imagen, titulo, pais, incluye, precio, descripcion, stock, initial} = item;
     const agregarAlCarrito=(Numero)=>{
         
         //funcion que no permite que se agreguen Cero pasajes Y que da alert de cuantos se agregaron
@@ -31,6 +31,8 @@ export function ItemDetail({item}){
             addToCart({ ...item, initial: Numero });
         }
     }
+
+
     //renderizo en pantalla todo:
     return (
         <section className= 'top-contenedor-Item-detail'>
@@ -68,7 +70,7 @@ export function ItemDetail({item}){
                         {cantidad===0 
                         ? 
                         <div className='agregar-volver'>   
-                            <ItemCount stock={item.stock} initial={item.initial} onAdd={agregarAlCarrito}/>
+                            <ItemCount stock={stock} initial={initial} onAdd={agregarAlCarrito}/>
                             <Link to='/' > <button className='agregarACarrito-detail terminar'> Elegir mas </button> </Link>
                         </div>
                             : 
