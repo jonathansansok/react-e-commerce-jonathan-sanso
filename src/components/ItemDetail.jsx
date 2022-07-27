@@ -65,20 +65,18 @@ export function ItemDetail({item}){
                             </div>
                         </div>
                         <div className='numerales-detail'>
-                        {/* EL Primer Ternario IF que el usuario elija la cantidad y Agregar al carrito, ELSE> volver a inicio o IR al CART */}    
+                        {/* EL Primer Ternario IF hace que si el usuario ya eligio la cantidad que la modifique yendose al cart--
+                         */}    
                         {isInCart(id) ? (
                             <>
-                            <Link to={"/"} className="itemDetail__buttonLink">
-                            <button className="buttonsDetail" style={{marginBottom:"0.8rem"}}> Seguir comprando </button>
-                            </Link>
-                            <Link to={"/cart"} className="itemDetail__buttonLink">
-                            <button className="buttonsDetail"> Terminar mi compra </button>
-                            </Link>
+                            <Link to='/'> <button className='agregarACarrito-detail terminar itemdetail'> Elegir mas </button> </Link>      
+                            <Link to='/cart'> <button className='agregarACarrito-detail terminar itemdetail'> Ir al Cart </button> </Link>
                             </>
                             ) 
                             :
                             (
                             <>
+                            {/* El 2do ternario hace que si el carrito está en Cero se active el contador de unidades, SINO es cero, que se derive a seguir eligiendo otros */}
                             {cantidad===0 
                             ? 
                             <div className='agregar-volver'>   
