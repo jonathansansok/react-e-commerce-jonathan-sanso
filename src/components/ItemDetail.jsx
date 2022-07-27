@@ -32,7 +32,6 @@ export function ItemDetail({item}){
         }
     }
 
-
     //renderizo en pantalla todo:
     return (
         <section className= 'top-contenedor-Item-detail'>
@@ -70,6 +69,7 @@ export function ItemDetail({item}){
                         {cantidad===0 
                         ? 
                         <div className='agregar-volver'>   
+                        {/* //Mas destructuring */}
                             <ItemCount stock={stock} initial={initial} onAdd={agregarAlCarrito}/>
                             <Link to='/' > <button className='agregarACarrito-detail terminar'> Elegir mas </button> </Link>
                         </div>
