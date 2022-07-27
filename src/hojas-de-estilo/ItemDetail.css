@@ -80,7 +80,7 @@
     justify-items: center;
     justify-content: space-between;
     height: 97px;
-    width: 800px;
+    width: 700px;
 }
 .nombre-Item-detail{
     font-size: 1.3rem;
@@ -177,7 +177,7 @@
 }
 
 .itemdetail{
-    margin-top: 40px;
+    margin-top: 25px;
     margin-left: 10px;
 }
 .itemdetail:hover{
@@ -189,7 +189,7 @@
 
 @media  (max-width: 975px) {
     .contenedor-Item-detail{
-        height: 1000px;
+        height: 900px;
         width: 80vw;
 
     }
