@@ -48,10 +48,11 @@ export function ItemDetail({item}){
                         </p>
                         <p className='incluye-Item-detail'>{incluye}</p>
                         <p className='precio-Item-detail'>US$ {precio}.-</p>
+                        <h3>{descripcion}</h3>
                     </div>
                 </div>
                 <div className= 'contenedor-texto-Item-detail-bajo'>
-                    <h3>{descripcion}</h3>
+
                     <div className= 'contenedor-texto-Item-detail-bajo letrasNumeros'>
                         <div className='fechasTodas-detail'>
                             <div className='checkIn-detail'>

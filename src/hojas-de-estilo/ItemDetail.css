@@ -9,7 +9,7 @@
 .contenedor-Item-detail{
     margin-top: 20px;
     width: 900px;
-    height: 500px; 
+    zheight: 500px; 
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -62,11 +62,12 @@
     flex-flow: wrap;
     font-size: 1rem;
     text-align: center;
-    padding: 20px 00px 40px 00px;
+/*     padding: 20px 00px 40px 00px; */
     font-family: Lato, sans-serif;
     font-weight: 400;
     line-height: 1.1;
     height: 209px;
+    margin-top: 30px;
 }
 
 .contenedor-texto-Item-detail-bajo h3{
