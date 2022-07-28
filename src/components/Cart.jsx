@@ -99,9 +99,11 @@ function Cart() {
                   <article className='renderizada-specs-palabras'> <p><strong>{producto.titulo}</strong> en <strong>{producto.pais}</strong></p>
                     <div className='renderizada-botonera-item-cart'>
                       <p>Pasajes: </p>
-                        <button className='botonera-sumaresta' onClick={() => addToCart({ id: producto.id, initial: -1 })} disabled={producto.initial === 1}><p>-</p></button>
-                        <strong className='botonera-sumaresta-numero' >{producto.initial}</strong>
-                        <button className='botonera-sumaresta' onClick={() => addToCart({ id: producto.id, initial: 1 })} disabled={producto.initial === producto.stock}><p>+</p></button>
+                        <div className='renderizada-botonera-item-cart-suma-resta'>
+                          <button className='botonera-sumaresta' onClick={() => addToCart({ id: producto.id, initial: -1 })} disabled={producto.initial === 1}><p>-</p></button>
+                          <strong className='botonera-sumaresta-numero' >{producto.initial}</strong>
+                          <button className='botonera-sumaresta' onClick={() => addToCart({ id: producto.id, initial: 1 })} disabled={producto.initial === producto.stock}><p>+</p></button>
+                          </div>
                         <p className='subTotal'>SubTotal U$D <strong>{Number(producto.precio) * producto.initial}</strong>.-</p>
                     </div>
                     <button className='agregarACarrito-detail' onClick={() => eliminarItem(producto.id)} >Eliminar</button>{' '}

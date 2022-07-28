@@ -70,7 +70,11 @@
     justify-content: flex-start;
 }
 
-
+.renderizada-botonera-item-cart-suma-resta{
+    display: flex;
+    flex-direction: row;
+    
+}
 .subTotal{
     margin-left: 10px;
 }
@@ -140,6 +144,12 @@
     .vaciar-carrito{
         width: 200px;
     }
+
+    
+}
+
+@media (max-width: 436px){
+
 
     
 }
