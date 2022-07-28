@@ -9,7 +9,7 @@
 .contenedor-Item-detail{
     margin-top: 20px;
     width: 900px;
-    zheight: 500px; 
+    height: 500px; 
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -230,6 +230,9 @@
     .contenedor-texto-Item-detail{
         padding: 40px 0px;
         padding: 40px 0px;
+    }
+    .item-detail-container-estilo-h1{
+        font-size: 1.8rem;
     }
     .imagen-Item-detail{
         width: 300px;
