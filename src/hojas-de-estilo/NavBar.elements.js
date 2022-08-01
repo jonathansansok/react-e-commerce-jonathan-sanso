@@ -1,7 +1,7 @@
 // import el hook de styled
 import styled from "styled-components";
 //Este archivo .js fue colocado dentro de hojas-de-estilo porque en su mayoria contiene código ¨.css¨ y su respectivo componente se 
-//llama ¨NavBar.jsx¨.-
+//llama ¨NavBar.jsx¨ dentro de carpeta components.-
 
 export const Container = styled.div`
   width: 100vw;
