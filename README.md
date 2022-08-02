@@ -22,7 +22,7 @@ CSS - Para darle estilos a todos los archivos *HTML.
 
 JAVASCRIPT - Para la funcionalidad del E-commerce y ciertas animaciones que favorecen al diseño responsive. 
 
-REACT - Para la funcionalidad adaptada a la maxima velocidad de navegacion del usuario y creaciones de componentes que se puedan reutilizar y reescalar.
+REACT - Para la funcionalidad adaptada a la maxima velocidad de navegacion del usuario y creacion de componentes que se puedan reutilizar y reescalar.
 
 ## COMENZANDO 🚀 
 Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas.  
