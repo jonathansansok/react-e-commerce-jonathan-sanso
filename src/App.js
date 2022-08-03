@@ -30,7 +30,7 @@ function App() {
             <Route path="/cart" element={<Cart />} /> 
             <Route path="/contacto" element={<Contacto />} />
           {/*   ruta que me devuelve a home si esta mal escrita la direccion  */}
-            <Route path="*" element={<ItemListContainer className="tituloCustom" titulo2='No existe, volvemos' to="/" replace />} />
+            <Route path="*" element={<ItemListContainer className="tituloCustom" titulo2='Elige tu próximo destino!' to="/" replace />} />
           </Routes>
           <Footer/>
         </div>
