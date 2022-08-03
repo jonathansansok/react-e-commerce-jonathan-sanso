@@ -42,3 +42,14 @@ li.icon {
   margin: 30px 00px 18px 00px; 
 }
 
+@media  (max-width: 400px) {
+  .creador {
+    font-size: 0.8rem;
+  }
+  .icon { 
+    margin: 2rem 0.2rem 1rem 0.2rem;
+    padding: 1px;
+    text-decoration: none;
+  }
+  
+}
