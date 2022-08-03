@@ -24,11 +24,13 @@ function App() {
         <div className="App">
           <NavBar/>
           <Routes>
-            <Route path="/" element={ <ItemListContainer className="tituloCustom" titulo2='Elige tu próximo destino!'/> } />
+            <Route path="/"  element={ <ItemListContainer className="tituloCustom" titulo2='Elige tu próximo destino!'/> } />
             <Route path="/item/:id" element={  <ItemDetailContainer/>  } />
             <Route path="/categoria/:categoria" element={<Category className="tituloElige" titulo2='Vamos por continente!'/>  } />  
             <Route path="/cart" element={<Cart />} /> 
             <Route path="/contacto" element={<Contacto />} />
+          {/*   ruta que me devuelve a home si esta mal escrita la direccion  */}
+            <Route path="*" element={<ItemListContainer className="tituloCustom" titulo2='No existe, volvemos' to="/" replace />} />
           </Routes>
           <Footer/>
         </div>
