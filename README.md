@@ -1,6 +1,7 @@
 ## WEB E-COMMERCE DE VENTA DE PASAJES DE TURISMO INTERNACIONAL🌄
-recuerde npm install react-scripts para instalar todo lo necesario de manera local y la descarga no sea lenta :D
+*recuerde ejecutar npm install react-scripts en consola para instalar todo lo necesario de manera local y la descarga no sea lenta :D
 (en .gitignore se incluyó /node_modules para que la descarga de github no sea lenta.)
+
   La idea de esta WEB es programar un E-commerce en el cual el usuario elige los destinos de turimos internacional y cantidad de pasajes para luego finalizar la compra.
   
 En el Header podemos encontrar un menu con las opciones: Home - América - Asia/OCN - Contacto
