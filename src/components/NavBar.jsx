@@ -52,7 +52,7 @@ const Navbar = () => {
             </MobileIcon>
   
             <Menu  open={showMobileMenu}>
-            <CartWidget/>
+              <CartWidget/>
               <MenuItem>
                 <MenuItemLink>
                   {/*Cuando se clickea una seccion del header desaparece este y me lleva al link   */}                
@@ -81,7 +81,7 @@ const Navbar = () => {
               <MenuItem>
                 <MenuItemLink>
                   <Link onClick= {() => setShowMobileMenu(!showMobileMenu) } to="/contacto" >
-                    <div>CONTACTO</div>
+                    <div>CONTACT</div>
                   </Link>
                   </MenuItemLink>
               </MenuItem>
