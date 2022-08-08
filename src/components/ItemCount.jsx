@@ -1,6 +1,6 @@
 //imports
 import {useState} from 'react';
-import '../hojas-de-estilo/ItemCount.css';
+import '../hojas-de-estilo/itemCount.css';
 //Este componente es para modificacion de unidades de cada producto con suma, resta y stock disponible
 //El onAdd es para el onClick de agregar al carrito el numero de pasajes
 //Se importa la funcion addToCart de CartContext.jsx que agrega al carrito lo que el comprador decida

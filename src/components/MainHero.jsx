@@ -1,6 +1,6 @@
 //imports
 import React from 'react';
-import '../hojas-de-estilo/MainHero.css';
+import '../hojas-de-estilo/mainHero.css';
 import { Link } from 'react-router-dom';
 //este es el MainHero reutilizable para otras paginas futuras
 //solo tiene un link hacia contacto.

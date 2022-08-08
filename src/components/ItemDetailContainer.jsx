@@ -1,6 +1,6 @@
 //imports
 import React, { useState, useEffect } from 'react';
-import '../hojas-de-estilo/ItemDetailContainer.css';
+import '../hojas-de-estilo/itemDetailContainer.css';
 import { useParams } from 'react-router-dom';
 import ItemDetail from './ItemDetail.jsx';   
 import {db} from '../firebase/firebaseConfig.js'; 

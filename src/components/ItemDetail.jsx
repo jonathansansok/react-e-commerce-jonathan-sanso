@@ -1,6 +1,6 @@
 //imports
 import React, { useState } from 'react';
-import '../hojas-de-estilo/ItemDetail.css';
+import '../hojas-de-estilo/itemDetail.css';
 import ItemCount from './ItemCount.jsx';
 import { Link } from 'react-router-dom';
 import { useCartContext } from './CartContext.jsx';

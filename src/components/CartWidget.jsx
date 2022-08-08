@@ -1,4 +1,4 @@
-import '../hojas-de-estilo/CartWidget.css';
+import '../hojas-de-estilo/cartWidget.css';
 import { useCartContext } from "./CartContext.jsx";
 import { Link } from 'react-router-dom';
 //este componente es el logo del carrito con el contador que se va actualizando de cantidad

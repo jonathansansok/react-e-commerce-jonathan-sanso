@@ -1,4 +1,4 @@
-import './App.css';
+import './app.css';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 // este Browserrouter es para poder linkear los <li> del header y otros componentes
 //importo todos los componentes necesarios, lo haré en cada componente, si así lo requiera.
@@ -12,7 +12,7 @@ import Footer from './components/Footer.jsx';
 //ahora importo el CartContextProvider y envuelvo mi app
 import CartContextProvider from './components/CartContext.jsx';
 
-import './App.css';
+/* import './app.css'; */
 
 function App() {
   return (

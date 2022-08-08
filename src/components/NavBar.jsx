@@ -23,7 +23,7 @@ import {
 import { IconContext } from "react-icons";
 //NavBar.css es destinado solo al  estilo solo al logo y titulo Travelfy .
 //...creado para separar bien los estilados.
-import '../hojas-de-estilo/NavBar.css';
+import '../hojas-de-estilo/navBar.css';
 
 
 const Navbar = () => {

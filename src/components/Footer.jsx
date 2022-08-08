@@ -1,6 +1,6 @@
 //imports
 import React from 'react';
-import '../hojas-de-estilo/Footer.css';
+import '../hojas-de-estilo/footer.css';
 //Este componente simple se muestra en todas las paginas con links a mis redes.
 // no usé los href y noreferer... porque daba warning en consola de node y la idea era cero warnings
 function Footer(){

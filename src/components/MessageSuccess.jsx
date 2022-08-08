@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Alert from '@mui/material/Alert';
 import Stack from '@mui/material/Stack';
-import '../hojas-de-estilo/MessageSuccess.css';
+import '../hojas-de-estilo/messageSuccess.css';
 import Swal from 'sweetalert2'
 
 //este componente se monta cuando el comprador termina toda su compra y le muestra su código unico PurchaseID 

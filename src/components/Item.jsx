@@ -1,5 +1,5 @@
 import React from "react";
-import "../hojas-de-estilo/Item.css";
+import "../hojas-de-estilo/item.css";
 import { Link } from "react-router-dom";
 
 function Item({ travels }) {     

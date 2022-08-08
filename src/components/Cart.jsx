@@ -1,7 +1,7 @@
 //imports
 import React from 'react';
 import { useCartContext } from './CartContext.jsx'; 
-import '../hojas-de-estilo/Cart.css'; 
+import '../hojas-de-estilo/cart.css'; 
 import { Link } from 'react-router-dom';
 ////
 import {db} from '../firebase/firebaseConfig.js'; 
