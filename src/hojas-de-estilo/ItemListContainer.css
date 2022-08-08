@@ -1,11 +1,11 @@
-h2{
-    letter-spacing: 1px;
+h2 {
+  letter-spacing: 1px;
 }
 
 .ItemListContainer-estilo {
-    width: 100vw;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
 }

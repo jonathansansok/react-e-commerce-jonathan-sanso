@@ -1,4 +1,4 @@
-.footer { 
+.footer {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -7,22 +7,22 @@
   width: 100vw;
 }
 
-.iconostodos { 
+.iconostodos {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-/*   margin-right: 22px; */
+  /*   margin-right: 22px; */
   text-decoration: none;
 }
 
-.iconostodos li:hover{
-    background-color: salmon;
-    text-decoration: none;
-    border-radius: 5px;
-  }
+.iconostodos li:hover {
+  background-color: salmon;
+  text-decoration: none;
+  border-radius: 5px;
+}
 
-li.icon { 
+li.icon {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -30,7 +30,7 @@ li.icon {
   margin-right: 22px;
   text-decoration: none;
 }
-.icon { 
+.icon {
   margin: 2rem 1rem 1rem 1rem;
   padding: 4px;
   text-decoration: none;
@@ -39,17 +39,16 @@ li.icon {
 .creador {
   font-size: 1.2re;
   font-weight: bold;
-  margin: 30px 00px 18px 00px; 
+  margin: 30px 00px 18px 00px;
 }
 
-@media  (max-width: 400px) {
+@media (max-width: 400px) {
   .creador {
     font-size: 0.8rem;
   }
-  .icon { 
+  .icon {
     margin: 2rem 0.2rem 1rem 0.2rem;
     padding: 1px;
     text-decoration: none;
   }
-  
 }

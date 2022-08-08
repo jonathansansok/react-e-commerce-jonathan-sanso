@@ -1,51 +1,50 @@
-.full-form{
-    height: 780px;
-    background-color: white;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.full-form {
+  height: 780px;
+  background-color: white;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-h2{
-    letter-spacing: 1.1rem;
-    font-size: 3rem;
-    margin-top: 30px;
-    margin-bottom: 15px;
-}
-
-.formulario{
-    width: 340px;
-    border: 1px solid rgb(120, 9, 224);
-    border-radius: 8px;
-    padding-left:20px ;
+h2 {
+  letter-spacing: 1.1rem;
+  font-size: 3rem;
+  margin-top: 30px;
+  margin-bottom: 15px;
 }
 
-.reglon-de-form{
-    font-size: 1.4rem;
-    margin: 15px 00px 15px 0px;
-    text-align: left;
+.formulario {
+  width: 340px;
+  border: 1px solid rgb(120, 9, 224);
+  border-radius: 8px;
+  padding-left: 20px;
 }
 
-input{
-    font-size: 1.2rem;
+.reglon-de-form {
+  font-size: 1.4rem;
+  margin: 15px 00px 15px 0px;
+  text-align: left;
+}
+
+input {
+  font-size: 1.2rem;
 }
 
 .enviar {
-    cursor: pointer;
-    padding: 2px 30px;
-    border: 1px solid rgb(120, 9, 224);
-    border-radius: 8px;
+  cursor: pointer;
+  padding: 2px 30px;
+  border: 1px solid rgb(120, 9, 224);
+  border-radius: 8px;
 }
 
-.enviar:hover{
-    background-color: rgb(120, 9, 224);
-    text-decoration: none;
-    color : salmon;
+.enviar:hover {
+  background-color: rgb(120, 9, 224);
+  text-decoration: none;
+  color: salmon;
 }
 
-@media (max-width: 960px){
-    .full-form h2{
-        font-size: 7vw;
-    }
-    
+@media (max-width: 960px) {
+  .full-form h2 {
+    font-size: 7vw;
+  }
 }

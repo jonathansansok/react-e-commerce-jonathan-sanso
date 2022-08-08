@@ -1,15 +1,16 @@
- //imports
+//imports
 import React from "react";
 import "../hojas-de-estilo/item.css";
 import "../hojas-de-estilo/itemList.css";
 import Item from "./Item.jsx";
 
-const ItemList = ({ productos }) => {	
-  return ( //aqui se mapea para que se forme cada cart de los 12 productos sin categoria, todos los productos.
+const ItemList = ({ productos }) => {
+  return (
+    //aqui se mapea para que se forme cada cart de los 12 productos sin categoria, todos los productos.
     <section className="todasLasItem">
       {productos.map((maker) => {
-        return <Item travels={maker} key={maker.id} />
-        })}   
+        return <Item travels={maker} key={maker.id} />;
+      })}
     </section>
   );
 };

@@ -1,6 +1,6 @@
 // import el hook de styled
 import styled from "styled-components";
-//Este archivo .js fue colocado dentro de hojas-de-estilo porque en su mayoria contiene código ¨.css¨ y su respectivo componente se 
+//Este archivo .js fue colocado dentro de hojas-de-estilo porque en su mayoria contiene código ¨.css¨ y su respectivo componente se
 //llama ¨NavBar.jsx¨ dentro de carpeta components.-
 
 export const Container = styled.div`
@@ -23,20 +23,17 @@ export const Wrapper = styled.div`
   padding-left: 40px;
   padding-right: 40px;
 
-  @media screen and (max-width: 480px){
-  padding-left: 00px;
-  padding-right: 00px;
-}
-
-
+  @media screen and (max-width: 480px) {
+    padding-left: 00px;
+    padding-right: 00px;
+  }
 `;
 
 export const CartUbi = styled.div`
-  @media screen and (min-width: 973px){
+  @media screen and (min-width: 973px) {
     display: none;
   }
-  @media screen and (max-width: 973px){
-
+  @media screen and (max-width: 973px) {
     justify-self: start;
   }
 `;
@@ -48,28 +45,28 @@ export const Menu = styled.ul`
   list-style: none;
 
   @media screen and (max-width: 973px) {
-  background-color: rgb(235, 235, 235, 0.9);
-  position: absolute;
-  top: 90px;
-  left: ${({ open }) => (open ? "0" : "-100%")}; 
-  width: 45%;
-  height: 50vh;
-  justify-content: flex-start;
-  flex-direction: column;
-  align-items: center;
-  transition: 0.5s all ease;
-  border-bottom-right-radius: 90px;
+    background-color: rgb(235, 235, 235, 0.9);
+    position: absolute;
+    top: 90px;
+    left: ${({ open }) => (open ? "0" : "-100%")};
+    width: 45%;
+    height: 50vh;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    transition: 0.5s all ease;
+    border-bottom-right-radius: 90px;
   }
 `;
 
 export const MenuItem = styled.li`
   height: 40%;
   @media screen and (max-width: 973px) {
-  width: 100%;
-  height: 70px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 `;
 
@@ -94,7 +91,7 @@ export const MenuItemLink = styled.div`
 
     div {
       color: black;
-        svg {
+      svg {
         fill: rgb(120, 9, 224);
       }
     }
@@ -106,7 +103,6 @@ export const MenuItemLink = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-
 
     svg {
       display: none;
@@ -128,51 +124,50 @@ export const MenuItemLink = styled.div`
     }
   }
 
-@media screen and (max-width: 880px) {
-  div {
-    justify-content: left;
+  @media screen and (max-width: 880px) {
+    div {
+      justify-content: left;
 
-    svg {
-      display: flex;
+      svg {
+        display: flex;
+      }
     }
   }
-}
 
-@media screen and (max-width: 500px) {
-  div {
-    width: 60%;
-    justify-content: left;
+  @media screen and (max-width: 500px) {
+    div {
+      width: 60%;
+      justify-content: left;
 
-    svg {
-      display: flex;
+      svg {
+        display: flex;
+      }
     }
   }
-}
 
-@media screen and (max-width: 260px) {
-  div {
-    width: 100%;
-    justify-content: left;
+  @media screen and (max-width: 260px) {
+    div {
+      width: 100%;
+      justify-content: left;
 
-    svg {
-      display: flex;
+      svg {
+        display: flex;
+      }
     }
   }
-}
 `;
 
 export const MobileIcon = styled.div`
-display: none;
+  display: none;
 
-@media screen and (max-width: 973px) {
-  display: flex;
-  align-items: center;
-  cursor: pointer;
+  @media screen and (max-width: 973px) {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
 
-  svg {
-    fill: rgb(120, 9, 224);
-    padding-right: 0.8rem;
+    svg {
+      fill: rgb(120, 9, 224);
+      padding-right: 0.8rem;
+    }
   }
-}
 `;
-

@@ -1,43 +1,42 @@
-.CounterSection{
-    display: flex;
-    flex-direction: column;
-    height: 120px;
-    justify-content: flex-start;
-    align-items: center;
+.CounterSection {
+  display: flex;
+  flex-direction: column;
+  height: 120px;
+  justify-content: flex-start;
+  align-items: center;
 }
 
-.botonera-pasaje{
-    margin-top: 3px;
+.botonera-pasaje {
+  margin-top: 3px;
 }
 
-.botonera-sumaresta{
-    font-size: 1rem;
-    cursor: pointer;
-    border: 1px solid black;
-    border-radius: 3px;
-    padding: 1px 6px 1px 6px;
-    margin-left: 10px;
-    margin-right: 10px;
-    color: rgb(120, 9, 224);
-    font-weight: bold;
+.botonera-sumaresta {
+  font-size: 1rem;
+  cursor: pointer;
+  border: 1px solid black;
+  border-radius: 3px;
+  padding: 1px 6px 1px 6px;
+  margin-left: 10px;
+  margin-right: 10px;
+  color: rgb(120, 9, 224);
+  font-weight: bold;
 }
 .stock {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
-.botonera-acciones{
-    display: flex;
-    flex-direction: row;
-    margin-bottom: 15px; 
+.botonera-acciones {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 15px;
 }
 
 .agregarACarrito-detail {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
-.agregarACarrito-detail:hover{
-    background-color: rgb(120, 9, 224);
-    text-decoration: none;
-    color : salmon;
+.agregarACarrito-detail:hover {
+  background-color: rgb(120, 9, 224);
+  text-decoration: none;
+  color: salmon;
 }
-

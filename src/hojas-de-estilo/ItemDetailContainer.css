@@ -1,19 +1,19 @@
-h2{
-    letter-spacing: 1px;
+h2 {
+  letter-spacing: 1px;
 }
 
 .item-detail-container-estilo {
-    margin-top: 50px;
-    width: 90%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    min-height: 800px;
+  margin-top: 50px;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 800px;
 }
 
-.item-detail-container-estilo-h1{
-    letter-spacing: 5px;
-    font-size: 3rem;
-    margin-bottom: 30px;
+.item-detail-container-estilo-h1 {
+  letter-spacing: 5px;
+  font-size: 3rem;
+  margin-bottom: 30px;
 }

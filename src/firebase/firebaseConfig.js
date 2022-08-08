@@ -12,8 +12,8 @@ const firebaseConfig = {
   projectId: "e-commerce-j-sanso",
   storageBucket: "e-commerce-j-sanso.appspot.com",
   messagingSenderId: "427475358098",
-  appId: "1:427475358098:web:360287de4bcc0702c6314b"
-};  
+  appId: "1:427475358098:web:360287de4bcc0702c6314b",
+};
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
