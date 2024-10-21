@@ -11,7 +11,7 @@ function Footer() {
       </p>
       <ul className="iconostodos">
         <li className="icon">
-          <a href="https://www.instagram.com/jonathan.sanso/">
+          <a href="https://www.instagram.com/jon.sanso/">
             <img
               src="https://icongr.am/fontawesome/instagram.svg?size=30&color=901886"
               alt="instagram"
