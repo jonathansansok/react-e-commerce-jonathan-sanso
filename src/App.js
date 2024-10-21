@@ -12,8 +12,6 @@ import Footer from "./components/Footer.jsx";
 //ahora importo el CartContextProvider y envuelvo mi app
 import CartContextProvider from "./components/CartContext.jsx";
 
-/* import './app.css'; */
-
 function App() {
   return (
     //el llamado a titulo2 es para ahorrar recursos y dinamizarlo

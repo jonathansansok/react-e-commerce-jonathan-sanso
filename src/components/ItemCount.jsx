@@ -5,7 +5,6 @@ import "../hojas-de-estilo/itemCount.css";
 //El onAdd es para el onClick de agregar al carrito el numero de pasajes
 //Se importa la funcion addToCart de CartContext.jsx que agrega al carrito lo que el comprador decida
 //initial es, previamente, la cantidad de pasajes que elegirá el usuario, proviene desde firestore como punto de partida real.
-
 const ItemCount = ({ stock, initial, onAdd }) => {
   //seteo el numero de pasajes
   const [Numero, setNumero] = useState(initial);
