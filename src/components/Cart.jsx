@@ -106,11 +106,19 @@ function Cart() {
                       />
                       <section className="renderizada-specs-todas">
                         <article className="renderizada-specs-palabras">
-                          {" "}
                           <p>
                             <strong>{producto.titulo}</strong> en{" "}
                             <strong>{producto.pais}</strong>
                           </p>
+
+                          {/* Mostrar las fechas de check-in y check-out */}
+                          <p>
+                            <strong>Check-in:</strong> {producto.checkInDate}
+                          </p>
+                          <p>
+                            <strong>Check-out:</strong> {producto.checkOutDate}
+                          </p>
+
                           <div className="renderizada-botonera-item-cart">
                             <p>Pasajes: </p>
                             <div className="renderizada-botonera-item-cart-suma-resta">
@@ -149,7 +157,7 @@ function Cart() {
                             onClick={() => eliminarItem(producto.id)}
                           >
                             Eliminar
-                          </button>{" "}
+                          </button>
                         </article>
                       </section>
                     </div>
