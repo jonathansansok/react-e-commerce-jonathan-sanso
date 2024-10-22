@@ -1,17 +1,23 @@
-//importo el contexto
-import { createContext, useContext, useState } from "react";
-//  creo el provider
+import { createContext, useContext, useState, useEffect } from "react";
+
+// Creo el provider
 const CartContext = createContext([]);
-//aqui arriba primero es un array vacio que luego se llena.
 
+// Función para usar el contexto
 export const useCartContext = () => useContext(CartContext);
-//  creo el provider
-function CartContextProvider({ children }) {
-  //componente
-  const [cartList, setCartList] = useState([]);
 
-  //funcion que agregar el producto al carrito pero sin repetir gracias al isInCart(item.id)
-  //recordar que initial es igual a la cantidad de pasajes ya modificada, se deja el initial por la referencia con firebase
+// CartContextProvider
+function CartContextProvider({ children }) {
+  // Recuperar carrito desde el localStorage si existe
+  const initialCart = JSON.parse(localStorage.getItem("cart")) || [];
+  const [cartList, setCartList] = useState(initialCart);
+
+  // Efecto para guardar el carrito en localStorage cuando cambia el cartList
+  useEffect(() => {
+    localStorage.setItem("cart", JSON.stringify(cartList));
+  }, [cartList]);
+
+  // Función para agregar al carrito
   const addToCart = (item) => {
     if (isInCart(item.id)) {
       const newArray = cartList.map((i) => {
@@ -25,12 +31,14 @@ function CartContextProvider({ children }) {
       setCartList([...cartList, item]);
     }
   };
-  //funcion que vacía el cart
+
+  // Función para vaciar el carrito
   const removeCart = () => {
     setCartList([]);
+    localStorage.removeItem("cart"); // Eliminar carrito del localStorage al vaciar
   };
 
-  //funcion que suma todos los subtotales
+  // Función que suma todos los subtotales
   const totalAPagar = () => {
     return cartList.reduce(
       (acum, prod) => acum + prod.initial * prod.precio,
@@ -38,24 +46,23 @@ function CartContextProvider({ children }) {
     );
   };
 
-  //funcion que suma la cantidad de pasajes totales.
+  // Función que suma la cantidad de pasajes totales.
   const totalPasajes = () => {
     let total = 0;
     cartList.forEach((item) => (total += item.initial));
     return total;
   };
 
-  //funcion que elimian un producto segun ID
+  // Función que elimina un producto según ID
   const eliminarItem = (id) => {
     setCartList(cartList.filter((prod) => prod.id !== id));
   };
 
-  //funcion que no perimte repetir el producto
+  // Función para verificar si el producto ya está en el carrito
   const isInCart = (id) => {
     return cartList.some((prod) => prod.id === id);
   };
 
-  //Aquí CartContext.Provider para llevarme a otros componentes estas funciones
   return (
     <CartContext.Provider
       value={{
