@@ -43,6 +43,7 @@ Desde la consola de comandos, ubicarse en la carpeta en la cual se clonara el re
 git clone https://github.com/jonathansansok/ecommerce-react-jonathan-sanso.git
 cd MI-APP
 npm install
+
 npm start
 ```
 
