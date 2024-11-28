@@ -76,8 +76,7 @@ El modelo de componentes de React nos da más control sobre la forma y función 
 
 ### Sweet Alert 2 ([sweetAlert2])
 
-Un reemplazo hermoso, con responsabilidad, personalizable y accesible (wai-aria) para las cajas emergentes de javascript con cero dependencias.
- 
+
 ### Yup ([yup]) (a futuro se usará)
 
 Yup, es un generador de esquemas de JavaScript para el análisis y la validación de valores. Defina un esquema, transforme un valor para que coincida, valide la forma de un valor existente o ambos. Sí, los esquemas son extremadamente expresivos y permiten modelar validaciones complejas e interdependientes o transformaciones de valores.
