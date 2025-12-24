@@ -1,21 +1,14 @@
-// Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
-//Aquí se cargó todo el código necesario para usar mi coleccion de firestore a mi web/App.
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
 
-// Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyBVgnxoNPtRgBJ3aLjM1MM3XQHVOmgyhYc",
-  authDomain: "e-commerce-j-sanso.firebaseapp.com",
-  projectId: "e-commerce-j-sanso",
-  storageBucket: "e-commerce-j-sanso.appspot.com",
-  messagingSenderId: "427475358098",
-  appId: "1:427475358098:web:360287de4bcc0702c6314b",
+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_FIREBASE_APP_ID,
 };
 
-// Initialize Firebase
 const app = initializeApp(firebaseConfig);
-//Export
 export const db = getFirestore(app);
