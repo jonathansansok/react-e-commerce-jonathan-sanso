@@ -1,4 +1,4 @@
-import "./app.css";
+import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 // este Browserrouter es para poder linkear los <li> del header y otros componentes
 //importo todos los componentes necesarios, lo haré en cada componente, si así lo requiera.

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import "../hojas-de-estilo/itemListContainer.css";
+import "../hojas-de-estilo/ItemListContainer.css";
+
 import MainHero from "./MainHero.jsx";
 import { db } from "../firebase/firebaseConfig.js";
 // importe db y ciertas caracteristicas de firebase
