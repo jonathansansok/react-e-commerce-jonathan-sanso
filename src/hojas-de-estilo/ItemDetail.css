@@ -2,41 +2,46 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: flex-start;
+  align-items: center;
   margin-bottom: 30px;
+  width: 100%;
 }
+
 .contenedor-Item-detail {
   margin-top: 20px;
-  width: 900px;
-  height: 500px;
+  width: min(900px, 92vw);
+  height: auto;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  flex-flow: wrap;
   background-color: #fff;
   box-shadow: 0 3px 13px 1px rgba(0 0 0 / 9%);
+  padding-bottom: 20px;
 }
 
 .contenedor-Item-detail-alto {
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 18px 14px 0 14px;
 }
 
 .anyTravel-detail {
-  margin-top: 18px;
-  margin-left: 11px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   font-size: 1.1rem;
   font-weight: bold;
   color: #000;
-  margin-bottom: 0px;
 }
 
 .imagen-Item-detail {
   width: 340px;
+  max-width: 100%;
+  height: auto;
   max-height: 226px;
+  border-radius: 8px;
 }
 
 .contenedor-texto-Item-detail {
@@ -46,42 +51,13 @@
   justify-content: center;
   font-size: 1rem;
   text-align: center;
-  padding: 40px;
-  margin-left: 20px;
+  padding: 20px 18px;
   font-family: Lato, sans-serif;
   font-weight: 400;
-  line-height: 1.1;
+  line-height: 1.25;
+  min-width: 0;
 }
 
-.contenedor-texto-Item-detail-bajo {
-  flex-direction: column;
-  align-items: start;
-  justify-items: start;
-  justify-content: space-around;
-  flex-flow: wrap;
-  font-size: 1rem;
-  text-align: center;
-  /*     padding: 20px 00px 40px 00px; */
-  font-family: Lato, sans-serif;
-  font-weight: 400;
-  line-height: 1.1;
-  height: 209px;
-  margin-top: 30px;
-}
-
-.contenedor-texto-Item-detail-bajo h3 {
-  width: 600px;
-}
-
-.letrasNumeros {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-items: center;
-  justify-content: space-between;
-  height: 97px;
-  width: 700px;
-}
 .nombre-Item-detail {
   font-size: 1.3rem;
   font-weight: 700;
@@ -89,9 +65,9 @@
 }
 
 .incluye-Item-detail {
-  font-size: 1.3rem;
-  margin-top: 15px;
-  padding-bottom: 12px;
+  font-size: 1.15rem;
+  margin-top: 10px;
+  padding-bottom: 10px;
 }
 
 .precio-Item-detail {
@@ -100,6 +76,127 @@
   margin-bottom: 10px;
 }
 
+.contenedor-texto-Item-detail-bajo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1rem;
+  text-align: center;
+  font-family: Lato, sans-serif;
+  font-weight: 400;
+  line-height: 1.25;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.contenedor-texto-Item-detail-bajo h3 {
+  width: min(600px, 90%);
+}
+
+/* --- BLOQUE FECHAS + ACCIONES (desktop: 2 columnas) --- */
+.letrasNumeros {
+  width: min(700px, 92%);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  align-items: start;
+  justify-items: center;
+  margin-top: 18px;
+}
+
+.fechasTodas-detail {
+  width: 100%;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.checkIn-detail,
+.checkOut-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-items: center;
+}
+
+.checkIn-detail label,
+.checkOut-detail label {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #111;
+}
+
+.checkIn-detail input,
+.checkOut-detail input {
+  appearance: none;
+  -webkit-appearance: none;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.14);
+  background-color: #fff;
+  color: #111;
+  font-size: 16px;
+  outline: none;
+  min-width: 190px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.06);
+  transition: transform 0.12s ease, border-color 0.12s ease,
+    box-shadow 0.12s ease;
+}
+
+.checkIn-detail input:focus,
+.checkOut-detail input:focus {
+  border-color: rgba(120, 9, 224, 0.65);
+  box-shadow: 0 10px 22px rgba(120, 9, 224, 0.18);
+  transform: translateY(-1px);
+}
+
+.numerales-detail {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding-top: 24px;
+}
+
+.numerales-detail a {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.agregarACarrito-detail {
+  border: 2px solid rgb(120, 9, 224);
+  background: transparent;
+  padding: 10px 14px;
+  border-radius: 12px;
+  transition: all 0.2s ease;
+  font-size: 1.05em;
+  text-align: center;
+  color: rgb(120, 9, 224);
+  cursor: pointer;
+  width: min(280px, 100%);
+}
+
+.itemdetail {
+  margin-top: 0;
+  margin-left: 0;
+}
+
+.itemdetail:hover {
+  background-color: rgb(120, 9, 224);
+  color: salmon;
+}
+
+.numerales-detail p {
+  margin-top: 4px;
+  text-align: center;
+}
+
+/* --- CONTADOR (si lo usás) --- */
 .contador-detail {
   margin-left: 10px;
   width: 40px;
@@ -115,121 +212,34 @@
   text-align: center;
 }
 
-.contador-detail input a {
-  color: green;
-  text-decoration: none;
-  font-size: bold;
-  margin-left: 10px;
-}
-
-.contador-detail a:hover {
-  color: salmon;
-}
-
-.fechasTodas-detail {
-  margin-bottom: 20px;
-  margin-top: 5px;
-}
-
-.checkIn-detail input {
-  margin-left: 10px;
-  border: 1px solid #000;
-  background-color: rgb(120, 9, 224);
-  margin-top: 10px;
-  margin-bottom: 10px;
-  color: salmon;
-  font-size: 16px;
-}
-
-.checkOut-detail {
-  margin-right: 10px;
-}
-
-.checkOut-detail input {
-  margin-left: 10px;
-  border: 1px solid #000;
-  background-color: rgb(120, 9, 224);
-  margin-top: 10px;
-  margin-bottom: 10px;
-  color: salmon;
-  font-size: 16px;
-}
-
-.agregarACarrito-detail {
-  border: 0;
-  padding: 3px 4px;
-  border-radius: 0.4rem;
-  transition: all 0.6s;
-  font-size: 1.1em;
-  text-align: center;
-  border: 2px solid rgb(120, 9, 224);
-  text-decoration: none;
-  color: rgb(120, 9, 224);
-  font-size: bold;
-  cursor: pointer;
-}
-
-.agregar-volver {
-  width: 320px;
-  display: flex;
-  flex-direction: column;
-  height: 400px;
-}
-
-.itemdetail {
-  margin-top: 25px;
-  margin-left: 10px;
-}
-.itemdetail:hover {
-  background-color: rgb(120, 9, 224);
-  text-decoration: none;
-  color: salmon;
-}
-
+/* --- RESPONSIVE --- */
 @media (max-width: 975px) {
-  .contenedor-Item-detail {
-    height: 900px;
-    width: 80vw;
-  }
   .contenedor-Item-detail-alto {
     flex-direction: column;
-    align-items: center;
-    height: 300px;
   }
+
   .contenedor-texto-Item-detail {
-    padding-bottom: 5px;
+    padding: 18px 12px;
   }
-  .contenedor-texto-Item-detail-bajo {
-    display: flex;
-    flex-direction: column;
-    height: 600px;
-    align-items: center;
-  }
-  .contenedor-texto-Item-detail-bajo h3 {
-    width: 40vw;
-  }
-  .contenedor-texto-Item-detail-bajo {
-    flex-wrap: nowrap;
-    width: 60vw;
-    height: 300px;
-  }
+
   .letrasNumeros {
-    justify-content: start;
+    grid-template-columns: 1fr;
+    gap: 14px;
   }
-  .agregar-volver {
-    height: 300px;
+
+  .numerales-detail {
+    padding-top: 0;
   }
 }
 
 @media (max-width: 518px) {
-  .contenedor-texto-Item-detail {
-    padding: 40px 0px;
-    padding: 40px 0px;
-  }
-  .item-detail-container-estilo-h1 {
-    font-size: 1.8rem;
-  }
   .imagen-Item-detail {
     width: 300px;
+  }
+
+  .checkIn-detail input,
+  .checkOut-detail input {
+    width: 100%;
+    min-width: 0;
   }
 }
