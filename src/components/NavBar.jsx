@@ -1,11 +1,6 @@
-//imports
 import CartWidget from "./CartWidget";
 import { Link } from "react-router-dom";
-import React, { useState } from "react";
-//el NavBar.elements.js antes era jsx, lo pasé a js y moví a estilos.-
-// El responsive: Me parecio una buena oportunidad para aprender el manejo de react styled comp. ya que con js vanilla
-//... ya los habia aprendido y usado en un freelance de Js.
-//Aquí importo lo creados en NavBar.elementos.js
+import React, { useState, useCallback } from "react";
 import {
   Container,
   Wrapper,
@@ -14,24 +9,30 @@ import {
   MenuItem,
   MenuItemLink,
   MobileIcon,
+  Overlay,
 } from "../hojas-de-estilo/NavBar.elements.js";
-//importo iconos de "react-icons/fa"
 import { FaBars, FaTimes } from "react-icons/fa";
 import { IconContext } from "react-icons";
-//NavBar.css es destinado solo al  estilo solo al logo y titulo Travelfy .
-//...creado para separar bien los estilados.
-import "../hojas-de-estilo/navBar.css";
+import "../hojas-de-estilo/NavBar.css";
 
 const Navbar = () => {
-  //cambio el icon de hamburgesa por una ¨X" con useState
   const [showMobileMenu, setShowMobileMenu] = useState(false);
 
+  const toggleMenu = useCallback(() => {
+    console.log("[NavBar] toggleMenu prev=", showMobileMenu);
+    setShowMobileMenu((v) => !v);
+  }, [showMobileMenu]);
+
+  const closeMenu = useCallback(() => {
+    console.log("[NavBar] closeMenu");
+    setShowMobileMenu(false);
+  }, []);
+
   return (
-    // la etiqueta <MenuItemLink> solo es un div que da propiedades
     <Container>
       <Wrapper>
         <IconContext.Provider value={{ style: { fontSize: "2em" } }}>
-          <Link to="/">
+          <Link to="/" onClick={closeMenu}>
             <h1 className="NaturAdventure">
               <img
                 className="NaturAdventurelogo"
@@ -41,25 +42,21 @@ const Navbar = () => {
               Travelfy
             </h1>
           </Link>
-          {/*El componenente <CartUbi/>  es para que el carrito de <CartWidget/>  se esconda en un (MIN-width: 960px) 
-              //...y solo aparezca en un (MAX-width: 960px)    */}
 
           <CartUbi>
             <CartWidget />
           </CartUbi>
-          {/*El componenente <CartUbi/>  es para que el carrito de <CartWidget/>  se esconda en un (MIN-width: 960px) 
-              //...y solo aparezca en un (MAX-width: 960px)    */}
-          <MobileIcon onClick={() => setShowMobileMenu(!showMobileMenu)}>
-            {/* Ternario que logra el State de hamburguesa o ¨X¨ */}
+
+          <MobileIcon onClick={toggleMenu}>
             {showMobileMenu ? <FaTimes /> : <FaBars />}
           </MobileIcon>
-
+          <Overlay open={showMobileMenu} onClick={closeMenu} />
           <Menu open={showMobileMenu}>
             <CartWidget />
+
             <MenuItem>
               <MenuItemLink>
-                {/*Cuando se clickea una seccion del header desaparece este y me lleva al link   */}
-                <Link onClick={() => setShowMobileMenu(!showMobileMenu)} to="/">
+                <Link onClick={closeMenu} to="/">
                   <div>HOME</div>
                 </Link>
               </MenuItemLink>
@@ -67,10 +64,7 @@ const Navbar = () => {
 
             <MenuItem>
               <MenuItemLink>
-                <Link
-                  onClick={() => setShowMobileMenu(!showMobileMenu)}
-                  to="/categoria/america"
-                >
+                <Link onClick={closeMenu} to="/categoria/america">
                   <div>AMÉRICA</div>
                 </Link>
               </MenuItemLink>
@@ -78,10 +72,7 @@ const Navbar = () => {
 
             <MenuItem>
               <MenuItemLink>
-                <Link
-                  onClick={() => setShowMobileMenu(!showMobileMenu)}
-                  to="/categoria/asiaoceania"
-                >
+                <Link onClick={closeMenu} to="/categoria/asiaoceania">
                   <div>ASIA/OCN</div>
                 </Link>
               </MenuItemLink>
@@ -89,10 +80,7 @@ const Navbar = () => {
 
             <MenuItem>
               <MenuItemLink>
-                <Link
-                  onClick={() => setShowMobileMenu(!showMobileMenu)}
-                  to="/contacto"
-                >
+                <Link onClick={closeMenu} to="/contacto">
                   <div>CONTACT</div>
                 </Link>
               </MenuItemLink>
